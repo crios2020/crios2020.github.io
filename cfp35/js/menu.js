@@ -14,19 +14,16 @@ const menu=`
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Oferta educativa</a>
+                            <a class="nav-link active" aria-current="page" href="oferta.html">Oferta educativa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inscripciones</a>
+                            <a class="nav-link active" aria-current="page" href="inscripciones.html">Inscripciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Bolsa de trabajo</a>
+                            <a class="nav-link active" aria-current="page" href="bolsa.html">Bolsa de trabajo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Empresas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
