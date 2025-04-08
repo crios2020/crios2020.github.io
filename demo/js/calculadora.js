@@ -1,7 +1,12 @@
 function sumar(){
     nro1=parseFloat(document.getElementById("numero1").value)
     nro2=parseFloat(document.getElementById("numero2").value)
-    resultado=nro1+nro2         //2+2.1=4
+    resultado=""
+    if(!isNaN(nro1) && !isNaN(nro2)){
+        resultado=nro1+nro2         //2+2.1=4
+    }else{
+        resultado="error en el ingreso de datos"
+    }
     document.getElementById("resultado").value=resultado
     hablar(resultado)
 }
