@@ -1,10 +1,14 @@
 //Libreria pensada como decorado para curso de programación Inicial
 
-const api = {
+const apiWheather = {
     key: '9e122cd782b2d0333f5fe4e7fa192062',
-    url: `https://api.openweathermap.org/data/2.5/weather`,
-    city: `Buenos Aires`,
+    url: 'https://api.openweathermap.org/data/2.5/weather',
+    city: 'Buenos Aires',
     internet: false
+}
+
+const apiGeo = {
+    url: 'https://ipwhois.app/json/'
 }
 
 /**
@@ -19,6 +23,26 @@ function hablar(mensaje) {
 }
 
 /**
+ * función usada para imprimir en el DOM, y facilitar el
+ * trabajo educativo a nicel inicial.
+ * No recomendado para usar en productos destinados a ambientes de producción
+ * @param {mensaje a escribir en el DOM} mensaje 
+ */
+function write(mensaje){
+    document.writeln(mensaje)
+}
+
+/**
+ * función usada para imprimir en el DOM, y facilitar el
+ * trabajo educativo a nicel inicial.
+ * No recomendado para usar en productos destinados a ambientes de producción
+ * @param {mensaje a escribir en el DOM} mensaje 
+ */
+function writeln(mensaje){
+    document.writeln(mensaje+"<br>")
+}
+
+/**
  * Función que devuelve la zona horaria
  * @returns Zona Horaria
 */
@@ -28,6 +52,7 @@ function getZonaHoraria() {
         .DateTimeFormat()
         .resolvedOptions()
         .timeZone
+        .replace("/", " ")
         .replace("/", " ")
         .replace("_", " ");
 }
@@ -130,7 +155,7 @@ function hoyEs() {
     nroMes = fecha.getMonth()
     anio = fecha.getFullYear()
     hoy = ""
-    if (diaSem == 1) hoy = "Odio lo días lunes, por que hay que ir a trabajar!"
+    if (diaSem == 1) hoy = "Odio los lunes, por que hay que ir a trabajar!"
     if (diaSem == 2) hoy = "Hoy es Martes hay que ir a trabajar!"
     if (diaSem == 3) hoy = "Hoy es Miércoles hay que ir a trabajar!"
     if (diaSem == 4) hoy = "Hoy es Jueves hay que ir a trabajar!"
@@ -183,7 +208,7 @@ function toCelsius(kelvin) {
 function getTemperatura() {
     try {
         const request = new XMLHttpRequest();
-        request.open("GET", `${api.url}?q=${api.city}&appid=${api.key}&lang=es`, false); // `false` makes the request synchronous
+        request.open("GET", `${apiWheather.url}?q=${apiWheather.city}&appid=${apiWheather.key}&lang=es`, false); // `false` makes the request synchronous
         request.send();
         if (request.status === 200) {
             const json = JSON.parse(request.responseText)
@@ -202,11 +227,154 @@ function getTemperatura() {
 function getClima() {
     try {
         const request = new XMLHttpRequest();
-        request.open("GET", `${api.url}?q=${api.city}&appid=${api.key}&lang=es`, false); // `false` makes the request synchronous
+        request.open("GET", `${apiWheather.url}?q=${apiWheather.city}&appid=${apiWheather.key}&lang=es`, false); // `false` makes the request synchronous
         request.send();
         if (request.status === 200) {
             const json = JSON.parse(request.responseText)
             return json.weather[0].description;
+        }
+    } catch (error) {
+        return "error";
+    }
+}
+
+/**
+ * Devuelve un string el nombre de la zona, consultada en un API,
+ * https://ipwhois.app/json/ solo se dispones de 10mil request por mes en modo free
+ * Se espera solucionar bug detectado en algunas configuraciones usando el API de JS
+ * @returns string zona
+ */
+function getZona() {
+    try {
+        if(navigator.geolocation){
+            var success = function(position){
+            var latitud = position.coords.latitude,
+                longitud = position.coords.longitude;
+            }
+            navigator.geolocation.getCurrentPosition(success, function(msg){
+                console.error( msg );
+            });
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiGeo.url}`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.timezone.replace("/", " ").replace("/", " ").replace("_", " ")
+        }
+    } catch (error) {
+        return "error";
+    }
+}
+
+/**
+ * Devuelve un string el nombre del continente, consultado en un API,
+ * https://ipwhois.app/json/ solo se dispones de 10mil request por mes en modo free
+ * @returns string continente
+ */
+function getContinente() {
+    try {
+        if(navigator.geolocation){
+            var success = function(position){
+            var latitud = position.coords.latitude,
+                longitud = position.coords.longitude;
+            }
+            navigator.geolocation.getCurrentPosition(success, function(msg){
+                console.error( msg );
+            });
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiGeo.url}`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.continent
+        }
+    } catch (error) {
+        return "error";
+    }
+}
+
+/**
+ * Devuelve un string el nombre del país consultada en un API,
+ * https://ipwhois.app/json/ solo se dispones de 10mil request por mes en modo free
+ * @returns string pais
+ */
+function getPais() {
+    try {
+        if(navigator.geolocation){
+            var success = function(position){
+            var latitud = position.coords.latitude,
+                longitud = position.coords.longitude;
+            }
+            navigator.geolocation.getCurrentPosition(success, function(msg){
+                console.error( msg );
+            });
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiGeo.url}`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.country
+        }
+    } catch (error) {
+        return "error";
+    }
+}
+
+/**
+ * Devuelve un string el nombre de la provincia consultada en un API,
+ * https://ipwhois.app/json/ solo se dispones de 10mil request por mes en modo free
+ * basado en la dirección del ISP
+ * @returns string provincia
+ */
+function getProvincia() {
+    try {
+        if(navigator.geolocation){
+            var success = function(position){
+            var latitud = position.coords.latitude,
+                longitud = position.coords.longitude;
+            }
+            navigator.geolocation.getCurrentPosition(success, function(msg){
+                console.error( msg );
+            });
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiGeo.url}`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.region
+        }
+    } catch (error) {
+        return "error";
+    }
+}
+
+/**
+ * Devuelve un string el nombre de la ciudad consultada en un API,
+ * https://ipwhois.app/json/ solo se dispones de 10mil request por mes en modo free
+ * basado en la dirección del ISP
+ * @returns string ciudad
+ */
+function getCiudad() {
+    try {
+        if(navigator.geolocation){
+            var success = function(position){
+            var latitud = position.coords.latitude,
+                longitud = position.coords.longitude;
+            }
+            navigator.geolocation.getCurrentPosition(success, function(msg){
+                console.error( msg );
+            });
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiGeo.url}`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.city
         }
     } catch (error) {
         return "error";
