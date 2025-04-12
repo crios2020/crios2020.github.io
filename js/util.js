@@ -21,8 +21,9 @@ function hablar(mensaje) {
 /**
  * Función que devuelve la zona horaria
  * @returns Zona Horaria
- */
+*/
 function getZonaHoraria() {
+    //FIXME a la fecha 12/04/2025 se encontro una PC cliente que no devuelve la zona horaria en el formato esperado, para Buenos aires retorna +GTM3
     return Intl
         .DateTimeFormat()
         .resolvedOptions()
@@ -135,7 +136,7 @@ function hoyEs() {
     if (diaSem == 4) hoy = "Hoy es Jueves hay que ir a trabajar!"
     if (diaSem == 5) hoy = "Hoy es viernes y tu cuerpo lo sabe!"
     if (diaSem == 6) hoy = "Es fin de semana a descansar!"
-    if (diaSem == 7) hoy = "Es fin de semana a descansar!"
+    if (diaSem == 0) hoy = "Es fin de semana a descansar!"
     return hoy
 
 }
@@ -335,7 +336,7 @@ const frases = [
     "¡No te enojes, tengo pocos amigos! ",
     "¡Eres una persona maravillosa, no te olvidare! ",
     "¡Perri que ladri no muerdi! ",
-    "¡e Gato!",
+    "¡eeeH Gato!",
     "¡Espitirús del mal vengan a mí!",
     "¡Siempre y cuando! ",
     "¡La eskainet va a despertar pronto!",
@@ -476,6 +477,7 @@ const frases = [
     "Me tomo el buque!",
     "Viva la pepa!",
     "Yo Argentino! ",
+    "Yo Argentino hasta los huesos! ",
     "No te duermas en los laureles!",
     "Me lo conto un pajarito! ",
     "Por si las moscas! ",
@@ -496,7 +498,7 @@ const frases = [
     "se te escapo la tortuga!",
     "Estudia programación, más vale tarde que nunca!",
     "No te aguanto, pero me hago el boludo!",
-    "No hay tutia!",
+    "No hay tu tía!",
     "No le busques el pelo a huevo! veni a estudiar programación"
 ]
 
