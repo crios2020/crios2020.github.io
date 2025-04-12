@@ -14,7 +14,7 @@ function climaActual(){
     temperatura=getTemperatura()
     clima=getClima()
     hablar("en "+getZonaHoraria()+" ")
-    hablar("La temperatura es "+temperatura+" grados centigrados ")
+    hablar("La temperatura es "+temperatura+" grados centígrados ")
     hablar("El clima es "+clima+" ")
 
     if(temperatura<=0)                          hablar("Cuidado! Hace muchisimo frio, esta nevando!")
