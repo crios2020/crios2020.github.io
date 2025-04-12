@@ -42,4 +42,6 @@ function calcular(){
     document.getElementById("estado").value=estado
     document.getElementById("imc").style=color
     document.getElementById("estado").style=color
+    hablar("Su índice de masa corporal es "+imc)
+    hablar(", su estado es "+estado)
 }

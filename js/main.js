@@ -1,5 +1,5 @@
 function hola(){
-    hablar("Hola soy OPA un asistente personal libre, estoy para ayudarte!")
+    hablar("Hola soy OPA, un carpincho, asistente personal libre, estoy para ayudarte!")
 }
 
 function horaActual(){
@@ -43,6 +43,10 @@ function climaActual(){
 
     if(clima.includes("gra"))                                   hablar("Alerta Granizada!")
     else                                                        hablar("No hay Granizo")
+}
+
+function ubicacion(){
+    hablar("nos encontramos en la ciudad de "+getCiudad()+" en "+getProvincia()+", país "+getPais()+", en la región de "+getContinente())
 }
 
 function programacion(){
