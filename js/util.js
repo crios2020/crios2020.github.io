@@ -3,7 +3,7 @@
 const apiWheather = {
     key: '9e122cd782b2d0333f5fe4e7fa192062',
     url: 'https://api.openweathermap.org/data/2.5/weather',
-    city: 'Buenos Aires',
+    city: 'Buenos Aires',       //FIXME deberia detectar la ciudad
     internet: false
 }
 
@@ -379,6 +379,17 @@ function getCiudad() {
     } catch (error) {
         return "error";
     }
+}
+
+/**
+ * Esta función devuelve un booleano true para llueve en este momento
+ * y false para no llueve. esta función consulta el clima actual.
+ * Esta función esta pensada para ser usada en el ambito educativo en 
+ * enseñanza de estructuras condicionales.
+ */
+function getLlueve(){
+    if(getClima().includes("lluv") || getClima().includes("llov"))    return true
+    else                                                    return false
 }
 
 const frases = [
