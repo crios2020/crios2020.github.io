@@ -1,19 +1,21 @@
 function hola(){
     hablar("Hola soy OPA, un carpincho, asistente personal libre, estoy para ayudarte!")
+    hablar("Soy un bot de inteligencia artificial, ")
+    hablar("tengo información del tiempo y trayectos de estudios.")
+    hablar("También estoy en proceso de desarrollo de aplicaciones de ayuda general")
 }
 
 function horaActual(){
-    hablar("en "+getZonaHoraria()+" es la hora "+getHora()+" es "+getMomento()+" es momento de "+getMomentoAccion())
+    hablar(" es la hora "+getHora()+" es "+getMomento()+" es momento de "+getMomentoAccion()+", ")
 }
 
 function fechaActual(){
-    hablar("Hoy es "+getFecha()+" "+hoyEs()+" estamos en "+getEstacion())
+    hablar("Hoy es "+getFecha()+" "+hoyEs()+" estamos en "+getEstacion()+", ")
 }
 
 function climaActual(){
     temperatura=getTemperatura()
     clima=getClima()
-    hablar("en "+getZonaHoraria()+" ")
     hablar("La temperatura es "+temperatura+" grados centígrados ")
     hablar("El clima es "+clima+" ")
 
@@ -36,20 +38,26 @@ function climaActual(){
     else                                                        hablar("No hay lluvias")
 
     if(clima.includes("nev") || clima.includes("niev"))         hablar("Esta Nevando!")
-    else                                                        hablar("No esta nevando!")
 
     if(clima.includes("nebli") || clima.includes("niebl"))      hablar("Hay Neblina!")
-    else                                                        hablar("No hay Neblina")
 
     if(clima.includes("gra"))                                   hablar("Alerta Granizada!")
-    else                                                        hablar("No hay Granizo")
 }
 
 function ubicacion(){
-    hablar("nos encontramos en la ciudad de "+getCiudad()+" en "+getProvincia()+", país "+getPais()+", en la región de "+getContinente())
+    hablar("nos encontramos en la ciudad de "+getCiudad()+" en "+getProvincia()+", país "+getPais()+", en la región de "+getContinente()+", ")
 }
 
-function programacion(){
+function tiempo(){
+    ubicacion()
+    fechaActual()
+    horaActual()
+    climaActual()
+    //TODO Efemerides
+}
+
+function info(){
+    hablar("Soy un bot de inteligencia artificial, fui programado en javascript")
     hablar("¡Estudia con nósotros y formate profesionalmente como programador!")
     hablar("¡El trayecto de programación dura 364 horas reloj!")
     hablar("Los módulos del trayecto son: ")
@@ -57,11 +65,11 @@ function programacion(){
     hablar("Base de datos 70 horas.")
     hablar("Programación orientada a objetos, de 150 horas.")
     hablar("Relaciones laborales 24 horas.")
-    hablar("También tenemos especialización en video juegos, programación web y base de datos.")
+    hablar("También tenemos especialización en video juegos, programación web, programación segura y cyberseguridad, y administración de base de datos.")
 }
 
 function bardear(){
-    for(a=1; a<=5; a++){
+    for(a=1; a<=10; a++){
         hablar(getFraseRandom())
     }
 }

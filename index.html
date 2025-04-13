@@ -12,42 +12,30 @@
 
 <body>
     <div class="container-lg bg-info-subtle">
-        <h1 class="text-primary text-center p-2 m-2 bg-secondary-subtle">Open Personal Assistant OPA</h1>
+        <h1 class="text-primary text-center bg-secondary-subtle">Open Personal Assistant OPA</h1>
         <!-- <p class="text-warning text-center p-2 m-2 bg-secondary-subtle">Habla con OPA!</p> -->
         <div class="container text-center">
-            <div class="row row-cols-2 p-2 m-2 bg-success-subtle">
+            <div class="row row-cols-2 bg-success-subtle">
                 <div class="col">
                     <img src="images/carpincho.jpeg" class="img-thumbnail" alt="asistente persona libre">
                 </div>
                 <div class="col">
                     <div class="row row-cols-1">
-                        <div class="col d-grid gap-2 p-2">
-                            <button type="button" class="btn btn-success btn-lg" onclick="hola()" >
+                        <div class="col d-grid gap-2">
+                            <button type="button" class="btn btn-success btn-sm" onclick="hola()">
                                 <img src="icons/person-badge.svg">
                                 Hola
                             </button>
-                            <button type="button" class="btn btn-success btn-lg" onclick="horaActual()" >
+                            <button type="button" class="btn btn-success btn-sm" onclick="tiempo()">
                                 <img src="icons/clock.svg">
-                                Hora
-                            </button>
-                            <button type="button" class="btn btn-success btn-lg" onclick="fechaActual()">
-                                <img src="icons/calendar-day.svg">
-                                Fecha
-                            </button>
-                            <button type="button" class="btn btn-success btn-lg" onclick="climaActual()">
-                                <img src="icons/cloud-sun.svg">
-                                Clima
-                            </button>
-                            <button type="button" class="btn btn-success btn-lg" onclick="ubicacion()">
-                                <img src="icons/globe-americas.svg">
-                                Ubicación
+                                Tiempo
                             </button>
 
-                            <button type="button" class="btn btn-success btn-lg" onclick="programacion()">
+                            <button type="button" class="btn btn-success btn-sm" onclick="info()">
                                 <img src="icons/cup-hot.svg">
-                                Centro 8
+                                Info
                             </button>
-                            <button type="button" class="btn btn-success btn-lg" onclick="bardear()">
+                            <button type="button" class="btn btn-success btn-sm" onclick="bardear()">
                                 <img src="icons/chat.svg">
                                 Manda Fruta
                             </button>
@@ -55,18 +43,52 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-cols-2 p-2 m-2 bg-success-subtle">
-                <a class="btn btn-success btn-lg col-sm-5 m-2" href="/calculadora/index.html">
-                    <img src="icons/calculator.svg">
-                    Calculadora
-                </a>
-                <a class="btn btn-success btn-lg col-sm-5 m-2" href="/imc/index.html">
-                    <img src="icons/person-walking.svg">
-                    Indice Masa Corporal
-                </a>
+
+            <!--
+            <nav id="navbar-aplicaciones" class="navbar  bg-secondary-subtle px-3 mb-3">
+                <ul class="nav nav-pills gap-2">
+                    <li class="nav-item">
+                        <a class="btn btn-success btn-sm" href="/calculadora/index.html">
+                            <img src="icons/calculator.svg">
+                            Calculadora
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-success btn-sm" href="/imc/index.html">
+                            <img src="icons/person-walking.svg">
+                            IMC
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            -->
+           
+            <div class="container-lg text-center">
+                <div class="row bg-success-subtle">
+                    <a class="btn btn-primary btn-sm col m-2" href="/calculadora/index.html">
+                        <img src="icons/calculator.svg">
+                        Calculadora
+                    </a>
+                    <a class="btn btn-primary btn-sm col m-2" href="/imc/index.html">
+                        <img src="icons/person-walking.svg">
+                        IMC
+                    </a>
+                </div>
+                <!--
+                <div class="row bg-success-subtle">
+                    <a class="btn btn-success btn-sm col m-2" href="/calculadora/index.html">
+                        <img src="icons/calculator.svg">
+                        Calculadora
+                    </a>
+                    <a class="btn btn-success btn-sm col m-2" href="/imc/index.html">
+                        <img src="icons/person-walking.svg">
+                        IMC
+                    </a>
+                </div>
+                -->
             </div>
         </div>
-        <p class="text-success text-center p-2 m-2 bg-secondary-subtle">
+        <p class="text-success text-center p-2 bg-secondary-subtle">
             Se recomienda usar el navegador Chrome o Edge
         </p>
     </div>
