@@ -34,14 +34,26 @@ function calcularColor(imc){
 function calcular(){
     peso=parseInt(document.getElementById("peso").value)                            //
     altura=parseInt(document.getElementById("altura").value)
-    imc=calcularIMC(peso, altura)
-    estado=calcularEstado(imc)
-    color=calcularColor(imc)
-    console.log(color)
-    document.getElementById("imc").value=imc
-    document.getElementById("estado").value=estado
-    document.getElementById("imc").style=color
-    document.getElementById("estado").style=color
-    hablar("Su índice de masa corporal es "+imc)
-    hablar(", su estado es "+estado)    
+    if(!isNaN(peso) && !isNaN(altura) &&
+        peso>=10 && peso<=500 &&
+        altura>=40 && altura<=300
+    ){
+        imc=calcularIMC(peso, altura)
+        estado=calcularEstado(imc)
+        color=calcularColor(imc)
+        console.log(color)
+        document.getElementById("imc").value=imc
+        document.getElementById("estado").value=estado
+        document.getElementById("imc").style=color
+        document.getElementById("estado").style=color
+        hablar("Su índice de masa corporal es "+imc)
+        hablar(", su estado es "+estado)    
+    }else{
+        document.getElementById("imc").value="Error en el ingreso de datos"
+        document.getElementById("estado").value=""
+        document.getElementById("imc").style="color: red; background-color: yellow;"
+        document.getElementById("estado").style="color: red; background-color: yellow;"
+        hablar("Error en el ingreso de datos")
+    }
+
 }
