@@ -1,4 +1,4 @@
-function calcularIMC(peso, altura){
+function calcularIMC(peso, altura){                                                 //
     //parámetros de entrada peso(kgs) y altura(cms)
     //imc = peso / Math.pow(altura/100, 2)
     //imc = imc.toFixed(1)
@@ -48,7 +48,7 @@ function calcular(){
         document.getElementById("estado").style=color
         hablar("Su índice de masa corporal es "+imc)
         hablar(", su estado es "+estado)    
-    }else{
+    }else{                                                                          //
         document.getElementById("imc").value="Error en el ingreso de datos"
         document.getElementById("estado").value=""
         document.getElementById("imc").style="color: red; background-color: yellow;"

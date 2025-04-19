@@ -43,6 +43,17 @@ function writeln(mensaje){
 }
 
 /**
+ * función usada para imprimir en el DOM, y facilitar el
+ * trabajo educativo a nicel inicial.
+ * El nombre el para emular el print de python
+ * No recomendado para usar en productos destinados a ambientes de producción
+ * @param {mensaje a escribir en el DOM} mensaje 
+ */
+function print(mensaje){
+    document.writeln(mensaje+"<br>")
+}
+
+/**
  * Función que devuelve la zona horaria
  * @returns Zona Horaria
 */
@@ -93,8 +104,7 @@ function getMomento() {
  */
 function getMomentoAccion() {
     momento = ""
-    if (hora >= 0 && hora < 4) momento = "dormir"
-    if (hora >= 4 && hora < 6) momento = "dormir"
+    if (hora >= 0 && hora < 6) momento = "dormir"
     if (hora >= 6 && hora < 8) momento = "despertar"
     if (hora >= 8 && hora < 11) momento = "desayunar"
     if (hora >= 11 && hora < 14) momento = "morfar"
@@ -268,11 +278,40 @@ function getZona() {
 }
 
 /**
+ * @deprecated este método esta deprecado por que la API devuelve una región no un continente
  * Devuelve un string el nombre del continente, consultado en un API,
  * https://ipwhois.app/json/ solo se dispones de 10mil request por mes en modo free
  * @returns string continente
  */
 function getContinente() {
+    try {
+        if(navigator.geolocation){
+            var success = function(position){
+            var latitud = position.coords.latitude,
+                longitud = position.coords.longitude;
+            }
+            navigator.geolocation.getCurrentPosition(success, function(msg){
+                console.error( msg );
+            });
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiGeo.url}`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.continent
+        }
+    } catch (error) {
+        return "error";
+    }
+}
+
+/**
+ * Devuelve un string el nombre de la región, consultado en un API,
+ * https://ipwhois.app/json/ solo se dispones de 10mil request por mes en modo free
+ * @returns string región
+ */
+function getRegion() {
     try {
         if(navigator.geolocation){
             var success = function(position){
@@ -359,6 +398,7 @@ function getProvincia() {
  * @returns string ciudad
  */
 function getCiudad() {
+    //FIXME es imprecisa la ciudad
     try {
         if(navigator.geolocation){
             var success = function(position){
@@ -382,14 +422,43 @@ function getCiudad() {
 }
 
 /**
+ * Devuelve devuelve el valor del dolar consultada en un API,
+ * https://ipwhois.app/json/ solo se dispones de 10mil request por mes en modo free
+ * basado en la dirección del ISP
+ * @returns string ciudad
+ */
+function getValorDolar() {
+    try {
+        if(navigator.geolocation){
+            var success = function(position){
+            var latitud = position.coords.latitude,
+                longitud = position.coords.longitude;
+            }
+            navigator.geolocation.getCurrentPosition(success, function(msg){
+                console.error( msg );
+            });
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiGeo.url}`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.currency_rates
+        }
+    } catch (error) {
+        return "error";
+    }
+}
+
+/**
  * Esta función devuelve un booleano true para llueve en este momento
  * y false para no llueve. esta función consulta el clima actual.
  * Esta función esta pensada para ser usada en el ambito educativo en 
  * enseñanza de estructuras condicionales.
  */
 function getLlueve(){
-    if(getClima().includes("lluv") || getClima().includes("llov"))    return true
-    else                                                    return false
+    if(getClima().includes("lluv") || getClima().includes("llov"))      return true
+    else                                                                return false
 }
 
 const frases = [
@@ -591,18 +660,18 @@ const frases = [
     "Lo sospeche desde un principio! ",
     "Ya me canse de hablar tanto ",
     "Me gustan las chicas! ",
-    "¿Te gustaria estudiar programación? ",
-    "¿Té gustaria estudiar Java?",
-    "¿Té gustaria estudiar Tester de Aplicaciónes?",
-    "¿Té gustaria estudiar Javaescript?",
-    "¿Té gustaria estudiar Paiton?",
+    "¿Te gustaría estudiar programación? ",
+    "¿Té gustaría estudiar Java?",
+    "¿Té gustaría estudiar Tester de Aplicaciónes?",
+    "¿Té gustaría estudiar Javaescript?",
+    "¿Té gustaría estudiar Paiton?",
     "Acusalo con tu mamá",
     "cuidado! Viene el maestro longaniza",
     "¿por si o por no?",
     "¡Pongán huevos que ganamos!",
     "Ladran Sancho ",
     "Si claro por supuesto ",
-    "Queres ganar buena guita, estudia programación",
+    "Quieres ganar buena guita, estudia programación",
     "Soy del año del ñaupa",
     "Estoy pipí cucú",
     "Me tomo el palo y me voy",
@@ -635,7 +704,7 @@ const frases = [
     "Tomatelo no Soda!",
     "No vendo humo ",
     "Vi luz y subi ",
-    "Me cayo un valde de agua fria! ",
+    "Me cayó un valde de agua fria! ",
     "Vivo adentro de un calefon",
     "Parece que vivis dentro de un frasco de mayonesa!",
     "A falta de pan, buenas son las tortas!",
@@ -658,7 +727,7 @@ const frases = [
     "Yo Argentino! ",
     "Yo Argentino hasta los huesos! ",
     "No te duermas en los laureles!",
-    "Me lo conto un pajarito! ",
+    "Me lo contó un pajarito! ",
     "Por si las moscas! ",
     "Siempre sale un martes trece ",
     "Soy mas viejo que Matusalén",
@@ -670,7 +739,7 @@ const frases = [
     "cada tanto me agarra la chiripiolca",
     "Decilo Enzo, decilo! ",
     "En Europa no me consiguen",
-    "Es tuya Juan! reclama Juan! ",
+    "Es tuya Juan! reclamalá Juan! ",
     "Vos fuma!",
     "Estoy un kilo y dos pancitos",
     "Un médico por alla!",
@@ -678,7 +747,9 @@ const frases = [
     "Estudia programación, más vale tarde que nunca!",
     "No te aguanto, pero me hago el boludo!",
     "No hay tu tía!",
-    "No le busques el pelo a huevo! veni a estudiar programación"
+    "No le busques el pelo a huevo! veni a estudiar programación",
+    "Soy muy argento!",
+    "Vivir en Suiza y perderte de conocerme a mi?"
 ]
 
 function getRandomInt(max) {

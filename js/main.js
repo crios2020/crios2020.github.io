@@ -45,15 +45,85 @@ function climaActual(){
 }
 
 function ubicacion(){
-    hablar("nos encontramos en la ciudad de "+getCiudad()+" en "+getProvincia()+", país "+getPais()+", en la región de "+getContinente()+", ")
+    hablar("nos encontramos en "+getProvincia()+", país "+getPais()+", en la región de "+getRegion()+", ")
 }
 
 function tiempo(){
     ubicacion()
-    fechaActual()
     horaActual()
+    fechaActual()
+    efemerides()
     climaActual()
-    //TODO Efemerides
+}
+
+function efemerides(){
+    fecha=new Date()
+    diaMes=fecha.getDate()
+    mes=fecha.getMonth()
+
+    //inicio de mes
+    if(diaMes==1)                               hablar(" Un nuevo mes inicia!! ")
+
+    //día de ñoquis
+    if(diaMes==29)                              hablar(" hoy es 29, hoy es día de ñoquis!! ")
+
+    //día de la mujer
+    if(diaMes==8 && mes==2)                     hablar(" Hoy es el día de la mujer!! ") 
+
+    //día del trabajador
+    if(diaMes==1 && mes==4)                     hablar(" Hoy es el día del trabajador!! ")    
+
+    //día de la felicidad
+    if(diaMes==20 && mes==2)                    hablar(" Hoy es el día internacional de la felicidad!! ") 
+
+    //día del programador
+    if(diaMes==13 && mes==8)                    hablar(" Hoy es el día del programador!! ")
+
+    //cumpleaños del programador
+    if(diaMes==2 && mes==1)                     hablar(" Hoy es el cumpleaños de mi programador!! ")
+
+    //día de la patria
+    if(diaMes==25 && mes==4)                    hablar(" Hoy es el día de la patria en argentina!! ")
+
+    //día de la independencia
+    if(diaMes==6 && mes==5)                     hablar(" Hoy es el día de la independencia en argentina !! ")
+
+    //día de san martin
+    if(diaMes==17 && mes==7)                    hablar(" Hoy recordamos a nuestro padre de la patria, el general Don Jose de San Martín!! ")
+
+    //día de la primavera & estudiante
+    if(diaMes==21 && mes==8)                    hablar(" Hoy es el día del estudiante y del perfumista, feliz cumpleaños!! ")
+
+    //día de san patricio
+    if(diaMes==17 && mes==3)                    hablar(" Feliz San Patricio, a tomar cerveza!! ")
+
+    //día del aprendiz
+    if(diaMes==3 && mes==5)                     hablar(" Feliz día del aprendiz")
+
+    //día del mecánico 
+    if(diaMes==24 && mes==1)                    hablar(" Feliz día del mecánico!! ")
+
+    //día de la secretaria
+    if(diaMes==4 && mes==8)                     hablar(" Feliz día de la secretaria!! ")
+
+    //día del ferroviario
+    if(diaMes==1 && mes==2)                     hablar(" Hoy es el día del ferroviario!! ")
+
+    //día de la educación técnica
+    if(diaMes==15 && mes==10)                   hablar(" Hoy es el día de la educación técnica!! ")
+
+    //día del maestro
+    if(diaMes==11 && mes==8)                    hablar(" Hoy es el día del maestro!! ")
+
+    //Navidad
+    if(diaMes==24 && mes==11)                   hablar(" Feliz noche buena!!! ")
+    if(diaMes==25 && mes==11)                   hablar(" Feliz navidad!!! ")
+
+    //Feliz año nuevo!
+    if(diaMes==31 && mes==11)                   hablar(" Hoy es Fin de Año!! ")
+    if(diaMes==1 && mes==0)                     hablar(" Feliz año nuevo!! ")
+
+
 }
 
 function info(){
