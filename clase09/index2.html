@@ -1,0 +1,166 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+    /*
+        //Operadores Lógicos o booleanos
+
+                ==          comparación equals
+                !=          not equals
+                !           not 
+                < <= => >   comparación numerica
+        
+        Operadores de logica
+
+                &&          and             (& shift 6)
+                ||          or              (| altgr 1)
+        
+        Tabla de verdad
+
+                X       Y       OR      AND
+                F       F       F       F
+                F       V       V       F
+                V       F       V       F
+                V       V       V       V
+
+    */
+
+    nro1 = 5
+    nro2 = 7
+    log1 = true
+    log2 = false
+
+    lindoTiempo = true
+    tengoPlata = false
+
+    document.writeln((nro1 == nro2) + "<br>")       //false
+    document.writeln((nro1 == nro2 - 2) + "<br>")     //true
+    document.writeln((nro1 != nro2) + "<br>")       //true
+    document.writeln((nro1 != 5) + "<br>")          //false
+    document.writeln((nro1 < nro2) + "<br>")        //true
+    document.writeln((nro1 < 5) + "<br>")           //false
+    document.writeln((nro1 <= 5) + "<br>")          //true 
+
+    document.writeln((log1 || log2) + "<br>")       //true
+    document.writeln((log1 && log2) + "<br>")       //false 
+
+    lindoTiempo = false
+    tengoPlata = true
+    document.writeln("Salimos de vacaciones!!<br>")
+    //plata y buen tiempo
+    document.writeln((tengoPlata && lindoTiempo) + "<br>")
+
+    //Operador Not !
+    document.writeln(log1 + "<br>")           //true
+    document.writeln(!log1 + "<br>")          //false
+    document.writeln(!!log1 + "<br>")         //true
+    document.writeln(!!!log1 + "<br>")        //false
+    document.writeln(!!!!log1 + "<br>")       //true
+
+    document.writeln((nro1 <= 10 && !log1 == true) + "<br>")
+    //                    v     Y      F                    //false
+
+
+    document.writeln((nro1 >= 10 + 2 && !!log1 == true) + "<br>")
+    //                     F     Y        V                 //false
+
+
+    //volver a explicar IF
+    // Estructura condicional IF
+    log1 = true
+    llueve = false
+    nro1 = 10
+
+    if (log1) {
+        document.writeln("verdad1<br>")
+    }
+
+    if (llueve) {
+        document.writeln("usar paraguas!<br>")
+    }
+
+    if (llueve == true) {
+        document.writeln("usar paraguas!<br>")
+    }
+
+    if (nro1 == 10) {
+        document.writeln("verdad2<br>")
+    }
+
+    if (nro1 == 10 && llueve) {
+        document.writeln("verdad3<br>")
+    }
+
+    //Uso de llaves expandido
+    //Modo recomendado por Microsoft
+    //Recomendado en forma educativa
+
+    if (log1) 
+    {
+        document.writeln("verdad4<br>")
+    }
+
+    //Uso de llaves abreviado
+    if (log1) document.writeln("verdad5<br>")
+
+    //código indentado
+    if (log1) {
+        document.writeln("verdad6<br>")
+        //código indentado
+    }
+        
+
+    //Estructura if else
+    if(log1){
+        document.writeln("verdad7<br>")
+    }else{
+        document.writeln("falso7<br>")
+    }
+    //llueve=true
+    if(llueve){
+        document.writeln("Usar paraguas<br>")
+    }else{
+        document.writeln("no usar paraguas<br>")
+    }
+
+    
+    clima=getClima()
+    document.writeln(clima+"<br>")
+
+    if(clima.includes("lluv") || clima.includes("llov")){
+        document.writeln("Usar paraguas<br>")
+    }else{
+        document.writeln("no usar paraguas<br>")
+    }
+
+    //Uso de llaves expandido
+    //recomendado por Microsoft o educativo
+    if(log1)
+    {
+        document.writeln("verdad8<br>")
+    }
+    else
+    {
+        document.writeln("falso8<br>")
+    }
+
+    //Uso de llaves comprimido
+    if(log1)    document.writeln("verdad9<br>")
+    else        document.writeln("falso9<br>")
+    
+    //Estructura switch
+    nro1=11
+
+    switch(nro1){
+        case 1:     document.writeln("Valor 1<br>"); break
+        case 2:     document.writeln("Valor 2<br>"); break
+        case 3:     document.writeln("Valor 3<br>")
+        case 4:     document.writeln("Valor 4<br>")
+        case 5:     document.writeln("Valor 5<br>"); break
+        case 6: case 7: case 8: case 9: case 10:
+                    document.writeln("Valor entre 6 y 10<br>"); break
+        case 11:    document.writeln("Valor 11<br>"); break
+        case 12:    document.writeln("Valor 12<br>"); break
+        default:    document.writeln("Valor no esperado<br>")
+    }
+
+
+</script>

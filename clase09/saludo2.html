@@ -1,0 +1,236 @@
+<!-- <script src="util.js"></script> -->
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+    frase = "Hoy es "
+
+    fecha = new Date()
+
+    diaSem = fecha.getDay()
+
+    /*
+    if (diaSem == 0) frase += "domingo "
+    if (diaSem == 1) frase += "lunes "
+    if (diaSem == 2) frase += "martes "
+    if (diaSem == 3) frase += "miércoles "
+    if (diaSem == 4) frase += "jueves "
+    if (diaSem == 5) frase += "viernes "
+    if (diaSem == 6) frase += "sábado "
+    */
+    switch(diaSem){
+        case 0:     frase += "domingo ";    break
+        case 1:     frase += "lunes";       break
+        case 2:     frase += "martes ";     break
+        case 3:     frase += "miércoles ";  break
+        case 4:     frase += "jueves ";     break
+        case 5:     frase += "viernes ";    break
+        case 6:     frase += "sábado ";     break
+    }
+
+    diaMes = fecha.getDate()
+    frase+=diaMes+" de "
+
+    mes=fecha.getMonth()
+    /*
+    if (mes == 0)   frase += "enero "
+    if (mes == 1)   frase += "febrero "
+    if (mes == 2)   frase += "marzo "
+    if (mes == 3)   frase += "abril "
+    if (mes == 4)   frase += "mayo "
+    if (mes == 5)   frase += "junio "
+    if (mes == 6)   frase += "julio "
+    if (mes == 7)   frase += "agosto "
+    if (mes == 8)   frase += "septiembre "
+    if (mes == 9)   frase += "octubre "
+    if (mes == 10)  frase += "noviembre "
+    if (mes == 11)  frase += "diciembre "
+    */
+    switch(mes){
+        case 0:     frase += "enero ";      break
+        case 1:     frase += "febrero ";    break
+        case 2:     frase += "marzo ";      break
+        case 3:     frase += "abril ";      break
+        case 4:     frase += "mayo ";       break
+        case 5:     frase += "junio ";      break
+        case 6:     frase += "julio ";      break
+        case 7:     frase += "agosto ";     break
+        case 8:     frase += "septiembre "; break
+        case 9:     frase += "octubre ";    break
+        case 10:    frase += "noviembre ";  break
+        case 11:    frase += "diciembre ";  break     
+    }
+
+    anio=fecha.getFullYear()
+    frase+="de "+anio
+
+    zona=Intl.DateTimeFormat().resolvedOptions().timeZone
+    zona=zona.replace("/"," ")
+    zona=zona.replace("_"," ")
+
+    frase+=", en "+zona
+
+    temperatura=getTemperatura()
+    clima=getClima()
+
+    frase+=", la temperatura es "+temperatura+" grados centígrados"
+
+    frase+=", hay "+clima+", y esta "
+
+    /*
+        temperatura<5                       frio polar
+        temperatura>=5 && temperatura <10   frio
+        temperatura>=10 && temperatura <15  fresco
+        temperatura>=15 && temperatura <25  agradable
+        temperatura>=25 && temperatura <30  calido
+        temperatura>=30                     muy caluroso
+    */
+
+    if(temperatura<5)                       frase+="frio polar"      
+    if(temperatura>=5 && temperatura<10)    frase+="frio"   
+    if(temperatura>=15 && temperatura<25)   frase+="agradable"   
+    if(temperatura>=25 && temperatura<30)   frase+="calido"   
+    if(temperatura>=30)                     frase+="muy caluroso"   
+
+    if(clima.includes("lluvi") || clima.includes("llov"))
+            frase+=", salir con paraguas"
+
+    //Momento del día
+    /*
+        0 a 6 hs        es momento de dormir
+        6 a 7 hs        esta amaneciendo
+        7 a 8 hs        es momento de desayunar
+        7 a 12 hs       estamos de mañana
+        12 a 13 hs      es momento de almorzar
+        13 a 17 hs      es de tarde
+        17 a 18 hs      es momento de merendar
+        18 a 20 hs      esta anocheciendo
+        20 a 21 hs      es momento de cenar
+        21 a 24 hs      es momento de ver series
+
+    */
+    hora=fecha.getHours()
+    /*
+    if(hora>=0 && hora <6)          frase+=", es momento de dormir"
+    if(hora>=6 && hora <7)          frase+=", esta amaneciendo"
+    if(hora>=7 && hora <8)          frase+=", es momento de desayunar"
+    if(hora>=7 && hora <12)         frase+=", estamos de mañana"
+    if(hora>=12 && hora <13)        frase+=", es momento de almorfar"
+    if(hora>=13 && hora <17)        frase+=", es atadercer"
+    if(hora>=17 && hora <18)        frase+=", es momento de merendar"
+    if(hora>=18 && hora <20)        frase+=", esta anocheciendo"
+    if(hora>=20 && hora <21)        frase+=", es momento de cenar"
+    if(hora>=21 && hora <24)        frase+=", es momento de ver series"
+    */
+    //hora=8
+    switch (hora) {
+        case 0:  case 1:  case 2:  case 3:  case 4:  case 5:
+                        frase+=", es momento de dormir";        break
+        case 6:         frase+=", esta amaneciendo";            break
+        case 7:         frase+=", es momento de desayunar"
+        case 8:  case 9:  case 10:  case 11:
+                        frase+=", estamos de mañana";           break
+        case 12:        frase+=", es momento de almorfar";      break
+        case 13: case 14: case 15: case 16:
+                        frase+=", es atadercer";                break
+        case 17:        frase+=", es momento de merendar";      break
+        case 18: case 19: 
+                        frase+=", esta anocheciendo";           break
+        case 20:        frase+=", es momento de cenar";         break
+        case 21: case 22: case 23:  
+                        frase+=", es momento de ver series"    
+    }
+    //Estación del año
+    //document.writeln(diaMes)
+    //document.writeln(mes)
+
+    //Solución muy compleja
+    //if((mes==11 && dia>=21) ||mes==0 || mes==1 || (mes==2 && dia<21) ) frase+=", estamos en verano"
+    //if((mes==2 && dia>=21) || mes==3 || mes==4 || (mes==5 && dia<21) ) frase+=", estamos en otoño"
+    //if((mes==5 && dia>=21) || mes==6 || mes==7 || (mes==8 && dia<21) ) frase+=", estamos en invierno"
+    //if((mes==8 && dia>=21) || mes==9 || mes==10 || (mes==11 && dia<21))frase+=", estamos en primavera"
+    
+    //Solución de facil lectura
+    /*
+    if(mes==0)                      frase+=", estamos en verano"
+    if(mes==1)                      frase+=", estamos en verano"
+    if(mes==2 && diaMes<21)         frase+=", estamos en verano"
+    if(mes==2 && diaMes>=21)        frase+=", estamos en otoño"
+    if(mes==3)                      frase+=", estamos en otoño"
+    if(mes==4)                      frase+=", estamos en otoño"
+    if(mes==5 && diaMes<21)         frase+=", estamos en otoño"
+    if(mes==5 && diaMes>=21)        frase+=", estamos en invierno"
+    if(mes==6)                      frase+=", estamos en invierno"
+    if(mes==7)                      frase+=", estamos en invierno"
+    if(mes==8 && diaMes<21)         frase+=", estamos en invierno"
+    if(mes==8 && diaMes>=21)        frase+=", estamos en primavera"
+    if(mes==9)                      frase+=", estamos en primavera"
+    if(mes==10)                     frase+=", estamos en primavera"
+    if(mes==11 && diaMes<21)        frase+=", estamos en primavera"
+    if(mes==11 && diaMes>=21)       frase+=", estamos en verano"
+    */
+
+    frase+=", estamos en "
+    switch(mes){
+        case 0:  case 1:            frase+="verano";       break
+        case 3:  case 4:            frase+="otoño";        break 
+        case 6:  case 7:            frase+="invierno";     break
+        case 9:  case 10:           frase+="primavera";    break
+        case 2:  if(diaMes<21)      frase+="verano"
+                 else               frase+="otoño";        break 
+        case 5:  if(diaMes<21)      frase+="otoño"
+                 else               frase+="invierno";     break
+        case 8:  if(diaMes<21)      frase+="invierno"
+                 else               frase+="primavera";    break
+        case 11: if(diaMes<21)      frase+="primavera"
+                 else               frase+="verano";       break 
+    }
+
+    if(diaMes==29)                  frase+=", hoy es 29 hoy comemos ñoquis!"
+
+    //Día laboral        
+    /*
+        sábado o domingo            hoy es día de descanso
+        lunes                       odio los lunes por que hay que ir a trabajar
+        martes miercoles jueves     hay que ir a trabajar
+        viernes                     hoy es viernes y tu cuerpo lo sabe
+    */
+    //document.writeln(diaSem)
+    frase +=", hoy es "
+
+    /*
+    if (diaSem == 0) frase += "domingo "
+    if (diaSem == 1) frase += "lunes "
+    if (diaSem == 2) frase += "martes "
+    if (diaSem == 3) frase += "miércoles "
+    if (diaSem == 4) frase += "jueves "
+    if (diaSem == 5) frase += "viernes "
+    if (diaSem == 6) frase += "sábado "
+    if(diaSem==0 || diaSem==6)                  frase+=", hoy es día de descanso"
+    if(diaSem==1)                               frase+=", odio los lunes porque hay que ir a trabajar"
+    if(diaSem==2 || diaSem==3 || diaSem==4)     frase+=", hoy hay que ir a trabajar"
+    if(diaSem==1)                               frase+=", hoy es viernes y tu cuerpo lo sabe"
+    */
+
+    switch(diaSem){
+        case 0:     frase += "domingo ";    break
+        case 1:     frase += "lunes";       break
+        case 2:     frase += "martes ";     break
+        case 3:     frase += "miércoles ";  break
+        case 4:     frase += "jueves ";     break
+        case 5:     frase += "viernes ";    break
+        case 6:     frase += "sábado ";     break
+    }
+
+    switch(diaSem){
+        case 6: case 0:     
+                frase+=", hoy es día de descanso";                          break
+        case 1: frase+=", odio los lunes porque hay que ir a trabajar";     break   
+        case 2: case 3: case 4:
+                frase+=", hoy hay que ir a trabajar";                       break     
+        case 5: frase+=", hoy es viernes y tu cuerpo lo sabe";              break                
+    }
+
+    frase+=", "+getFraseRandom()
+
+    document.writeln(frase)     
+    //hablar(frase)
+</script>

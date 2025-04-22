@@ -1,0 +1,46 @@
+<script>
+    nombre=prompt("Ingrese su nombre: ")
+    edad=parseFloat(prompt("Ingrese su edad: "))
+
+    fecha=new Date()
+    dia=fecha.getDay()
+
+
+    /*
+        0 - Domingo
+        1 - Lunes
+        2 - Martes
+        3 - Miércoles
+        4 - Jueves
+        5 - Viernes
+        6 - Sábado
+
+    */
+    if(dia==0){
+        document.writeln("Hoy es domingo!<br>")
+    }
+    if(dia==1){
+        document.writeln("Hoy es Lunes!<br>")
+    }
+    if(dia==2){
+        document.writeln("Hoy es Martes!<br>")
+    }
+    if(dia==3){
+        document.writeln("Hoy es Miércoles!<br>")
+    }
+    if(dia==4){
+        document.writeln("Hoy es Jueves!<br>")
+    }
+    if(dia==5){
+        document.writeln("Hoy es Viernes!<br>")
+    }
+    if(dia==6){
+        document.writeln("Hoy es Sábado!<br>")
+    }
+
+    if(edad>=18){
+        document.writeln("Hola "+nombre+"<br>")
+        document.writeln("Usted es mayor de edad!<br>")
+    }
+
+</script>
