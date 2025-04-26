@@ -11,6 +11,7 @@ function horaActual(){
 
 function fechaActual(){
     hablar("Hoy es "+getFecha()+" "+hoyEs()+" estamos en "+getEstacion()+", ")
+    efemerides()
 }
 
 function climaActual(){
@@ -23,7 +24,7 @@ function climaActual(){
     if(temperatura>0 && temperatura<=5)         hablar("Hace frio, hay heladas!")
     if(temperatura>5 && temperatura<=10)        hablar("Esta fresco!")
     if(temperatura>10 && temperatura<=15)       hablar("Esta Templado!")
-    if(temperatura>15 && temperatura<=20)       hablar("Agradable!")
+    if(temperatura>15 && temperatura<=20)       hablar("Esta Agradable!")
     if(temperatura>20 && temperatura<=25)       hablar("Esta cálido!")
     if(temperatura>25 && temperatura<=30)       hablar("Hace Calor!")
     if(temperatura>30 && temperatura<=35)       hablar("Hace Mucho Calor!")
@@ -46,14 +47,6 @@ function climaActual(){
 
 function ubicacion(){
     hablar("nos encontramos en "+getProvincia()+", país "+getPais()+", en la región de "+getRegion()+", ")
-}
-
-function tiempo(){
-    ubicacion()
-    horaActual()
-    fechaActual()
-    efemerides()
-    climaActual()
 }
 
 function efemerides(){
