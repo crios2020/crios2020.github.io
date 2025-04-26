@@ -1,4 +1,5 @@
 function hola(){
+    callar()
     hablar("Hola soy OPA, un carpincho, asistente personal libre, estoy para ayudarte!")
     hablar("Soy un bot de inteligencia artificial, ")
     hablar("tengo información del tiempo y trayectos de estudios.")
@@ -6,15 +7,18 @@ function hola(){
 }
 
 function horaActual(){
+    callar()
     hablar(" es la hora "+getHora()+" es "+getMomento()+" es momento de "+getMomentoAccion()+", ")
 }
 
 function fechaActual(){
+    callar()
     hablar("Hoy es "+getFecha()+" "+hoyEs()+" estamos en "+getEstacion()+", ")
     efemerides()
 }
 
 function climaActual(){
+    callar()
     temperatura=getTemperatura()
     clima=getClima()
     hablar("La temperatura es "+temperatura+" grados centígrados ")
@@ -22,10 +26,10 @@ function climaActual(){
 
     if(temperatura<=0)                          hablar("Cuidado! Hace muchisimo frio, esta nevando!")
     if(temperatura>0 && temperatura<=5)         hablar("Hace frio, hay heladas!")
-    if(temperatura>5 && temperatura<=10)        hablar("Esta fresco!")
-    if(temperatura>10 && temperatura<=15)       hablar("Esta Templado!")
-    if(temperatura>15 && temperatura<=20)       hablar("Esta Agradable!")
-    if(temperatura>20 && temperatura<=25)       hablar("Esta cálido!")
+    if(temperatura>5 && temperatura<=10)        hablar("Está fresco!")
+    if(temperatura>10 && temperatura<=15)       hablar("Está Templado!")
+    if(temperatura>15 && temperatura<=20)       hablar("Está Agradable!")
+    if(temperatura>20 && temperatura<=25)       hablar("Está cálido!")
     if(temperatura>25 && temperatura<=30)       hablar("Hace Calor!")
     if(temperatura>30 && temperatura<=35)       hablar("Hace Mucho Calor!")
     if(temperatura>35 && temperatura<=40)       hablar("Cuidado! Hace muchisimo Calor!")
@@ -46,6 +50,7 @@ function climaActual(){
 }
 
 function ubicacion(){
+    callar()
     hablar("nos encontramos en "+getProvincia()+", país "+getPais()+", en la región de "+getRegion()+", ")
 }
 
@@ -120,6 +125,7 @@ function efemerides(){
 }
 
 function info(){
+    callar()
     hablar("Soy un bot de inteligencia artificial, fui programado en javascript")
     hablar("¡Estudia con nósotros y formate profesionalmente como programador!")
     hablar("¡El trayecto de programación dura 364 horas reloj!")
@@ -132,6 +138,7 @@ function info(){
 }
 
 function bardear(){
+    callar()
     for(a=1; a<=10; a++){
         hablar(getFraseRandom())
     }

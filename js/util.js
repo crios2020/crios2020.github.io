@@ -18,8 +18,15 @@ const apiGeo = {
  * @param {*} mensaje Mensaje a generar
  */
 function hablar(mensaje) {
-    const message = new SpeechSynthesisUtterance(mensaje);
-    speechSynthesis.speak(message);
+    message = new SpeechSynthesisUtterance(mensaje)
+    window.speechSynthesis.speak(message)
+}
+
+/**
+ * Esta función detiene el sintetizador de voz
+ */
+function callar(){
+    window.speechSynthesis.cancel()
 }
 
 /**
@@ -170,8 +177,8 @@ function hoyEs() {
     if (diaSem == 3) hoy = "Hoy es Miércoles hay que ir a trabajar!"
     if (diaSem == 4) hoy = "Hoy es Jueves hay que ir a trabajar!"
     if (diaSem == 5) hoy = "Hoy es viernes y tu cuerpo lo sabe!"
-    if (diaSem == 6) hoy = "Es fin de semana a descansar!"
-    if (diaSem == 0) hoy = "Es fin de semana a descansar!"
+    if (diaSem == 6) hoy = "Es fin de semana, a descansar!"
+    if (diaSem == 0) hoy = "Es fin de semana, a descansar!"
     return hoy
 
 }
