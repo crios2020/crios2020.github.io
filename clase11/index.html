@@ -1,0 +1,116 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+    //Estructura while
+    a=1
+    writeln("-- Inicio de Estructura While --")
+    while(a<=10){
+        writeln(a)
+        a++
+    }
+    writeln("-- Fin de estructura While --")
+    writeln(a)
+
+    //Estructura FOR
+    writeln("-- Inicio de Estructura For --")
+    for(a=1; a<=10; a++){
+        writeln(a)
+    }
+    writeln("-- Fin de Estructura For --")
+    writeln(a)
+
+    /*
+        Cuando usar FOR?
+        cuando conocemos en que valor iniciar y en que valor terminar de iterar
+
+        Cuando usar While?
+        cuando no conocemos cuando terminar y el terminar depende de un factor 
+            externo al programa
+    */
+
+    //Modo de uso de llaves recomendado para javascript y java
+    for(a=1; a<=10; a++){
+        writeln(a)
+    }
+
+    //Modo de uso de llaves recomendado por Microsoft y educativo
+    for(a=1; a<=10; a++)
+    {
+        writeln(a)
+    }
+
+    //Modo de uso de llaves abreviado
+    for(a=1; a<=10; a++)    writeln(a)
+    
+    //usar variable de control externa
+    writeln("----------------------------------------------")
+    writeln(a)
+    writeln("----------------------------------------------")
+    for(a++;a<=20;a++){
+        writeln(a)
+    }
+    writeln("----------------------------------------------")
+    for(;a<=30;a++){
+        writeln(a)
+    }
+
+    //omisión de parametros
+    writeln("Omisión de parámetros")
+    a=1
+    for(;;){
+        writeln(a)
+        if(a>=10) break
+        a++
+    }
+
+    //Recorrido con varias variables de control
+    writeln("----------------------------------------------")
+    for(r=1, s=1; r<=5 && s<=10; s++, r++){
+        writeln(r+" "+s)
+    }
+    writeln("----------------------------------------------")
+    for(r=1, s=1; r<=5 || s<=10; s++, r++){
+        writeln(r+" "+s)
+    }
+
+    //loop infinito
+    // for(;;){
+    //     //writeln(a)
+    // }
+
+    //loop infinito
+    //for(a=1;true;a++){
+    //    writeln(a)
+    //}
+
+    //loop infinito
+    //for(a=1;a<=10 || true;a++){
+    //    writeln(a)
+    //}
+
+    //loop infinito
+    //for(a=1;a<=10 || a>=1;a++){
+    //    writeln(a)
+    //}
+
+    //loop infinito
+    // for(a=1;a<=10;a++){
+    //    writeln(a--)
+    //}
+
+    //loop infinito
+    //for(a=1;a<=10;){
+    //    writeln(a)
+    //}
+
+    //loop infinito
+    //b=2
+    //for(a=b;b<=10;a++){
+    //    writeln(a)
+    //}
+
+    //loop infinito
+    //b=2
+    //for(a=b;a<=10;b++){
+    //    writeln(a)
+    //}
+</script>

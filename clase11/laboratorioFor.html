@@ -1,0 +1,214 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+    // Ejercicio 1
+    // Imprimir los números del 1 al 10 uno abajo del otro.
+    writeln("-- Ejercicio 1 --")
+    for(a=1; a<=10; a++) writeln(a)
+    // Ejercicio 2
+    // Imprimir los números del 1 al 10 salteando de a dos uno abajo del otro.
+    writeln("-- Ejercicio 2 --")
+    for(a=1; a<=10; a+=2) writeln(a)
+    // Ejercicio 3
+    // Imprimir los números del 10 al 1 uno abajo del otro.
+    writeln("-- Ejercicio 3 --")
+    for(a=10; a>=1; a--) writeln(a)
+    // Ejercicio 4
+    // Imprimir la suma de los números impares del 1 al 10.
+    writeln("-- Ejercicio 4 --")
+    suma=0
+    for(a=1; a<=10; a+=2) suma+=a
+    writeln("Total: "+suma)
+
+    // Ejercicio 5
+    // Mostrar la suma de
+    // la multiplicación de los números del 1 al 5
+    // con
+    // la suma de los números del 1 al 5.
+    writeln("-- Ejercicio 5 --")
+    suma=0
+    multi=1
+    for(a=1; a<=5; a++){
+        multi*=a
+        suma+=a
+    }
+    writeln("Total: "+(multi+suma))
+
+    // Ejercicio 6
+    // Imprimir la siguiente figura utilizando la estructura for:
+    // @
+    // @
+    // @
+    // @
+    // @
+    writeln("-- Ejercicio 6 --")
+    for(a=1; a<=5; a++){
+        writeln("@")
+    }
+
+    // Bonus
+    // @@@@@
+    writeln("-- Bonus --")
+    for(a=1; a<=5; a++){
+        write("@")
+    }
+    writeln("")
+    
+    // Ejercicio 7
+    // Imprimir la siguiente figura utilizando la estructura for:
+    // @
+    // @@
+    // @
+    // @@
+    // @
+    writeln("-- Ejercicio 5 --")
+    for(a=1; a<=5; a++){
+        if(a%2==0)      writeln("@@")
+        else            writeln("@")
+    }
+
+    // Bonus
+    // @@@@@
+    // @@@@@
+    // @@@@@
+    // @@@@@
+    // @@@@@
+    writeln("-- Bonus --")
+    //writeln("@@@@@")
+    //writeln("@@@@@")
+    //writeln("@@@@@")
+    //writeln("@@@@@")
+    //writeln("@@@@@")
+    // for(a=1; a<=5; a++){
+    //     writeln("@@@@@")
+    // }
+
+    for(x=1; x<=5; x++){
+        for(a=1; a<=5; a++){
+            write("@")
+        }
+        writeln("")
+    }
+
+
+
+    // Ejercicio 8
+    // Imprimir la siguiente figura utilizando la estructura for:
+    // @
+    // @@
+    // @@@
+    // @@@@
+    // @@@@@
+    writeln("-- Ejercicio 8 --")
+    for(x=1; x<=5; x++){
+        for(a=1; a<=x; a++){
+            write("@")
+        }
+        writeln("")
+    }
+    
+    // Ejercicio 9
+    // Imprimir la siguiente figura utilizando la estructura for:
+    // @@@@@
+    // @@@@
+    // @@@
+    // @@
+    // @
+    writeln("-- Ejercicio 9 --")
+    for(x=5; x>=1; x--){
+        for(a=1; a<=x; a++){
+            write("@")
+        }
+        writeln("")
+    }
+
+    // Ejercicio 10
+    // Imprimir la siguiente figura utilizando la estructura for:
+    // @
+    // @@
+    // @@@
+    // @@@@
+    // @@@
+    // @@
+    // @
+    writeln("-- Ejercicio 10 --")
+    for(x=1; x<=4; x++){
+        for(a=1; a<=x; a++){
+            write("@")
+        }
+        writeln("")
+    }
+    for(x=3; x>=1; x--){
+        for(a=1; a<=x; a++){
+            write("@")
+        }
+        writeln("")
+    }
+    // Ejercicio 11
+    // Imprimir la siguiente figura utilizando la estructura for:
+    // @@@@@
+    // @@@
+    // @
+    // @@@
+    // @@@@@
+    writeln("-- Ejercicio 11 --")
+    for(x=5; x>=1; x-=2){
+        for(a=1; a<=x; a++){
+            write("@")
+        }
+        writeln("")
+    }
+    for(x=3; x<=5; x+=2){
+        for(a=1; a<=x; a++){
+            write("@")
+        }
+        writeln("")
+    }
+
+    // Bonus
+    // @@@@@@@
+    // @@@ @@@
+    // @@   @@
+    // @     @
+    // @@   @@
+    // @@@ @@@
+    // @@@@@@@
+    writeln("-- Bonus --")
+    for(x=1; x<=4; x++){
+        for(a=1; a<=7; a++){
+            if(a<=5-x || a>=3+x)        write("@")
+            else                        write("__")
+        }
+        writeln("")
+    }
+    for(x=3; x>=1; x--){
+        for(a=1; a<=7; a++){
+            if(a<=5-x || a>=3+x)        write("@")
+            else                        write("__")
+        }
+        writeln("")
+    }
+
+    // Bonus 2
+    //    *
+    //   ***
+    //  *****
+    // *******
+    //  *****
+    //   ***
+    //    *
+    writeln("-- Bonus2 --")
+    for(x=1; x<=4; x++){
+        for(a=1; a<=7; a++){
+            if(a<=4-x || a>=4+x)        write("_")
+            else                        write("*")
+        }
+        writeln("")
+    }
+    for(x=3; x>=1; x--){
+        for(a=1; a<=7; a++){
+            if(a<=4-x || a>=4+x)        write("_")
+            else                        write("*")
+        }
+        writeln("")
+    }
+</script>

@@ -1,0 +1,32 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+    //for anidado
+    cont = 1
+    for (r = 1; r <= 10; r++) {
+        for (s = 1; s <= 10; s++) {
+            for (t = 1; t <= 10; t++) {
+                writeln(r + " - " + s + " - " + t + " - " + cont)
+                cont++
+            }
+        }
+    }
+
+    //horas del reloj
+    for(hora=0; hora<24; hora++){
+        for(minuto=0; minuto<60; minuto++){
+            for(segundo=0; segundo<60; segundo++){
+                writeln(
+                            String(hora).padStart(2, '0')+":"+
+                            String(minuto).padStart(2, '0')+":"+
+                            String(segundo).padStart(2, '0'))
+            }
+        }
+    }
+
+    nombre=prompt("Ingrese su nombre: ")
+    writeln("hola "+nombre)
+    document.writeln("hola "+nombre)
+    print("hola "+nombre)
+    writeln("Temperatura: "+getTemperatura())
+    
+</script>
