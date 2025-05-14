@@ -52,12 +52,69 @@ function writeln(mensaje){
 /**
  * función usada para imprimir en el DOM, y facilitar el
  * trabajo educativo a nicel inicial.
- * El nombre el para emular el print de python
+ * El nombre es para emular el print de python
  * No recomendado para usar en productos destinados a ambientes de producción
  * @param {mensaje a escribir en el DOM} mensaje 
  */
 function print(mensaje){
     document.writeln(mensaje+"<br>")
+}
+
+/**
+ * función usada para imprimir sin salto de linea en el DOM, y facilitar el
+ * trabajo educativo a nicel inicial.
+ * El nombre es para emular el print de python
+ * No recomendado para usar en productos destinados a ambientes de producción
+ * @param {mensaje a escribir en el DOM} mensaje 
+ */
+function printx(mensaje){
+    document.writeln(mensaje)
+}
+
+/**
+ * función usada para imprimir en el DOM, y facilitar el
+ * trabajo educativo a nicel inicial.
+ * El nombre es para emular el print de PSeint
+ * No recomendado para usar en productos destinados a ambientes de producción
+ * @param {mensaje a escribir en el DOM} mensaje 
+ */
+function imprimir(mensaje){
+    document.writeln(mensaje+"<br>")
+}
+
+/**
+ * función usada para imprimir sin salto de linea en el DOM, y facilitar el
+ * trabajo educativo a nicel inicial.
+ * El nombre es para emular el print de PSeint
+ * No recomendado para usar en productos destinados a ambientes de producción
+ * @param {mensaje a escribir en el DOM} mensaje 
+ */
+function imprimirx(mensaje){
+    document.writeln(mensaje)
+}
+
+/**
+ * función usada para entrada de datos, y facilitar el
+ * trabajo educativo a nicel inicial.
+ * El nombre es para emular un input básico
+ * No recomendado para usar en productos destinados a ambientes de producción
+ * @param {mensaje a mostrar} mensaje 
+ * @returns valor ingresado
+ */
+function input(mensaje){
+    return prompt(mensaje)
+}
+
+/**
+ * función usada para entrada de datos, y facilitar el
+ * trabajo educativo a nicel inicial.
+ * El nombre es para emular un input de PSeint
+ * No recomendado para usar en productos destinados a ambientes de producción
+ * @param {mensaje a mostrar} mensaje 
+ * @returns valor ingresado
+ */
+function entrada(mensaje){
+    return prompt(mensaje)
 }
 
 /**
