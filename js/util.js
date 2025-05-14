@@ -822,7 +822,18 @@ const frases = [
     "En Bolivia me llaman capiguara!",
     "En otros paises me dicen capiguara!",
     "Me gusta tomar Mate!",
-    "Yo vivo en Nordelta, provincia de Buenos Aires"
+    "Yo vivo en Nordelta, provincia de Buenos Aires",
+    "Ahora tengo una diseñadora gráfica, pronto voy a estar más bonito!",
+    "Mi diseñadora gráfica se llama Romina!",
+    "Mi diseñadora gráfica me quiere mucho!",
+    "Yo se que soy muy lindo!",
+    "Me cuesta mucho superarme, soy insuperable, soy maravilloso",
+    "Tengo fiaca",
+    "Yo argentino",
+    "Que pretende usted de mi?",
+    "Soy un carpincho cheto!",
+    "en mi barrio eso es pelea!",
+    "no te cortés!"
 ]
 
 function getRandomInt(max) {
