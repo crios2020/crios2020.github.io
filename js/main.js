@@ -290,7 +290,13 @@ const estudios = [
     "Deberías estudiar Gastronomía",
     "Deberías estudiar Mecánica automotriz",
     "Deberías estudiar Turismo",
-    "Deberías estudiar Marroquinería"
+    "nada mejor que aprender oficios",
+    "querés un consejo? aprende un oficio",
+    "Cual será tu próximo oficio?",
+    "construye tu futuro!",
+    "Pensaste que oficio deseas aprender?",
+    "Cual es tu oficio preferido?",
+    "Al que trabaja Díos lo ayuda, pero al que estudia Díos lo Ama"
 ]
 
 function getEstudiosRandom(){
