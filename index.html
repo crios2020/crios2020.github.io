@@ -13,13 +13,11 @@
 <body>
     <div class="container-lg bg-info-subtle">
         <h1 class="text-primary text-center bg-secondary-subtle">Open Personal Assistant OPA</h1>
-        <!-- <p class="text-warning text-center p-2 m-2 bg-secondary-subtle">Habla con OPA!</p> -->
         <div class="container-fluid text-center">
 
-            <!-- Nuevo Maquetado!! -->
             <div class="row">
                 <div class="col-sm-6" style="background-color:#aaa">
-                    <img src="images/carpincho.jpeg" class="img-thumbnail" alt="asistente persona libre">
+                    <img src="images/carpincho.jpeg" class="img-fluid" alt="asistente persona libre">
                 </div>
                 <div class="col-sm-6" style="background-color:#bbb">
                     <div class="col d-grid gap-2">
@@ -41,11 +39,19 @@
                         </button>
                         <button type="button" class="btn btn-success btn-sm" onclick="ubicacion()">
                             <img src="icons/globe-americas.svg">
-                            Ubicacion
+                            Ubicación
                         </button>
-                        <button type="button" class="btn btn-success btn-sm" onclick="info()">
+                        <button type="button" class="btn btn-success btn-sm" onclick="fp()">
                             <img src="icons/cup-hot.svg">
-                            Info
+                            Formación profesional
+                        </button>
+                        <button type="button" class="btn btn-success btn-sm" onclick="programacion()">
+                            <img src="icons/cup-hot.svg">
+                            Estudiar programación
+                        </button>
+                        <button type="button" class="btn btn-success btn-sm" onclick="estudiar()">
+                            <img src="icons/cup-hot.svg">
+                            Que puedo estudiar?
                         </button>
                         <button type="button" class="btn btn-success btn-sm" onclick="bardear()">
                             <img src="icons/chat.svg">
@@ -55,6 +61,8 @@
                 </div>
             </div>
 
+            <!-- No disponible para el evento de noche de los oficios -->
+            <!--
             <div class="container-fluid text-center">
                 <div class="row bg-success-subtle">
                     <a class="btn btn-primary btn-sm col m-2" href="/calculadora/index.html">
@@ -66,7 +74,7 @@
                         IMC
                     </a>
                 </div>
-                <!--
+                
                 <div class="row bg-success-subtle">
                     <a class="btn btn-success btn-sm col m-2" href="/calculadora/index.html">
                         <img src="icons/conversor.svg">
@@ -77,9 +85,8 @@
                         Cambio USD
                     </a>
                 </div>
-                -->
             </div>
-
+            -->
             <div class="container-fluid text-center">
                 <p class="text-success text-center p-2 bg-secondary-subtle">
                     Se recomienda usar el navegador Chrome o Edge
@@ -91,7 +98,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://crios2020.github.io/js/util.js"></script>
-    <!-- <script src="/js/util.js"></script> -->
     <script src="js/main.js"></script>
 </body>
 

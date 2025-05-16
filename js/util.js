@@ -891,7 +891,13 @@ const frases = [
     "tu moto te deja a pata? estudia reparación de motos",
     "estas cansado de ir al mecánico? estudia mecánica del automotor",
     "tenés una moto vieja? estudia reparación de motos",
-    "tenés un auto viejo? estudia mecánica del automotor"
+    "tenés un auto viejo? estudia mecánica del automotor",
+    "Fui programado en javascript!",
+    "Abrazame tengo frio!",
+    "Abrazame tengo miedo!",
+    "Tengo hambre!",
+    "Sabías que ",
+    "Hoy te convertis en heroe! "
 ]
 
 

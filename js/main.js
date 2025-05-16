@@ -96,7 +96,7 @@ function efemerides(){
     if(diaMes==17 && mes==3)                    hablar(" Feliz San Patricio, a tomar cerveza!! ")
 
     //día del aprendiz
-    if(diaMes==3 && mes==5)                     hablar(" Feliz día del aprendiz")
+    if(diaMes==3 && mes==5)                     hablar(" Feliz día del aprendiz, hoy es la noche de los oficios!")
 
     //día del mecánico 
     if(diaMes==24 && mes==1)                    hablar(" Feliz día del mecánico!! ")
@@ -124,7 +124,16 @@ function efemerides(){
 
 }
 
-function info(){
+function fp(){
+    callar()
+    hablar("Formación Profesional ")
+    hablar("Es una modalidad de capacitación integral destinada a ofrecer las herramientas y habilidades necesarias para el desarrollo eficaz en el mundo del trabajo.")
+    hablar("A través de los cursos, trayectos y capacitaciones laborales prepara, actualiza y capacita para que jóvenes y adultos puedan mejorar sus oportunidades de empleabilidad.")
+    hablar("Nuestra oferta está orientada a temáticas como: Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Construcciones, Textil, Estética, entre otros.")
+    hablar("Toda la oferta es gratuita y cuenta con certificación oficial de validez nacional.")
+}
+
+function programacion(){
     callar()
     hablar("Soy un bot de inteligencia artificial, fui programado en javascript")
     hablar("¡Estudia con nósotros y formate profesionalmente como programador!")
@@ -137,9 +146,153 @@ function info(){
     hablar("También tenemos especialización en video juegos, programación web, programación segura y cyberseguridad, y administración de base de datos.")
 }
 
+function estudiar(){
+    callar()
+        for(a=1; a<=16; a++){
+        hablar(getEstudiosRandom())
+    }
+}
+
 function bardear(){
     callar()
-    for(a=1; a<=10; a++){
+    for(a=1; a<=12; a++){
         hablar(getFraseRandom())
     }
+}
+
+const estudios = [
+    "No me canso de decir que ",
+    "No tengo más pretextos pero", 
+    "Es Hora de admitir que ",
+    "No hay mas manera de decir que ",
+    "Lo siento debo decir que ",
+    "No te enojes con migo si ",
+    "Debes admitir que ",
+    "Mi Madre me dijo que ", 
+    "Tus amigos saben que ",
+    "Me contaron que ",
+    "A veces pienso en voz alta y ",
+    "Muy seguido quiero decir que ",
+    "Son muchos los motivos para contarte que ",
+    "Por que ",
+    "No debes mirarme así ",
+    "¡Tu piensas lo mismo que yo! ",
+    "¡Ni lo intentes! ",
+    "No te asombres si te digo que ",
+    "Vos sabés que ",
+    "¿Que duda te cabe? ",
+    "¡Veo que tenemos pocas ganas de trabajar! ",
+    "Según mis registros encontré que ",
+    "Según mis datos veo que ",
+    "En mi base de datos encontré que ",
+    "No creo que quieras escuchar que ",
+    "No creo que quieras saber que ",
+    "Te veo poco interesado en saber que ",
+    "Es mucho muy importante saber que ",
+    "Me gusta hablar sin pelos en la lengua ",
+    "¿Te gustaría estudiar programación? ",
+    "¿Té gustaría estudiar Java?",
+    "¿Té gustaría estudiar Tester de Aplicaciónes?",
+    "¿Té gustaría estudiar Javaescript?",
+    "¿Té gustaría estudiar Paiton?",
+    "¿Té gustaría estudiar Cyber Seguridad?",
+    "¿Té gustaría estudiar Análisis de datos?",
+    "¿Té gustaría estudiar Programación Web?",
+    "Quieres ganar buena guita, estudia programación",
+    "No levantes la perdiz! hay que estudiar programación",
+    "¿Más claro? Echale agua",
+    "No vendo humo ",
+    "Vi luz y subí ",
+    "No trabajes por el pancho y la coca, vení a estudiar programación",
+    "Estudia programación, más vale tarde que nunca!",
+    "Nada que perder, todo por ganar!",
+    "La programación es divertida",
+    "éstudia Marketing digital",
+    "Te gustaría estudiar Marketing digital?",
+    "éstudia Análisis de datos",
+    "Te gustaría estudiar análisis de datos?",
+    "Hacete conocer, estudiá marketing digital",
+    "Convertite en un Bi Ai, estudia análisis de datos",
+    "Domina la inteligencia de negocio con análisis de datos",
+    "Tu vida pide alegría, por eso vení a estudiar con nosotros",
+    "como te dije antes",
+    "Deberías estudiar energías renovables",
+    "éstudia energías renovables",
+    "Contribuye con el medio ambiente, éstudia energías renovables",
+    "Te falta un tornillo, imprimilo en 3 d, éstudia modelado 3 d",
+    "éstudia modelado 3 d",
+    "deberías estudiar modelado 3 d",
+    "éstudia reparación de celulares",
+    "deberías estudiar reparación de celulares",
+    "potencia tus ventas con marketing digital",
+    "querés ser famoso como yo, estudia marketing digital",
+    "pronto inician los cursos de reparación de celulares",
+    "sabemos que",
+    "me alegra saber que",
+    "éstudia instalación de alarmas de seguridad",
+    "éstudia reparación de equipos de climatización",
+    "éstudia reparación de aires acondicionado",
+    "éstudia instalación de redes informáticas",
+    "éstudia reparación de impresoras 3 D",
+    "éstudia electricidad básica",
+    "tenemos cursos con inserción laboral",
+    "siempre es bueno estudiar",
+    "mejora tus capacidades laborales, éstudia con nosotros",
+    "no lo dudes, estudia con nosotros",
+    "En formación profesional, brindamos capacitaciones gratuitas",
+    "no sabes que hacer de tu vida? Vení a estudiar con nosotros",
+    "te sentís solo? Vení a estudiar con nosotros",
+    "tu amor te dejó? Vení a estudiar con nosotros",
+    "estas sin trabajo? Vení a estudiar con nosotros",
+    "estas depre? Vení a estudiar con nosotros y te alegramos el día",
+    "dale a tu vida un cambio, vení a estudiar con nosotros",
+    "ponele fin a los problemas, vení a estudiar con nosotros",
+    "tu moto te deja a pata? estudia reparación de motos",
+    "estas cansado de ir al mecánico? estudia mecánica del automotor",
+    "tenés una moto vieja? estudia reparación de motos",
+    "tenés un auto viejo? estudia mecánica del automotor",
+    "Sabías que ",
+    "tenemos capacitaciones en Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Construcciones, Textil, Estética, entre otros.",
+    "Toda nuestra oferta educativa es gratuita",
+    "Toda nuestra oferta educativa cuenta con certificación oficial de validez nacional.",
+    "Otro año sin trabajo? vení a estudiar con nostros!",
+    "tenemos oferta educativa de administración ",
+    "tenemos oferta educativa de informática ",
+    "tenemos oferta educativa de comunicación y producción audiovisual",
+    "tenemos oferta educativa de construcciones",
+    "tenemos oferta educativa de cuero y calzado",
+    "tenemos oferta educativa de Energia y dispositivos electricos",
+    "tenemos oferta educativa de Estetica",
+    "tenemos oferta educativa de Hotelería",
+    "tenemos oferta educativa de Gastronomía",
+    "tenemos oferta educativa de Mecánica automotriz",
+    "tenemos oferta educativa de Turismo",
+    "tenemos oferta educativa de Marroquineria",
+    "potencia tu carrera y asegura tu futuro, estudia con nosotros!",
+    "no sabes que hacer? estudia administración",
+    "no sabes que hacer? estudia informática",
+    "no sabes que hacer? estudia producción audiovisual",
+    "no sabes que hacer? estudia construcciones",
+    "no sabes que hacer? estudia Energia y dispositivos electricos",
+    "no sabes que hacer? estudia Estetica",
+    "no sabes que hacer? estudia Hotelería",
+    "no sabes que hacer? estudia Gastronomía",
+    "no sabes que hacer? estudia Mecánica automotriz",
+    "no sabes que hacer? estudia Turismo",
+    "no sabes que hacer? estudia Marroquineria",
+    "Deberías estudiar administración",
+    "Deberías estudiar informática",
+    "Deberías estudiar producción audiovisual",
+    "Deberías estudiar construcciones",
+    "Deberías estudiar Energia y dispositivos electricos",
+    "Deberías estudiar Estetica",
+    "Deberías estudiar Hotelería",
+    "Deberías estudiar Gastronomía",
+    "Deberías estudiar Mecánica automotriz",
+    "Deberías estudiar Turismo",
+    "Deberías estudiar Marroquinería"
+]
+
+function getEstudiosRandom(){
+    return estudios[getRandomInt(estudios.length-1)]
 }
