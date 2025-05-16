@@ -820,9 +820,13 @@ const frases = [
     "No se si soy carpincho, capibara o capiguara!",
     "En Argentina me llaman carpincho!",
     "En Bolivia me llaman capiguara!",
+    "En Brazil me llaman capibara!",
     "En otros paises me dicen capiguara!",
+    "En otros paises me dicen capibara!",
     "Me gusta tomar Mate!",
     "Yo vivo en Nordelta, provincia de Buenos Aires",
+    "Naci en nordelta, provincia de Buenos Aires",
+    "Soy bonaerense, vivo en nordelta",
     "Ahora tengo una diseñadora gráfica, pronto voy a estar más bonito!",
     "Mi diseñadora gráfica se llama Romina!",
     "Mi diseñadora gráfica me quiere mucho!",
@@ -897,7 +901,11 @@ const frases = [
     "Abrazame tengo miedo!",
     "Tengo hambre!",
     "Sabías que ",
-    "Hoy te convertis en heroe! "
+    "Hoy te convertis en heroe! ",
+    "Al que trabaja Díos lo ayuda, pero al que estudia Díos lo Ama",
+    "los carpinchos somos muy sociables y tomamos mate",
+    "los carpinchos somos muy amistosos",
+    "adopta un carpincho"
 ]
 
 
