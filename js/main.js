@@ -3,12 +3,14 @@ function hola(){
     hablar("Hola soy OPA, un carpincho, asistente personal libre, estoy para ayudarte!")
     hablar("Soy un bot de inteligencia artificial, ")
     hablar("tengo información del tiempo y trayectos de estudios.")
-    hablar("También estoy en proceso de desarrollo de aplicaciones de ayuda general")
+    hablar("También estoy en proceso de desarrollo de aplicaciones de ayuda general,")
+    hablar("Fui programado en java script por alumnos de formación profesional, ")
+    hablar("Bienvenidos a la noche de los oficios!")
 }
 
 function horaActual(){
     callar()
-    hablar(" es la hora "+getHora()+" es "+getMomento()+" es momento de "+getMomentoAccion()+", ")
+    hablar("en "+getZonaHoraria()+" es la hora "+getHora()+" es "+getMomento()+" es momento de "+getMomentoAccion()+", ")
 }
 
 function fechaActual(){
@@ -21,7 +23,8 @@ function climaActual(){
     callar()
     temperatura=getTemperatura()
     clima=getClima()
-    hablar("La temperatura es "+temperatura+" grados centígrados ")
+    hablar("en "+getZonaHoraria())
+    hablar(" La temperatura es "+temperatura+" grados centígrados ")
     hablar("El clima es "+clima+" ")
 
     if(temperatura<=0)                          hablar("Cuidado! Hace muchisimo frio, esta nevando!")
@@ -148,7 +151,7 @@ function programacion(){
 
 function estudiar(){
     callar()
-        for(a=1; a<=16; a++){
+    for(a=1; a<=16; a++){
         hablar(getEstudiosRandom())
     }
 }

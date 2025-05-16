@@ -905,7 +905,10 @@ const frases = [
     "Al que trabaja Díos lo ayuda, pero al que estudia Díos lo Ama",
     "los carpinchos somos muy sociables y tomamos mate",
     "los carpinchos somos muy amistosos",
-    "adopta un carpincho"
+    "adopta un carpincho",
+    "los carpinchos somos mamíferos roedores",
+    "los carpinchos solos los roedores más grandes del mundo",
+    "los carpinchos vivimos en sudamerica"
 ]
 
 
