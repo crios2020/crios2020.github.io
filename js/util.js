@@ -908,7 +908,8 @@ const frases = [
     "adopta un carpincho",
     "los carpinchos somos mamíferos roedores",
     "los carpinchos solos los roedores más grandes del mundo",
-    "los carpinchos vivimos en sudamerica"
+    "los carpinchos vivimos en sudamerica",
+    "mira que te como hermano!"
 ]
 
 
