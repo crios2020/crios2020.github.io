@@ -139,13 +139,13 @@ function fp(){
     hablar("Formación Profesional ")
     hablar("Es una modalidad de capacitación integral destinada a ofrecer las herramientas y habilidades necesarias para el desarrollo eficaz en el mundo del trabajo.")
     //hablar("A través de los cursos, trayectos y capacitaciones laborales prepara, actualiza y capacita para que jóvenes y adultos puedan mejorar sus oportunidades de empleabilidad.")
-    hablar("Nuestra oferta está orientada a temáticas como: Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Construcciones, Textil, Estética, entre otros.")
-    hablar("Toda la oferta es gratuita y cuenta con certificación oficial de validez nacional.")
+    hablar("Nuestra oferta está orientada en: Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Construcciones, Textil, Estética, entre otros.")
+    hablar("Toda la oferta es gratuita y con certificación oficial de validez nacional.")
 }
 
 function programacion(){
     callar()
-    hablar("Soy un bot de inteligencia artificial, fui programado en javascript")
+    //hablar("Soy un bot de inteligencia artificial, fui programado en javascript")
     hablar("¡Estudia con nósotros y formate profesionalmente como programador!")
     hablar("¡El trayecto de programación dura 364 horas reloj!")
     hablar("Los módulos del trayecto son: ")
@@ -315,7 +315,9 @@ const estudios = [
     "Cual es tu oficio preferido?",
     "Al que trabaja Díos lo ayuda, pero al que estudia Díos lo Ama",
     "Queres un oficio, pensate en estudiar para trabajar en la construcción",
-    "Pensaste en estudiar carpintería"
+    "Pensaste en estudiar carpintería",
+    "Queres estudiar construcciones con certificado oficial?",
+    "veni a formación profesional!"
 ]
 
 function getEstudiosRandom(){
