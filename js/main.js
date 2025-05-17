@@ -3,7 +3,7 @@ function hola(){
     hablar("Hola soy OPA, un carpincho, asistente personal libre, estoy para ayudarte!")
     hablar("Soy un bot de inteligencia artificial, ")
     hablar("tengo información del tiempo y trayectos de estudios.")
-    hablar("También estoy en proceso de desarrollo de aplicaciones de ayuda general,")
+    //hablar("También estoy en proceso de desarrollo de aplicaciones de ayuda general,")
     hablar("Fui programado en java script por alumnos de formación profesional, ")
     hablar("Bienvenidos a la noche de los oficios!")
 }
@@ -26,8 +26,8 @@ function climaActual(){
     hablar("en "+getZonaHoraria())
     hablar(" La temperatura es "+temperatura+" grados centígrados ")
     hablar(" La sensación térmica es "+getSensacionTermica()+" grados centígrados ")
-    hablar(" La temperatura mínima prevista es "+getTemperaturaMin()+" grados centígrados ")
-    hablar(" La temperatura máxima prevista es "+getTemperaturaMax()+" grados centígrados ")
+    //hablar(" La temperatura mínima prevista es "+getTemperaturaMin()+" grados centígrados ")
+    //hablar(" La temperatura máxima prevista es "+getTemperaturaMax()+" grados centígrados ")
     hablar("El clima es "+clima+" ")
 
     if(temperatura<=0)                          hablar("Cuidado! Hace muchisimo frio, esta nevando!")
@@ -54,8 +54,8 @@ function climaActual(){
 
     if(clima.includes("gra"))                                   hablar("Alerta Granizada!")
 
-    hablar("Hoy sale el sol a "+getAmanece())
-    hablar("Hoy se pone el sol a "+getAnochece())
+    //hablar("Hoy sale el sol a "+getAmanece())
+    //hablar("Hoy se pone el sol a "+getAnochece())
     
 }
 
@@ -138,7 +138,7 @@ function fp(){
     callar()
     hablar("Formación Profesional ")
     hablar("Es una modalidad de capacitación integral destinada a ofrecer las herramientas y habilidades necesarias para el desarrollo eficaz en el mundo del trabajo.")
-    hablar("A través de los cursos, trayectos y capacitaciones laborales prepara, actualiza y capacita para que jóvenes y adultos puedan mejorar sus oportunidades de empleabilidad.")
+    //hablar("A través de los cursos, trayectos y capacitaciones laborales prepara, actualiza y capacita para que jóvenes y adultos puedan mejorar sus oportunidades de empleabilidad.")
     hablar("Nuestra oferta está orientada a temáticas como: Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Construcciones, Textil, Estética, entre otros.")
     hablar("Toda la oferta es gratuita y cuenta con certificación oficial de validez nacional.")
 }
@@ -153,19 +153,19 @@ function programacion(){
     hablar("Base de datos 70 horas.")
     hablar("Programación orientada a objetos, de 150 horas.")
     hablar("Relaciones laborales 24 horas.")
-    hablar("También tenemos especialización en video juegos, programación web, programación segura y cyberseguridad, y administración de base de datos.")
+    //hablar("También tenemos especialización en video juegos, programación web, programación segura y cyberseguridad, y administración de base de datos.")
 }
 
 function estudiar(){
     callar()
-    for(a=1; a<=16; a++){
+    for(a=1; a<=10; a++){
         hablar(getEstudiosRandom())
     }
 }
 
 function bardear(){
     callar()
-    for(a=1; a<=12; a++){
+    for(a=1; a<=10; a++){
         hablar(getFraseRandom())
     }
 }
