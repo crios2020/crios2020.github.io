@@ -231,6 +231,8 @@ const estudios = [
     "querés ser famoso como yo, estudia marketing digital",
     "pronto inician los cursos de reparación de celulares",
     "sabemos que",
+    "se te rompió la pantalla del celular? Estudia reparación de celulares",
+    "se astilló la pantalla del celular? Estudia reparación de celulares",
     "me alegra saber que",
     "estudia instalación de alarmas de seguridad",
     "estudia reparación de equipos de climatización",
@@ -271,6 +273,7 @@ const estudios = [
     "tenemos oferta educativa de Mecánica automotriz",
     "tenemos oferta educativa de Turismo",
     "tenemos oferta educativa de Marroquinería",
+    "tenemos oferta educativa de Carpintería",
     "potencia tu carrera y asegura tu futuro, estudia con nosotros!",
     "no sabes que hacer? estudia administración",
     "no sabes que hacer? estudia informática",
@@ -283,6 +286,7 @@ const estudios = [
     "no sabes que hacer? estudia Mecánica automotriz",
     "no sabes que hacer? estudia Turismo",
     "no sabes que hacer? estudia Marroquinería",
+    "no sabes que hacer? estudia Carpintería",
     "Deberías estudiar administración",
     "Deberías estudiar informática",
     "Deberías estudiar producción audiovisual",
@@ -302,7 +306,9 @@ const estudios = [
     "construye tu futuro!",
     "Pensaste que oficio deseas aprender?",
     "Cual es tu oficio preferido?",
-    "Al que trabaja Díos lo ayuda, pero al que estudia Díos lo Ama"
+    "Al que trabaja Díos lo ayuda, pero al que estudia Díos lo Ama",
+    "Queres un oficio, pensate en estudiar para trabajar en la construcción",
+    "Pensaste en estudiar carpintería"
 ]
 
 function getEstudiosRandom(){
