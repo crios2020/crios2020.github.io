@@ -272,7 +272,7 @@ function getEstacion() {
 }
 
 function toCelsius(kelvin) {
-    return Math.round(kelvin - 273.15);
+    return Math.round(kelvin - 273.15)
 }
 
 /**
@@ -286,10 +286,64 @@ function getTemperatura() {
         request.send();
         if (request.status === 200) {
             const json = JSON.parse(request.responseText)
-            return toCelsius(json.main.temp);
+            return toCelsius(json.main.temp)
         }
     } catch (error) {
-        return "error";
+        return "error"
+    }
+}
+
+/**
+ * Devuelve la sensación térmica ambiente consultada en un API meteorológico
+ * @returns temperatura en grados centigrados
+ */
+function getSensacionTermica() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiWheather.url}?q=${apiWheather.city}&appid=${apiWheather.key}&lang=es`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return toCelsius(json.main.feels_like)
+        }
+    } catch (error) {
+        return "error"
+    }
+}
+
+/**
+ * Devuelve la temperatura mínima consultada en un API meteorológico
+ * @returns temperatura en grados centigrados
+ */
+function getTemperaturaMin() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiWheather.url}?q=${apiWheather.city}&appid=${apiWheather.key}&lang=es`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return toCelsius(json.main.temp_min)
+        }
+    } catch (error) {
+        return "error"
+    }
+}
+
+/**
+ * Devuelve la temperatura máxima consultada en un API meteorológico
+ * @returns temperatura en grados centigrados
+ */
+function getTemperaturaMax() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiWheather.url}?q=${apiWheather.city}&appid=${apiWheather.key}&lang=es`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return toCelsius(json.main.temp_max)
+        }
+    } catch (error) {
+        return "error"
     }
 }
 
@@ -305,10 +359,10 @@ function getClima() {
         request.send();
         if (request.status === 200) {
             const json = JSON.parse(request.responseText)
-            return json.weather[0].description;
+            return json.weather[0].description
         }
     } catch (error) {
-        return "error";
+        return "error"
     }
 }
 
@@ -337,7 +391,7 @@ function getZona() {
             return json.timezone.replace("/", " ").replace("/", " ").replace("_", " ")
         }
     } catch (error) {
-        return "error";
+        return "error"
     }
 }
 
@@ -366,7 +420,53 @@ function getContinente() {
             return json.continent
         }
     } catch (error) {
-        return "error";
+        return "error"
+    }
+}
+
+/**
+ * Devuelve la hora en que anochece consultada en un API meteorológico
+ * @returns temperatura en grados centigrados
+ */
+function getAnochece() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiWheather.url}?q=${apiWheather.city}&appid=${apiWheather.key}&lang=es`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            timestamp=json.sys.sunset
+            fecha = new Date(timestamp*1000)
+            anio = fecha.getFullYear()
+            hora = fecha.getHours()
+            minuto = fecha.getMinutes()
+            return hora + " horas y " + minuto + " minutos"
+        }
+    } catch (error) {
+        return "error"
+    }
+}
+
+/**
+ * Devuelve la hora en que anochece consultada en un API meteorológico
+ * @returns temperatura en grados centigrados
+ */
+function getAmanece() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", `${apiWheather.url}?q=${apiWheather.city}&appid=${apiWheather.key}&lang=es`, false); // `false` makes the request synchronous
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            timestamp=json.sys.sunrise
+            fecha = new Date(timestamp*1000)
+            anio = fecha.getFullYear()
+            hora = fecha.getHours()
+            minuto = fecha.getMinutes()
+            return hora + " horas y " + minuto + " minutos"
+        }
+    } catch (error) {
+        return "error"
     }
 }
 
@@ -394,7 +494,7 @@ function getRegion() {
             return json.continent
         }
     } catch (error) {
-        return "error";
+        return "error"
     }
 }
 
@@ -422,7 +522,7 @@ function getPais() {
             return json.country
         }
     } catch (error) {
-        return "error";
+        return "error"
     }
 }
 
@@ -451,7 +551,7 @@ function getProvincia() {
             return json.region
         }
     } catch (error) {
-        return "error";
+        return "error"
     }
 }
 
@@ -481,7 +581,7 @@ function getCiudad() {
             return json.city
         }
     } catch (error) {
-        return "error";
+        return "error"
     }
 }
 
@@ -510,7 +610,7 @@ function getValorDolar() {
             return json.currency_rates
         }
     } catch (error) {
-        return "error";
+        return "error"
     }
 }
 
@@ -904,12 +1004,33 @@ const frases = [
     "Hoy te convertis en heroe! ",
     "Al que trabaja Díos lo ayuda, pero al que estudia Díos lo Ama",
     "los carpinchos somos muy sociables y tomamos mate",
+    "los carpinchos somos muy sociables y vivimos en grupo",
     "los carpinchos somos muy amistosos",
+    "los carpinchos somos muy tranquilos y convivimos con los humanos",
+    "los carpinchos somos un símbolo de la biodiversidad en los humedales de América del Sur",
+    "los carpinchos nos encanta estar cerca del agua y somos buenos nadadores",
+    "los carpinchos no le tenemos miedo a los codrilos",
+    "los carpinchos montamos y andamos parados sobre codrilos",
     "adopta un carpincho",
     "los carpinchos somos mamíferos roedores",
     "los carpinchos solos los roedores más grandes del mundo",
     "los carpinchos vivimos en sudamerica",
-    "mira que te como hermano!"
+    "mira que te como hermano!",
+    "Sos un groso!!",
+    "no te hagas el gil!",
+    "Esta todo bien!",
+    "Esta todo dies más iva!",
+    "No te hagas el vivo!",
+    "Estoy copado!",
+    "hacer esto me copa mucho!",
+    "soy muy berraco!",
+    "Esto esta de diez!",
+    "Le estoy poniendo onda a esto",
+    "no hay drama",
+    "no seas chanta, dalee, copate!",
+    "corta la bocha",
+    "en esta te banco",
+    "estoy en la lona!"
 ]
 
 

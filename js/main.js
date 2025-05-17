@@ -25,6 +25,9 @@ function climaActual(){
     clima=getClima()
     hablar("en "+getZonaHoraria())
     hablar(" La temperatura es "+temperatura+" grados centígrados ")
+    hablar(" La sensación térmica es "+getSensacionTermica()+" grados centígrados ")
+    hablar(" La temperatura mínima prevista es "+getTemperaturaMin()+" grados centígrados ")
+    hablar(" La temperatura máxima prevista es "+getTemperaturaMax()+" grados centígrados ")
     hablar("El clima es "+clima+" ")
 
     if(temperatura<=0)                          hablar("Cuidado! Hace muchisimo frio, esta nevando!")
@@ -50,6 +53,10 @@ function climaActual(){
     if(clima.includes("nebli") || clima.includes("niebl"))      hablar("Hay Neblina!")
 
     if(clima.includes("gra"))                                   hablar("Alerta Granizada!")
+
+    hablar("Hoy sale el sol a "+getAmanece())
+    hablar("Hoy se pone el sol a "+getAnochece())
+    
 }
 
 function ubicacion(){
