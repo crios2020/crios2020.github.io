@@ -1,0 +1,14 @@
+.fondo{
+    background-color: #27214f;
+    color:white;
+}
+
+.boton{
+    color: #27214f;
+    background-color: white;
+}
+
+.boton:hover{
+    color: #27214f;
+    background-color: #9b94cc;
+}

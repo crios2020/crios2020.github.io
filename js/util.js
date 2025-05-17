@@ -1030,7 +1030,9 @@ const frases = [
     "no seas chanta, dalee, copate!",
     "corta la bocha",
     "en esta te banco",
-    "estoy en la lona!"
+    "estoy en la lona!",
+    "te peliaste con la tóxica? Vení a estudiar con nosotros",
+    "seguinos en redes sociales!"
 ]
 
 
