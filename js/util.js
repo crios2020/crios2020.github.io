@@ -1010,7 +1010,7 @@ const frases = [
     "los carpinchos somos un símbolo de la biodiversidad en los humedales de América del Sur",
     "los carpinchos nos encanta estar cerca del agua y somos buenos nadadores",
     "los carpinchos no le tenemos miedo a los codrilos",
-    "los carpinchos montamos y andamos parados sobre codrilos",
+    "los carpinchos montamos y andamos parados sobre cocodrilos",
     "adopta un carpincho",
     "los carpinchos somos mamíferos roedores",
     "los carpinchos solos los roedores más grandes del mundo",
@@ -1032,7 +1032,8 @@ const frases = [
     "en esta te banco",
     "estoy en la lona!",
     "te peliaste con la tóxica? Vení a estudiar con nosotros",
-    "seguinos en redes sociales!"
+    "seguinos en redes sociales!",
+    "siempre carpincho, nunca capibara!!!"
 ]
 
 
