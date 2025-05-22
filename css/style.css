@@ -24,3 +24,28 @@
     color: #26214f;
     background-color: #78529d;
 }
+
+.button {
+    background-color: white;
+    color: #78529d;
+    border-radius: 6px;
+    padding: 0px 10px;
+    margin: 2 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-style: none;
+}
+.button i {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+.button:hover{
+    color: #26214f;
+    background-color: #78529d;
+}
