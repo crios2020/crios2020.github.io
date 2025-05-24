@@ -197,7 +197,7 @@ function fp(){
     hablar("Formación Profesional ")
     hablar("Es una modalidad de capacitación integral destinada a ofrecer las herramientas y habilidades necesarias para el desarrollo eficaz en el mundo del trabajo.")
     //hablar("A través de los cursos, trayectos y capacitaciones laborales prepara, actualiza y capacita para que jóvenes y adultos puedan mejorar sus oportunidades de empleabilidad.")
-    hablar("Nuestra oferta está orientada en: Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Construcciones, Textil, Estética, entre otros.")
+    hablar("Nuestra oferta está orientada en: Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Textil, Estética, entre otros.")
     hablar("Toda la oferta es gratuita y con certificación oficial de validez nacional.")
 }
 
@@ -471,7 +471,19 @@ function getEstudiosRandom(){
     return estudios[getRandomInt(estudios.length-1)]
 }
 
-avatares=['carpincho2.jpg','carpincho1.jpeg','carpincho3.jpg','carpincho4.jpeg']
+avatares=[  'carpincho2.jpg',
+            'carpincho1.jpeg',
+            'carpincho3.jpg',
+            'carpincho4.jpeg',
+            'carpincho5.png',
+            'carpincho6.jpeg',
+            'carpincho7.png',
+            'carpincho8.jpeg',
+            'carpincho9.jpeg',
+            'carpincho10.jpeg',
+            'carpincho11.jpeg',
+            'carpincho12.jpeg'
+        ]
 
 avatarIndex=0
 
