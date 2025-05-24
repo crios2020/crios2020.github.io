@@ -1033,7 +1033,13 @@ const frases = [
     "estoy en la lona!",
     "te peliaste con la tóxica? Vení a estudiar con nosotros",
     "seguinos en redes sociales!",
-    "siempre carpincho, nunca capibara!!!"
+    "siempre carpincho, nunca capibara!!!",
+    "Escuchate esta ",
+    "Estoy pisando la banquina",
+    "Con el diario del lunes es facil hablar",
+    "Me fui al pasto",
+    "Estoy lento por que estoy a gas",
+    "voy redondeando la idea"
 ]
 
 
