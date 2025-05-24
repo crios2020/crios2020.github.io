@@ -22,10 +22,17 @@ function fechaActual(){
 function climaActual(){
     callar()
     temperatura=getTemperatura()
+    sensacionTermica=getSensacionTermica()
     clima=getClima()
+
+    /* Opción para hardcodear */
+    //temperatura=20
+    //sensacionTermica=20
+    //clima="Cielo Claro"
+
     hablar("en "+getZonaHoraria())
     hablar(" La temperatura es "+temperatura+" grados centígrados ")
-    hablar(" La sensación térmica es "+getSensacionTermica()+" grados centígrados ")
+    hablar(" La sensación térmica es "+sensacionTermica+" grados centígrados ")
     //hablar(" La temperatura mínima prevista es "+getTemperaturaMin()+" grados centígrados ")
     //hablar(" La temperatura máxima prevista es "+getTemperaturaMax()+" grados centígrados ")
     hablar("El clima es "+clima+" ")
@@ -61,7 +68,16 @@ function climaActual(){
 
 function ubicacion(){
     callar()
-    hablar("nos encontramos en "+getProvincia()+", país "+getPais()+", en la región de "+getRegion()+", ")
+    //provincia=getProvincia()
+    //pais=getPais()
+    //region=getRegion()
+
+    /* Opción para hardcodear */
+    provincia="Ciudad Autónoma de Buenos Aires"
+    pais="Argentina"
+    region="America del sur, tierra de carpinchos"
+
+    hablar("nos encontramos en "+provincia+", país "+pais+", en la región de "+region+", ")
 }
 
 function efemerides(){
@@ -248,6 +264,14 @@ const estudios = [
     "estudia reparación de impresoras 3 D",
     "estudia electricidad básica",
     "tenemos cursos con inserción laboral",
+    "Estas aburrido en tu casa? estudia instalación de alarmas de seguridad",
+    "Estas aburrido en tu casa? estudia reparación de equipos de climatización",
+    "Estas aburrido en tu casa? estudia reparación de aires acondicionado",
+    "Estas aburrido en tu casa? estudia instalación de redes informáticas",
+    "Estas aburrido en tu casa? estudia reparación de impresoras 3 D",
+    "Estas aburrido en tu casa? estudia electricidad básica",
+    "Estas aburrido en tu casa? ven a estudiar con nosotros",
+    "tenemos cursos con inserción laboral",
     "siempre es bueno estudiar",
     "mejora tus capacidades laborales, estudia con nosotros",
     "no lo dudes, estudia con nosotros",
@@ -388,7 +412,17 @@ const estudios = [
     "Cada día es una nueva oportunidad para dominar un nuevo oficio.",
     "La maestría en un oficio es el resultado de la práctica y la perseverancia.",
     "Cree en ti mismo: puedes convertirte en un experto en cualquier área.",
-    "El aprendizaje nunca termina; cada nuevo oficio es un nuevo comienzo."
+    "El aprendizaje nunca termina; cada nuevo oficio es un nuevo comienzo.",
+    "El conocimiento es el primer paso hacia el crecimiento personal y profesional.",
+    "Cada libro que lees es una oportunidad para expandir tu mente y tu vida.",
+    "Invertir en ti mismo es la mejor decisión que puedes tomar para tu futuro.",
+    "El aprendizaje constante es la clave para desbloquear tu verdadero potencial.",
+    "El crecimiento personal comienza cuando te atreves a salir de tu zona de confort.",
+    "Desafía tus límites y descubrirás la grandeza que llevas dentro.",
+    "Cada día es una nueva oportunidad para aprender y crecer.",
+    "El éxito se construye sobre la base del conocimiento y la autoexploración.",
+    "Tu mente es un jardín; cultiva el conocimiento y cosecharás sabiduría.",
+    "El verdadero crecimiento personal comienza cuando te comprometes a mejorar cada día."
 ]
 
 function getEstudiosRandom(){
