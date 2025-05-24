@@ -22,7 +22,7 @@
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="images/carpincho2.jpg" class="img-fluid" alt="asistente personal libre">
+                    <img src="images/carpincho2.jpg" id="avatarImage" class="img-fluid" alt="asistente personal libre">
                 </div>
                 <div class="col-sm-6">
                     <div class="col d-grid gap-2 p-0">
@@ -32,26 +32,38 @@
                             Hola
                         </button>
                         -->
+                        <button type="button" class="btn boton btn-sm" onclick="getSiguienteAvatar()">
+                            <img src="icons/person-square.svg">
+                            Avatar
+                        </button>
                         <button type="button" class="btn boton btn-sm" onclick="hola()">
                             <img src="icons/speaker.png">
                             Hola
                         </button>
+                        <!--
                         <button type="button" class="btn boton btn-sm" onclick="horaActual()">
                             <img src="icons/clock.svg">
                             Hora
                         </button>
-                        <button type="button" class="btn boton btn-sm" onclick="fechaActual()">
+                        -->
+                        <button type="button" class="btn boton btn-sm" onclick="fechaHoraActual()">
+                            <img src="icons/clock.svg">
                             <img src="icons/calendar-day.svg">
-                            Fecha
+                            <img src="icons/cloud-sun.svg">
+                            Fecha Hora y Clima
                         </button>
+                        <!--
                         <button type="button" class="btn boton btn-sm" onclick="climaActual()">
                             <img src="icons/cloud-sun.svg">
                             Clima
                         </button>
-                        <button type="button" class="btn boton btn-sm" onclick="ubicacion()">
-                            <img src="icons/globe-americas.svg">
-                            Ubicación
+                        -->
+                        <!--
+                        <button type="button" class="btn boton btn-sm" onclick="climaActual()">
+                            <img src="icons/cloud-sun.svg">
+                            Estado del Clima
                         </button>
+                        -->
                         <button type="button" class="btn boton btn-sm" onclick="fp()">
                             <img src="icons/tools.svg">
                             Formación profesional

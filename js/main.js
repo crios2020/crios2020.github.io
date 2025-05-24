@@ -13,6 +13,48 @@ function horaActual(){
     hablar("en "+getZonaHoraria()+" es la hora "+getHora()+" es "+getMomento()+" es momento de "+getMomentoAccion()+", ")
 }
 
+function fechaHoraActual(){
+    callar()
+    hablar("en "+getZonaHoraria()+" es la hora "+getHora()+" es "+getMomento()+" es momento de "+getMomentoAccion()+", ")
+    hablar("Hoy es "+getFecha()+" "+hoyEs()+" estamos en "+getEstacion()+", ")
+    efemerides()
+
+    temperatura=getTemperatura()
+    sensacionTermica=getSensacionTermica()
+    clima=getClima()
+
+    /* Opción para hardcodear */
+    //temperatura=20
+    //sensacionTermica=20
+    //clima="Cielo Claro"
+
+    hablar(" La temperatura es "+temperatura+" grados centígrados ")
+    hablar("El clima es "+clima+" ")
+
+    if(temperatura<=0)                          hablar("Cuidado! Hace muchisimo frio, esta nevando!")
+    if(temperatura>0 && temperatura<=5)         hablar("Hace frio, hay heladas!")
+    if(temperatura>5 && temperatura<=10)        hablar("Está fresco!")
+    if(temperatura>10 && temperatura<=15)       hablar("Está Templado!")
+    if(temperatura>15 && temperatura<=20)       hablar("Está Agradable!")
+    if(temperatura>20 && temperatura<=25)       hablar("Está cálido!")
+    if(temperatura>25 && temperatura<=30)       hablar("Hace Calor!")
+    if(temperatura>30 && temperatura<=35)       hablar("Hace Mucho Calor!")
+    if(temperatura>35 && temperatura<=40)       hablar("Cuidado! Hace muchisimo Calor!")
+    
+    if(clima.includes("nube") )                                 hablar("En el cielo hay pocas nubes!")
+    if(clima.includes("nubla") )                                hablar("El cielo esta Nublado!")
+    if(clima.includes("claro") || clima.includes("limpi"))      hablar("El cielo esta despejado!")
+
+    if(clima.includes("lluv") || clima.includes("llov"))        hablar("Esta lloviendo!")
+    else                                                        hablar("No hay lluvias")
+
+    if(clima.includes("nev") || clima.includes("niev"))         hablar("Esta Nevando!")
+
+    if(clima.includes("nebli") || clima.includes("niebl"))      hablar("Hay Neblina!")
+
+    if(clima.includes("gra"))                                   hablar("Alerta Granizada!")
+}
+
 function fechaActual(){
     callar()
     hablar("Hoy es "+getFecha()+" "+hoyEs()+" estamos en "+getEstacion()+", ")
@@ -32,7 +74,7 @@ function climaActual(){
 
     hablar("en "+getZonaHoraria())
     hablar(" La temperatura es "+temperatura+" grados centígrados ")
-    hablar(" La sensación térmica es "+sensacionTermica+" grados centígrados ")
+    //hablar(" La sensación térmica es "+sensacionTermica+" grados centígrados ")
     //hablar(" La temperatura mínima prevista es "+getTemperaturaMin()+" grados centígrados ")
     //hablar(" La temperatura máxima prevista es "+getTemperaturaMax()+" grados centígrados ")
     hablar("El clima es "+clima+" ")
@@ -428,3 +470,13 @@ const estudios = [
 function getEstudiosRandom(){
     return estudios[getRandomInt(estudios.length-1)]
 }
+
+avatares=['carpincho2.jpg','carpincho1.jpeg','carpincho3.jpg','carpincho4.jpeg']
+
+avatarIndex=0
+
+function getSiguienteAvatar(){
+    avatarIndex++
+    if(avatarIndex>=avatares.length) avatarIndex=0
+    document.getElementById("avatarImage").setAttribute("src","images/"+avatares[avatarIndex])
+} 
