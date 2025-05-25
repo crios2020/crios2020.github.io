@@ -2,7 +2,7 @@
 Proyecto OPA Open Personal Assistant<br>
 Asistente Persona Abierto en JS<br>
 
-Participantes de este proyecto:
+Participantes de este proyecto:<br>
         Alumnos de programación de CFP 8<br>
         Alumnos de programación de CFP 35<br>
         Alumnos de tester de aplicaciones de CFP 35<br>
