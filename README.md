@@ -2,6 +2,13 @@
 Proyecto OPA Open Personal Assistant<br>
 Asistente Persona Abierto en JS<br>
 
+Participantes de este proyecto:
+        Alumnos de programación de CFP 8
+        Alumnos de programación de CFP 35
+        Alumnos de tester de aplicaciones de CFP 35
+        Diseño gráfico Romina Cabral
+        Profesor Carlos Ríos
+
 Este proyecto esta diseñado para dar apoyo a la enseñanza de programación. A parte del front-end hay una librería util.js que brinda asistencias a la programación estructurada inicial<br>
 Junio       2025 V RC 0.95: Se agrego diseño (Gracias <strong>Romina Cabral</stong>) y se agregaron avatares
 Mayo        2025 V 0.9: Preparación para la presentación en noche de los oficios.<br>
