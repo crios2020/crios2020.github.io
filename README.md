@@ -6,8 +6,8 @@ Participantes de este proyecto:
         Alumnos de programación de CFP 8<br>
         Alumnos de programación de CFP 35<br>
         Alumnos de tester de aplicaciones de CFP 35<br>
-        Diseño gráfico <strong>Romina Cabral</strong>
-        Profesor <strong>Carlos Rios</strong>
+        Diseño gráfico <strong>Romina Cabral</strong><br>
+        Profesor <strong>Carlos Rios</strong><br>
 
 Este proyecto esta diseñado para dar apoyo a la enseñanza de programación. A parte del front-end hay una librería util.js que brinda asistencias a la programación estructurada inicial<br>
 Junio       2025 V RC 0.95: Se agrego diseño (Gracias <strong>Romina Cabral</strong>) y se agregaron avatares<br>
