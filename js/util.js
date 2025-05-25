@@ -1112,7 +1112,9 @@ const frases = [
     "No hay nada como una tarde de río.",
     "La naturaleza es mi hogar.",
     "¿Quién se anima a jugar en el barro?",
-    "Disfrutemos del momento, siempre."
+    "Disfrutemos del momento, siempre.",
+    "seguí así que vamos bien",
+    "me da lo mismo y no me importa que"
 ]
 
 
