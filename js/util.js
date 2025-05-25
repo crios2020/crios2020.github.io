@@ -1086,8 +1086,11 @@ const frases = [
     "Estoy aquí para apoyarte en tu camino.",
     "Juntos podemos lograr grandes cosas.",
     "Cada conversación contigo es un regalo.",
-    "¡Sigamos adelante y disfrutemos del viaje!"
-
+    "¡Sigamos adelante y disfrutemos del viaje!",
+    "pimn punm panm",
+    "No confío en la gente que come pizza con ananá",
+    "soy vegetariano",
+    "soy vegano"
 ]
 
 
