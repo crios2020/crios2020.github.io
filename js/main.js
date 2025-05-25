@@ -331,7 +331,7 @@ const estudios = [
     "tenés una moto vieja? estudia reparación de motos",
     "tenés un auto viejo? estudia mecánica del automotor",
     "Sabías que ",
-    "tenemos capacitaciones en Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Construcciones, Textil, Estética, entre otros.",
+    "tenemos capacitaciones en Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Textil, Estética, entre otros.",
     "Toda nuestra oferta educativa es gratuita",
     "Toda nuestra oferta educativa cuenta con certificación oficial de validez nacional.",
     "Otro año sin trabajo? vení a estudiar con nostros!",
