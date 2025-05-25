@@ -473,7 +473,7 @@ function getEstudiosRandom(){
 
 avatares=[  'carpincho2.jpg',
             'carpincho1.jpeg',
-            'carpincho3.jpg',
+            'frame.png',
             'carpincho4.jpeg',
             'carpincho5.png',
             'carpincho6.jpeg',

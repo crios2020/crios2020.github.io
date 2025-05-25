@@ -1,24 +1,17 @@
-@font-face {
-    font-family: 'Aller';
-    src: url('../fonts/ALLER\ FONT/');
-}
-
-@font-face {
-    font-family: 'Avenir';
-    src: url('../fonts/65.\ Avenir\ \ \ \ \ [1988\ -\ Adrian\ Frutiger]/');
-}
 
 .fondo{
     background-color: #26214f;
     color:white;
 }
 
+
 .boton{
     /*color: #78529d;*/
     color: #26214f;
     background-color: white;
-    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    font-family: Aller;
 }
+
 
 .boton:hover{
     color: #26214f;
@@ -26,8 +19,6 @@
 }
 
 .button {
-    background-color: white;
-    color: #78529d;
     border-radius: 6px;
     padding: 0px 10px;
     margin: 2 0;
@@ -49,3 +40,4 @@
     color: #26214f;
     background-color: #78529d;
 }
+
