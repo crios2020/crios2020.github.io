@@ -1090,7 +1090,29 @@ const frases = [
     "pimn punm panm",
     "No confío en la gente que come pizza con ananá",
     "soy vegetariano",
-    "soy vegano"
+    "soy vegano",
+    "si quieres ser feliz debes pensar como un carpincho",
+    "si quieres ser feliz debes pensar vivir un carpincho",
+    "¡Che, qué calor hace hoy!",
+    "¿Vamos a la laguna a refrescarnos?",
+    "Amo tomar sol, es lo mejor.",
+    "Soy el rey de la tranquilidad.",
+    "¿Te traigo un poco de pasto?",
+    "La vida es mejor en grupo.",
+    "¡No te preocupes, todo está bien!",
+    "Me encanta hacer amigos.",
+    "Un mate nunca está de más.",
+    "La siesta es sagrada.",
+    "¿Vieron a los flamencos? ¡Son unos divinos!",
+    "Soy un experto en relajación.",
+    "¿Vamos a explorar el campo?",
+    "La amistad es lo más importante.",
+    "¡Qué rica está esta hierba!",
+    "Siempre hay tiempo para un chapuzón.",
+    "No hay nada como una tarde de río.",
+    "La naturaleza es mi hogar.",
+    "¿Quién se anima a jugar en el barro?",
+    "Disfrutemos del momento, siempre."
 ]
 
 

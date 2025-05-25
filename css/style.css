@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Aller';
+    src: url('/fonts/ALLERFONT/Aller_Rg.ttf') format('truetype');
+}
 
 .fondo{
     background-color: #26214f;
@@ -9,16 +13,7 @@
     /*color: #78529d;*/
     color: #26214f;
     background-color: white;
-    font-family: Aller;
-}
-
-
-.boton:hover{
-    color: #26214f;
-    background-color: #78529d;
-}
-
-.button {
+    font-family: 'Aller', sans-serif;
     border-radius: 6px;
     padding: 0px 10px;
     margin: 2 0;
@@ -30,14 +25,20 @@
     text-align: center;
     border-style: none;
 }
-.button i {
+
+
+.boton:hover{
+    color: #26214f;
+    background-color: #78529d;
+}
+
+.boton img {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-right: 10px;
     font-size: 1.5rem;
+    color:#78529d;
 }
-.button:hover{
-    color: #26214f;
-    background-color: #78529d;
-}
+
+
 

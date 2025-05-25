@@ -482,7 +482,12 @@ avatares=[  'carpincho2.jpg',
             'carpincho9.jpeg',
             'carpincho10.jpeg',
             'carpincho11.jpeg',
-            'carpincho12.jpeg'
+            'carpincho12.jpeg',
+            'carpincho13.jpeg',
+            'carpincho14.jpeg',
+            'carpincho15.jpeg',
+            'carpincho16.png',
+            'carpincho17.png'
         ]
 
 avatarIndex=0
