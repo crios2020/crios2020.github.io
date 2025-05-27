@@ -22,6 +22,7 @@ function fechaHoraActual(){
     temperatura=getTemperatura()
     sensacionTermica=getSensacionTermica()
     clima=getClima()
+    hora=new Date().getHours()
 
     /* Opción para hardcodear */
     //temperatura=20
@@ -45,8 +46,10 @@ function fechaHoraActual(){
     if(clima.includes("nubla") )                                hablar("El cielo esta Nublado!")
     if(clima.includes("claro") || clima.includes("limpi"))      hablar("El cielo esta despejado!")
 
-    if(clima.includes("lluv") || clima.includes("llov"))        hablar("Esta lloviendo!")
-    else                                                        hablar("No hay lluvias")
+    if(clima.includes("lluv") || clima.includes("llov")){
+        hablar("Esta lloviendo!")
+        if(hora>=15 && hora<=18 && temperatura<=18)             hablar("Esta para hacer unas tortafritas!")
+    }else                                                       hablar("No hay lluvias")
 
     if(clima.includes("nev") || clima.includes("niev"))         hablar("Esta Nevando!")
 
@@ -66,6 +69,7 @@ function climaActual(){
     temperatura=getTemperatura()
     sensacionTermica=getSensacionTermica()
     clima=getClima()
+    hora=new Date().getHours()
 
     /* Opción para hardcodear */
     //temperatura=20
@@ -94,8 +98,10 @@ function climaActual(){
     if(clima.includes("nubla") )                                hablar("El cielo esta Nublado!")
     if(clima.includes("claro") || clima.includes("limpi"))      hablar("El cielo esta despejado!")
 
-    if(clima.includes("lluv") || clima.includes("llov"))        hablar("Esta lloviendo!")
-    else                                                        hablar("No hay lluvias")
+    if(clima.includes("lluv") || clima.includes("llov")){
+        hablar("Esta lloviendo!")
+        if(hora>=15 && hora<=18 && temperatura<=18)             hablar("Esta para hacer unas tortafritas!")
+    }else                                                       hablar("No hay lluvias")
 
     if(clima.includes("nev") || clima.includes("niev"))         hablar("Esta Nevando!")
 
