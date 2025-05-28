@@ -1115,7 +1115,7 @@ const frases = [
     "Disfrutemos del momento, siempre.",
     "seguí así que vamos bien",
     "No tenes un mango? nuestra oferta es gratuita",
-    "No tenes un plata? nuestra oferta es gratuita",
+    "No tenes plata? nuestra oferta es gratuita",
     "Mirarme a mi, trae suerte",
     "Soy Fan de Mirta Legrand!",
     "No me gusta escuchar cumbia, aguante los redondos!",

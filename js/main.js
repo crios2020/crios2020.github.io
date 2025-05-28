@@ -129,6 +129,9 @@ function efemerides(){
     //día del maestro
     if(diaMes==11 && mes==8)                    hablar(" Hoy es el día del maestro!! ")
 
+    //día de la maestra jardinera
+    if(diaMes==28 && mes==4)                    hablar(" Hoy es el día de la maestra jardinera!! ")
+
     //Navidad
     if(diaMes==24 && mes==11)                   hablar(" Feliz noche buena!!! ")
     if(diaMes==25 && mes==11)                   hablar(" Feliz navidad!!! ")
@@ -410,7 +413,7 @@ const estudios = [
     "El éxito se construye sobre la base del conocimiento y la autoexploración.",
     "Tu mente es un jardín; cultiva el conocimiento y cosecharás sabiduría.",
     "No tenes un mango? nuestra oferta es gratuita",
-    "No tenes un plata? nuestra oferta es gratuita",
+    "No tenes plata? nuestra oferta es gratuita",
     "El verdadero crecimiento personal comienza cuando te comprometes a mejorar cada día."
 ]
 
