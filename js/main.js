@@ -3,7 +3,6 @@ function hola(){
     hablar("Hola soy OPA, un carpincho, asistente personal libre, estoy para ayudarte!")
     hablar("Soy un bot de inteligencia artificial, ")
     hablar("tengo información del tiempo y trayectos de estudios.")
-    //hablar("También estoy en proceso de desarrollo de aplicaciones de ayuda general,")
     hablar("Fui programado en java script por alumnos de formación profesional, ")
     hablar("Bienvenidos a la noche de los oficios!")
 }
@@ -20,7 +19,6 @@ function fechaHoraActual(){
     efemerides()
 
     temperatura=getTemperatura()
-    sensacionTermica=getSensacionTermica()
     clima=getClima()
     hora=new Date().getHours()
 
@@ -45,9 +43,9 @@ function fechaHoraActual(){
     if(clima.includes("nube") )                                 hablar("En el cielo hay pocas nubes!")
     if(clima.includes("nubla") )                                hablar("El cielo esta Nublado!")
     if(clima.includes("claro") || clima.includes("limpi"))      hablar("El cielo esta despejado!")
-
+    if(temperatura<26) hablar("Salir abrigado! ")
     if(clima.includes("lluv") || clima.includes("llov")){
-        hablar("Esta lloviendo!")
+        hablar("Esta lloviendo!, Salir con paraguas!")
         if(hora>=15 && hora<=18 && temperatura<=18)             hablar("Esta para hacer unas tortafritas!")
     }else                                                       hablar("No hay lluvias")
 
@@ -56,62 +54,6 @@ function fechaHoraActual(){
     if(clima.includes("nebli") || clima.includes("niebl"))      hablar("Hay Neblina!")
 
     if(clima.includes("gra"))                                   hablar("Alerta Granizada!")
-}
-
-function fechaActual(){
-    callar()
-    hablar("Hoy es "+getFecha()+" "+hoyEs()+" estamos en "+getEstacion()+", ")
-    efemerides()
-}
-
-function climaActual(){
-    callar()
-    temperatura=getTemperatura()
-    sensacionTermica=getSensacionTermica()
-    clima=getClima()
-    hora=new Date().getHours()
-
-    /* Opción para hardcodear */
-    //temperatura=20
-    //sensacionTermica=20
-    //clima="Cielo Claro"
-
-    hablar("en "+getZonaHoraria())
-    hablar(" La temperatura es "+temperatura+" grados centígrados ")
-    //hablar(" La sensación térmica es "+sensacionTermica+" grados centígrados ")
-    //hablar(" La temperatura mínima prevista es "+getTemperaturaMin()+" grados centígrados ")
-    //hablar(" La temperatura máxima prevista es "+getTemperaturaMax()+" grados centígrados ")
-    hablar("El clima es "+clima+" ")
-
-    if(temperatura<=0)                          hablar("Cuidado! Hace muchisimo frio, esta nevando!")
-    if(temperatura>0 && temperatura<=5)         hablar("Hace frio, hay heladas!")
-    if(temperatura>5 && temperatura<=10)        hablar("Está fresco!")
-    if(temperatura>10 && temperatura<=15)       hablar("Está Templado!")
-    if(temperatura>15 && temperatura<=20)       hablar("Está Agradable!")
-    if(temperatura>20 && temperatura<=25)       hablar("Está cálido!")
-    if(temperatura>25 && temperatura<=30)       hablar("Hace Calor!")
-    if(temperatura>30 && temperatura<=35)       hablar("Hace Mucho Calor!")
-    if(temperatura>35 && temperatura<=40)       hablar("Cuidado! Hace muchisimo Calor!")
-    
-
-    if(clima.includes("nube") )                                 hablar("En el cielo hay pocas nubes!")
-    if(clima.includes("nubla") )                                hablar("El cielo esta Nublado!")
-    if(clima.includes("claro") || clima.includes("limpi"))      hablar("El cielo esta despejado!")
-
-    if(clima.includes("lluv") || clima.includes("llov")){
-        hablar("Esta lloviendo!")
-        if(hora>=15 && hora<=18 && temperatura<=18)             hablar("Esta para hacer unas tortafritas!")
-    }else                                                       hablar("No hay lluvias")
-
-    if(clima.includes("nev") || clima.includes("niev"))         hablar("Esta Nevando!")
-
-    if(clima.includes("nebli") || clima.includes("niebl"))      hablar("Hay Neblina!")
-
-    if(clima.includes("gra"))                                   hablar("Alerta Granizada!")
-
-    //hablar("Hoy sale el sol a "+getAmanece())
-    //hablar("Hoy se pone el sol a "+getAnochece())
-    
 }
 
 function ubicacion(){
@@ -164,7 +106,7 @@ function efemerides(){
     if(diaMes==17 && mes==7)                    hablar(" Hoy recordamos a nuestro padre de la patria, el general Don Jose de San Martín!! ")
 
     //día de la primavera & estudiante
-    if(diaMes==21 && mes==8)                    hablar(" Hoy es el día del estudiante y del perfumista, feliz cumpleaños!! ")
+    if(diaMes==21 && mes==8)                    hablar(" Hoy es el día del estudiante y del perfumista!! ")
 
     //día de san patricio
     if(diaMes==17 && mes==3)                    hablar(" Feliz San Patricio, a tomar cerveza!! ")
@@ -202,22 +144,19 @@ function fp(){
     callar()
     hablar("Formación Profesional ")
     hablar("Es una modalidad de capacitación integral destinada a ofrecer las herramientas y habilidades necesarias para el desarrollo eficaz en el mundo del trabajo.")
-    //hablar("A través de los cursos, trayectos y capacitaciones laborales prepara, actualiza y capacita para que jóvenes y adultos puedan mejorar sus oportunidades de empleabilidad.")
     hablar("Nuestra oferta está orientada en: Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Textil, Estética, entre otros.")
     hablar("Toda la oferta es gratuita y con certificación oficial de validez nacional.")
 }
 
 function programacion(){
     callar()
-    //hablar("Soy un bot de inteligencia artificial, fui programado en javascript")
-    hablar("¡Estudia con nósotros y formate profesionalmente como programador!")
+    hablar("¡Estudia con nosotros y formate profesionalmente como programador!")
     hablar("¡El trayecto de programación dura 364 horas reloj!")
     hablar("Los módulos del trayecto son: ")
-    hablar("Técnicas de programación, de 120 horas.")
-    hablar("Base de datos 70 horas.")
-    hablar("Programación orientada a objetos, de 150 horas.")
-    hablar("Relaciones laborales 24 horas.")
-    //hablar("También tenemos especialización en video juegos, programación web, programación segura y cyberseguridad, y administración de base de datos.")
+    hablar("Técnicas de programación, ")
+    hablar("Base de datos, ")
+    hablar("Programación orientada a objetos ")
+    hablar("y Relaciones laborales.")
 }
 
 function estudiar(){
@@ -379,7 +318,7 @@ const estudios = [
     "Deberías estudiar Turismo",
     "te peliaste con la tóxica? Vení a estudiar administración",
     "te peliaste con la tóxica? Vení a estudiar informática",
-    "te peliaste con la tóxica? Vení as estudiar producción audiovisual",
+    "te peliaste con la tóxica? Vení a estudiar producción audiovisual",
     "te peliaste con la tóxica? Vení a estudiar construcciones",
     "te peliaste con la tóxica? Vení a estudiar Energia y dispositivos electricos",
     "te peliaste con la tóxica? Vení a estudiar Estetica",
@@ -470,36 +409,11 @@ const estudios = [
     "Cada día es una nueva oportunidad para aprender y crecer.",
     "El éxito se construye sobre la base del conocimiento y la autoexploración.",
     "Tu mente es un jardín; cultiva el conocimiento y cosecharás sabiduría.",
+    "No tenes un mango? nuestra oferta es gratuita",
+    "No tenes un plata? nuestra oferta es gratuita",
     "El verdadero crecimiento personal comienza cuando te comprometes a mejorar cada día."
 ]
 
 function getEstudiosRandom(){
     return estudios[getRandomInt(estudios.length-1)]
 }
-
-avatares=[  'carpincho2.jpg',
-            'carpincho1.jpeg',
-            'frame.png',
-            'carpincho4.jpeg',
-            'carpincho5.png',
-            'carpincho6.jpeg',
-            'carpincho7.png',
-            'carpincho8.jpeg',
-            'carpincho9.jpeg',
-            'carpincho10.jpeg',
-            'carpincho11.jpeg',
-            'carpincho12.jpeg',
-            'carpincho13.jpeg',
-            'carpincho14.jpeg',
-            'carpincho15.jpeg',
-            'carpincho16.png',
-            'carpincho17.png'
-        ]
-
-avatarIndex=0
-
-function getSiguienteAvatar(){
-    avatarIndex++
-    if(avatarIndex>=avatares.length) avatarIndex=0
-    document.getElementById("avatarImage").setAttribute("src","images/"+avatares[avatarIndex])
-} 

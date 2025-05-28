@@ -230,10 +230,10 @@ function hoyEs() {
     anio = fecha.getFullYear()
     hoy = ""
     if (diaSem == 1) hoy = "Odio los lunes, por que hay que ir a trabajar!"
-    if (diaSem == 2) hoy = "Hoy es Martes hay que ir a trabajar!"
-    if (diaSem == 3) hoy = "Hoy es Miércoles hay que ir a trabajar!"
-    if (diaSem == 4) hoy = "Hoy es Jueves hay que ir a trabajar!"
-    if (diaSem == 5) hoy = "Hoy es viernes y tu cuerpo lo sabe!"
+    if (diaSem == 2) hoy = "es Martes hay que ir a trabajar!"
+    if (diaSem == 3) hoy = "es Miércoles hay que ir a trabajar!"
+    if (diaSem == 4) hoy = "es Jueves hay que ir a trabajar!"
+    if (diaSem == 5) hoy = "es viernes y tu cuerpo lo sabe!"
     if (diaSem == 6) hoy = "Es fin de semana, a descansar!"
     if (diaSem == 0) hoy = "Es fin de semana, a descansar!"
     return hoy
