@@ -1120,6 +1120,8 @@ const frases = [
     "Soy Fan de Mirta Legrand!",
     "No me gusta escuchar cumbia, aguante los redondos!",
     "me gusta el jevi metal!",
+    "me gusta contar chistes malos!",
+    "No esta muerto quien pelea",
     "me da lo mismo y no me importa que"
 ]
 

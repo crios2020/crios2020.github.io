@@ -413,7 +413,9 @@ const estudios = [
     "El éxito se construye sobre la base del conocimiento y la autoexploración.",
     "Tu mente es un jardín; cultiva el conocimiento y cosecharás sabiduría.",
     "No tenes un mango? nuestra oferta es gratuita",
+    "No tenes un peso? nuestra oferta es gratuita",
     "No tenes plata? nuestra oferta es gratuita",
+    "No esta muerto quien pelea",
     "El verdadero crecimiento personal comienza cuando te comprometes a mejorar cada día."
 ]
 
