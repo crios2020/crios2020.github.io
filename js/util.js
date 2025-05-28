@@ -1114,6 +1114,8 @@ const frases = [
     "¿Quién se anima a jugar en el barro?",
     "Disfrutemos del momento, siempre.",
     "seguí así que vamos bien",
+    "No tenes un mango? nuestra oferta es gratuita",
+    "No tenes un plata? nuestra oferta es gratuita",
     "me da lo mismo y no me importa que"
 ]
 
