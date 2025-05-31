@@ -62,9 +62,9 @@ function runSpeechRecognition() {
 
         // show the closed captioned and remove after 3 seconds
         texto.textContent = transcript;
-        setTimeout(function () {
-            texto.textContent = "Escuchando .......";
-        }, 5000)
+        //setTimeout(function () {
+        //    texto.textContent = "Escuchando .......";
+        //}, 5000)
 
         // read out loud the answer
         let speech = new SpeechSynthesisUtterance();
