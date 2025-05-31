@@ -1,4 +1,5 @@
 function runSpeechRecognition() {
+    callar()
     const frida = document.querySelector("#frida");
     const texto = document.querySelector("#output");
     
@@ -7,7 +8,7 @@ function runSpeechRecognition() {
     // new speech recognition object in Spanish!
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
-    recognition.lang = "es";
+    recognition.lang = "es-AR";
 
     // This runs when the speech recognition service starts
     recognition.onstart = function () {
