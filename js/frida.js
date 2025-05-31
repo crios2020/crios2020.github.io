@@ -34,13 +34,13 @@ function runSpeechRecognition() {
                 hola();
             }
 
-            if (transcript === "hora" || transcript === "horario" || transcript === "reloj" || transcript === "tiempo") {
+            if (transcript === "hora" || transcript === "horario" || transcript === "reloj" || transcript === "order" || transcript === "hello") {
                 hora();
             }
             if (transcript === "fecha") {
                 fecha();
             }
-            if (transcript === "clima" || transcript === "temperatura") {
+            if (transcript === "clima" || transcript === "temperatura" || transcript === "tiempo") {
                 clima();
             }
             if (transcript === "ubicacion" || transcript === "ubicación" || transcript === "donde" || transcript === "dónde" || transcript === "estamos") {
@@ -52,7 +52,7 @@ function runSpeechRecognition() {
             if (transcript === "programación" || transcript === "programacion" || transcript === "programar" || transcript === "software" || transcript === "desarrollo" || transcript === "programa") {
                 programacion();
             }
-            if (transcript === "estudiar" || transcript === "estudios" || transcript === "estudiante" || transcript === "carrera" || transcript === "laboral" || transcript === "curso" || transcript === "cursos" || transcript === "trayecto" || transcript === "trayectos") {
+            if (transcript === "estudiar" || transcript === "estudios" || transcript === "estudiante" || transcript === "carrera" || transcript === "laboral" || transcript === "curso" || transcript === "cursos" || transcript === "trayecto" || transcript === "trayectos" || transcript === "corso" || transcript === "corsos") {
                 estudiar();
             }
             if (transcript === "locura" || transcript === "fruta" || transcript === "bardo") {
