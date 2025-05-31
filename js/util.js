@@ -142,7 +142,6 @@ function getHora() {
     hora = fecha.getHours()
     minuto = fecha.getMinutes()
     return hora + " horas y " + minuto + " minutos"
-
 }
 
 /**
