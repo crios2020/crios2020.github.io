@@ -61,7 +61,7 @@ function runSpeechRecognition() {
         }
 
         // show the closed captioned and remove after 3 seconds
-        texto.textContent = transcript;
+        texto.textContent = transcript+" "+confidence;
         //setTimeout(function () {
         //    texto.textContent = "Escuchando .......";
         //}, 5000)
