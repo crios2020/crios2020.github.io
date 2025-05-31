@@ -1,6 +1,6 @@
 function runSpeechRecognition() {
     const frida = document.querySelector("#frida");
-    //const texto = document.querySelector("#output");
+    const texto = document.querySelector("#output");
     
     console.log("------");
 
@@ -61,10 +61,10 @@ function runSpeechRecognition() {
         }
 
         // show the closed captioned and remove after 3 seconds
-        //texto.textContent = textToSpeak;
-        //setTimeout(function () {
-        //    texto.textContent = banner;
-        //}, 3000)
+        texto.textContent = transcript;
+        setTimeout(function () {
+            texto.textContent = "Escuchando .......";
+        }, 5000)
 
         // read out loud the answer
         let speech = new SpeechSynthesisUtterance();
