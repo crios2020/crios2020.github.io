@@ -31,32 +31,34 @@ function runSpeechRecognition() {
         // only run the special sentences if confidence is "high"
         if (confidence > 0.75) {
 
-            if (transcript === "hola") {
+            if (transcript.includes("hola") || transcript.includes("frida") || transcript.includes("ia") || transcript.includes("inteligencia") || transcript.includes("artificial")) {
                 hola();
             }
-
-            if (transcript === "hora" || transcript === "horario" || transcript === "reloj" || transcript === "order" || transcript === "hello") {
+            if (transcript.includes("hora") || transcript.includes("horario") || transcript.includes("reloj")) {
                 hora();
             }
-            if (transcript === "fecha") {
+            if (transcript.includes("fecha") || transcript.includes("dia") || transcript.includes("hoy")) {
                 fecha();
             }
-            if (transcript === "clima" || transcript === "temperatura" || transcript === "tiempo") {
+            if (transcript.includes("clima") || transcript.includes("temperatura") || transcript.includes("tiempo")) {
                 clima();
             }
-            if (transcript === "ubicacion" || transcript === "ubicación" || transcript === "donde" || transcript === "dónde" || transcript === "estamos") {
+            if (transcript.includes("ubicacion") || transcript.includes("ubicación") || transcript.includes("donde") || transcript.includes("dónde") || transcript.includes("estamos")) {
                 ubicacion();
             }
-            if (transcript === "formación profesional" || transcript === "colegio" || transcript === "escuela" || transcript === "formacion profesional" || transcript === "oficio" || transcript === "oficios") {
+            if (transcript.includes("formación profesional") || transcript.includes("colegio") || transcript.includes("escuela") || transcript.includes("formacion profesional") || transcript.includes("formación") || transcript.includes("laboral") || transcript.includes("oficio") || transcript.includes("oficios")) {
                 fp();
             }
-            if (transcript === "programación" || transcript === "programacion" || transcript === "programar" || transcript === "software" || transcript === "desarrollo" || transcript === "programa") {
+            if (transcript.includes("programación") || transcript.includes("programacion") || transcript.includes("programar") || transcript.includes("software") || transcript.includes("desarrollo") || transcript.includes("programa")) {
                 programacion();
             }
-            if (transcript === "estudiar" || transcript === "estudios" || transcript === "estudiante" || transcript === "carrera" || transcript === "laboral" || transcript === "curso" || transcript === "cursos" || transcript === "trayecto" || transcript === "trayectos" || transcript === "corso" || transcript === "corsos") {
+            if (transcript.includes("videojuegos") || transcript.includes("video juegos") || transcript.includes("base de datos") || transcript.includes("seguridad") || transcript.includes("especialidad") || transcript.includes("especialidades") || transcript.includes("aplicaciones") || transcript.includes("web")) {
+                especialidades();
+            }
+            if (transcript.includes("estudiante") || transcript.includes("carrera") || transcript.includes("curso") || transcript.includes("cursos") || transcript.includes("trayecto") || transcript.includes("trayectos")) {
                 estudiar();
             }
-            if (transcript === "locura" || transcript === "fruta" || transcript === "bardo") {
+            if (transcript.includes("locura") || transcript.includes("fruta") || transcript.includes("bardo") || transcript.includes("bardear")) {
                 bardear();
             }
         }

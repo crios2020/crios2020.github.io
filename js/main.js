@@ -147,7 +147,9 @@ function fp(){
     callar()
     hablar("Formación Profesional ")
     hablar("Es una modalidad de capacitación integral destinada a ofrecer las herramientas y habilidades necesarias para el desarrollo eficaz en el mundo del trabajo.")
-    hablar("Nuestra oferta está orientada en: Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Textil, Estética, entre otros.")
+    hablar("Nuestra oferta está orientada en: ")
+    hablar("Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; ")
+    hablar("Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Textil, Estética, entre otros.")
     hablar("Toda la oferta es gratuita y con certificación oficial de validez nacional.")
 }
 
@@ -160,6 +162,15 @@ function programacion(){
     hablar("Base de datos, ")
     hablar("Programación orientada a objetos ")
     hablar("y Relaciones laborales.")
+}
+
+function especialidades(){
+    callar()
+    hablar("Nuestras especialidades en programación son: ")
+    hablar("Programación WEB")
+    hablar("Programación Segura y Cyberseguridad!")
+    hablar("Programación de video juegos")
+    hablar("Administración de base de datos")
 }
 
 function estudiar(){
@@ -279,7 +290,6 @@ const estudios = [
     "tenés una moto vieja? estudia reparación de motos",
     "tenés un auto viejo? estudia mecánica del automotor",
     "Sabías que ",
-    "tenemos capacitaciones en Informática; Energía Eléctrica; Mecánica Automotriz; Construcciones; Hotelería y Gastronomía; Imagen y Sonido, Carpintería, Turismo, Textil, Estética, entre otros.",
     "Toda nuestra oferta educativa es gratuita",
     "Toda nuestra oferta educativa cuenta con certificación oficial de validez nacional.",
     "Otro año sin trabajo? vení a estudiar con nostros!",
