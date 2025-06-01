@@ -31,7 +31,7 @@ function runSpeechRecognition() {
         // only run the special sentences if confidence is "high"
         if (confidence > 0.75) {
 
-            if (transcript.includes("hola") || transcript.includes("frida") || transcript.includes("ia") || transcript.includes("inteligencia") || transcript.includes("artificial")) {
+            if (transcript.includes("hola") || transcript.includes("frida") || transcript.includes("inteligencia") || transcript.includes("artificial")) {
                 hola();
             }
             if (transcript.includes("hora") || transcript.includes("horario") || transcript.includes("reloj")) {
