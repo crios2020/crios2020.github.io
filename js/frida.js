@@ -37,7 +37,7 @@ function runSpeechRecognition() {
             if (transcript.includes("hora") || transcript.includes("horario") || transcript.includes("reloj")) {
                 hora();
             }
-            if (transcript.includes("fecha") || transcript.includes("dia") || transcript.includes("hoy")) {
+            if (transcript.includes("fecha") || transcript.includes("día") || transcript.includes("hoy")) {
                 fecha();
             }
             if (transcript.includes("clima") || transcript.includes("temperatura") || transcript.includes("tiempo")) {
