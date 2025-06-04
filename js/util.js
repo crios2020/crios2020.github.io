@@ -920,6 +920,7 @@ const frases = [
     "En Argentina me llaman carpincho!",
     "En Bolivia me llaman capiguara!",
     "En Brazil me llaman capibara!",
+    "En Venezuela me llaman chigüire!",
     "En otros paises me dicen capiguara!",
     "En otros paises me dicen capibara!",
     "Me gusta tomar Mate!",
