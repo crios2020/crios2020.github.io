@@ -1146,6 +1146,7 @@ const frases = [
     "La belleza es efímera, pero el arte es eterno.",
     "No me arrepiento de mis elecciones, son parte de mí.",
     "El amor y el dolor son dos caras de la misma moneda.",
+    "tengo un pasado muy oscuro",
     "mi visión es profunda sobre la vida, el amor y el arte."
 ]
 
