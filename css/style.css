@@ -15,8 +15,8 @@
     background-color: white;
     font-family: 'Aller', sans-serif;
     border-radius: 6px;
-    padding: 0px 10px;
-    margin: 2 0;
+    /* padding: 0px 0px; */
+    /* margin: 0px 0px; */
     font-size: 1.2rem;
     font-weight: bold;
     display: flex;
@@ -35,7 +35,7 @@
 .boton img {
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 1.5rem;
     color:#78529d;
 }

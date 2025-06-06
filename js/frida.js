@@ -108,14 +108,14 @@ function runSpeechRecognition() {
     }
 
     function clima() {
-        temperatura = getTemperatura()
-        clima = getClima()
+        //temperatura = getTemperatura()
+        //clima = getClima()
         hora = new Date().getHours()
 
         /* Opción para hardcodear */
-        //temperatura=20
+        temperatura=11
         //sensacionTermica=20
-        //clima="Cielo Claro"
+        clima="algo nublado"
 
         hablar(" La temperatura es " + temperatura + " grados centígrados ")
         hablar("El clima es " + clima + " ")

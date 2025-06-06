@@ -18,14 +18,14 @@ function fechaHoraActual(){
     hablar("Hoy es "+getFecha()+" "+hoyEs()+" estamos en "+getEstacion()+", ")
     efemerides()
 
-    temperatura=getTemperatura()
-    clima=getClima()
+    //temperatura=getTemperatura()
+    //clima=getClima()
     hora=new Date().getHours()
 
     /* Opción para hardcodear */
-    //temperatura=20
+    temperatura=11
     //sensacionTermica=20
-    //clima="Cielo Claro"
+    clima="algo nublado"
 
     hablar(" La temperatura es "+temperatura+" grados centígrados ")
     hablar("El clima es "+clima+" ")
@@ -100,7 +100,7 @@ function efemerides(){
     if(diaMes==25 && mes==4)                    hablar(" Hoy es el día de la patria en argentina!! ")
 
     //día de la independencia
-    if(diaMes==6 && mes==5)                     hablar(" Hoy es el día de la independencia en argentina !! ")
+    if(diaMes==9 && mes==6)                     hablar(" Hoy es el día de la independencia en argentina !! ")
 
     //día de san martin
     if(diaMes==17 && mes==7)                    hablar(" Hoy recordamos a nuestro padre de la patria, el general Don Jose de San Martín!! ")
