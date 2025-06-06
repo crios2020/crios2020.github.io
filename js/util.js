@@ -849,7 +849,7 @@ const frases = [
     "No seas ortiva, no te zarpes!!",
     "Che, esto es un embole!",
     "¿Más claro? Echale agua",
-    "Ni en pedo! ",
+    //"Ni en pedo! ",
     "No gastes pólvora en chimango",
     "Creo que no te llega agua al tanque",
     "Me faltan un par de caramelos en el frasco!",
