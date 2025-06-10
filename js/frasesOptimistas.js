@@ -51,10 +51,6 @@ const frasesOptimistas = [
     "Si puedo soñarlo, puedo crearlo, porque la esperanza siempre encuentra el camino."
 ]
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-
 function getFraseOptimistaRandom(){
     return frasesOptimistas[getRandomInt(frasesOptimistas.length-1)]
 }

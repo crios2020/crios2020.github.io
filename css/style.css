@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Aller';
+    src: url('/fonts/ALLERFONT/Aller_Rg.ttf') format('truetype');
+}
+
+.fondo{
+    background-color: #26214f;
+    color:white;
+}
+
+
+.boton{
+    color: #26214f;
+    background-color: white;
+    font-family: 'Aller', sans-serif;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-style: none;
+}
+
+
+.boton:hover{
+    color: white;
+    background-color: #78529d;
+}
+
+.boton img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+    color:#78529d;
+}
+.pie{
+    font-family: 'Aller', sans-serif;
+}

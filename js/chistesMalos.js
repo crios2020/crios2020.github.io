@@ -96,7 +96,6 @@ const chistesMalos = [
     "Encendí una vela y ahora no quiere apagarse, dice que está en su mejor momento.",
     "El sol estaba tan cansado que se tomó un día libre y dejó todo nublado.",
     "El lápiz se quebró por estrés, estaba bajo mucha presión.",
-    "Pasé por una tienda de ropa y las camisetas me dijeron que no tenían tiempo para mí.",
     "El papel se rebeló y ahora vive arrugado por decisión propia.",
     "La lámpara se apagó porque quería descansar de iluminar problemas.",
     "El reloj dejó de funcionar porque ya no tenía tiempo para tonterías.",
@@ -107,10 +106,6 @@ const chistesMalos = [
     "El coco dejó de ser loco porque fue a terapia.",
     "El espejo me dijo: Hoy estás muy bien... pero luego se rompió de la risa."
 ]
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
 
 function getChisteMaloRandom(){
     return chistesMalos[getRandomInt(chistesMalos.length-1)]
