@@ -1,0 +1,60 @@
+const frasesOptimistas = [
+    "Aunque duela, la vida siempre tiene algo hermoso que ofrecer.",
+    "Cada flor que brota en el jardín me recuerda que siempre se puede empezar de nuevo.",
+    "El dolor me enseñó a valorar cada instante de alegría.",
+    "No hay tormenta que dure para siempre; el sol siempre vuelve a salir.",
+    "La vida no es perfecta, pero siempre puede ser profundamente nuestra.",
+    "Si la vida me rompe, yo me reconstruyo con colores más vivos.",
+    "En cada herida hay una lección que me hace más fuerte.",
+    "Aunque me corten las alas, siempre encontraré la manera de volar.",
+    "El arte de vivir está en convertir cada caída en un nuevo comienzo.",
+    "No importa cuántas veces me derrumbe, siempre encuentro motivos para levantarme.",
+    "Amar es una revolución que empieza en el corazón.",
+    "La pasión es el fuego que mantiene viva mi alma.",
+    "El amor no siempre es perfecto, pero siempre es parte del camino.",
+    "Prefiero un amor real, aunque duela, que uno que no me haga sentir nada.",
+    "El amor empieza en el corazón, pero florece en los actos.",
+    "Mi corazón puede romperse mil veces, pero siempre encuentra formas de latir.",
+    "El amor verdadero no se encuentra, se construye cada día.",
+    "El arte y el amor son los remedios para cualquier tristeza.",
+    "Aunque me lastimen, nunca dejaré de amar.",
+    "El amor es como un pincel: puede crear las obras más hermosas si lo usamos bien.",
+    "El arte me salva cuando todo parece perder sentido.",
+    "Mi dolor se convierte en pinceladas que llenan de vida el lienzo.",
+    "Pinto lo que siento, porque las emociones también necesitan ser libres.",
+    "El arte es el puente entre lo que soy y lo que sueño ser.",
+    "La creatividad es mi forma de gritarle al mundo que sigo aquí.",
+    "Cada cuadro es un pedazo de mi alma que dejo para el mundo.",
+    "El arte no es perfecto, pero siempre es sincero.",
+    "Si no puedo caminar, pintaré alas para llegar más lejos.",
+    "Cada pincelada es una cicatriz que se transforma en belleza.",
+    "La pintura me da lo que la vida a veces me niega: libertad.",
+    "Soy más fuerte que cualquier tormenta que la vida me envíe.",
+    "Mis cicatrices son testigos de que sobreviví cuando todo parecía perdido.",
+    "Aunque el camino sea difícil, siempre hay flores que crecen entre las piedras.",
+    "Caer no es el final, es solo parte de aprender a levantarse.",
+    "El dolor me enseñó que soy capaz de soportar más de lo que imaginé.",
+    "Nada me detendrá; si no encuentro la puerta, abriré una ventana.",
+    "La vida me golpea, pero yo la abrazo con más fuerza.",
+    "Cada lágrima que derramo riega el árbol de mi fortaleza.",
+    "La adversidad me dio raíces, pero mi esperanza me regaló alas.",
+    "Soy como un cactus: sobrevivo incluso en los desiertos más áridos.",
+    "Mis sueños son más grandes que cualquier obstáculo en mi camino.",
+    "El futuro es un lienzo en blanco, y yo tengo los colores para pintarlo.",
+    "Nunca dejaré de soñar, porque soñar me mantiene viva.",
+    "Cada día es una nueva oportunidad para crear algo hermoso.",
+    "Mis sueños me recuerdan que siempre hay algo por lo que vale la pena luchar.",
+    "El horizonte siempre está lleno de posibilidades, aunque no lo vea ahora.",
+    "No importa cuán oscuro parezca todo, el amanecer siempre llega.",
+    "El mañana es la promesa de que lo mejor aún está por venir.",
+    "Nunca es tarde para empezar de nuevo; los sueños no tienen fecha de caducidad.",
+    "Si puedo soñarlo, puedo crearlo, porque la esperanza siempre encuentra el camino."
+]
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function getFraseOptimistaRandom(){
+    return frasesOptimistas[getRandomInt(frasesOptimistas.length-1)]
+}
