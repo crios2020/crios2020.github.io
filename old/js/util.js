@@ -1,6 +1,5 @@
-/**
-    Libreria pensada como decorado para curso de programación Inicial
-*/
+//Libreria pensada como decorado para curso de programación Inicial
+
 const apiWheather = {
     key: '9e122cd782b2d0333f5fe4e7fa192062',
     url: 'https://api.openweathermap.org/data/2.5/weather',
@@ -123,7 +122,7 @@ function entrada(mensaje){
  * @returns Zona Horaria
 */
 function getZonaHoraria() {
-    //El formato de zona horaria lo da el navegador de internet
+    //FIXME a la fecha 12/04/2025 se encontro una PC cliente que no devuelve la zona horaria en el formato esperado, para Buenos aires retorna +GTM3
     return Intl
         .DateTimeFormat()
         .resolvedOptions()
@@ -133,12 +132,144 @@ function getZonaHoraria() {
         .replace("_", " ");
 }
 
+/**
+ * Función que devuelve la hora en un string
+ * @returns Hora
+ */
+function getHora() {
+    fecha = new Date()
+    anio = fecha.getFullYear()
+    hora = fecha.getHours()
+    minuto = fecha.getMinutes()
+    return hora + " horas y " + minuto + " minutos"
+}
 
 /**
- * Función que convierte grados kelvin a celcius
- * @param {*} kelvin 
- * @returns 
+ * Función el momento del día
+ * @returns Momento
  */
+function getMomento() {
+    momento = ""
+    if (hora >= 0 && hora < 4) momento = "trasnoche"
+    if (hora >= 4 && hora < 6) momento = "madrugada"
+    if (hora >= 6 && hora < 8) momento = "amanecer"
+    if (hora >= 8 && hora < 11) momento = "mañana"
+    if (hora >= 11 && hora < 14) momento = "mediodía"
+    if (hora >= 14 && hora < 18) momento = "tarde"
+    if (hora >= 18 && hora < 20) momento = "anochecer"
+    if (hora >= 20 && hora < 24) momento = "noche"
+    return momento
+}
+
+/**
+ * Función la acción del momento del día
+ * @returns Momento
+ */
+function getMomentoAccion() {
+    momento = ""
+    if (hora >= 0 && hora < 6) momento = "dormir"
+    if (hora >= 6 && hora < 8) momento = "despertar"
+    if (hora >= 8 && hora < 11) momento = "desayunar"
+    if (hora >= 11 && hora < 14) momento = "morfar"
+    if (hora >= 14 && hora < 16) momento = "dormir siesta"
+    if (hora >= 16 && hora < 18) momento = "merendar"
+    if (hora >= 18 && hora < 20) momento = "ver series"
+    if (hora >= 20 && hora < 22) momento = "cenar"
+    if (hora >= 22 && hora < 24) momento = "dormir"
+    return momento
+}
+
+/**
+ * Función que devuelve la fecha actual en un string
+ * @returns Fecha
+ */
+function getFecha() {
+    fecha = new Date()
+    diaMes = fecha.getDate()
+    diaSem = fecha.getDay()
+    nroMes = fecha.getMonth()
+    anio = fecha.getFullYear()
+
+    var nombreDia = ''
+    if (diaSem == 0) nombreDia = 'domingo'
+    if (diaSem == 1) nombreDia = 'lunes'
+    if (diaSem == 2) nombreDia = 'martes'
+    if (diaSem == 3) nombreDia = 'miércoles'
+    if (diaSem == 4) nombreDia = 'jueves'
+    if (diaSem == 5) nombreDia = 'viernes'
+    if (diaSem == 6) nombreDia = 'sábado'
+
+    var nombreMes = ''
+    if (nroMes == 0) nombreMes = 'enero'
+    if (nroMes == 1) nombreMes = 'febrero'
+    if (nroMes == 2) nombreMes = 'marzo'
+    if (nroMes == 3) nombreMes = 'abril'
+    if (nroMes == 4) nombreMes = 'mayo'
+    if (nroMes == 5) nombreMes = 'junio'
+    if (nroMes == 6) nombreMes = 'julio'
+    if (nroMes == 7) nombreMes = 'agosto'
+    if (nroMes == 8) nombreMes = 'septiembre'
+    if (nroMes == 9) nombreMes = 'octubre'
+    if (nroMes == 10) nombreMes = 'noviembre'
+    if (nroMes == 11) nombreMes = 'diciembre'
+
+    return nombreDia + ", " + diaMes + " de " + nombreMes + " del año " + anio
+
+}
+
+/**
+ * Función hoyEs devuelve una esfemérides del día
+ * @returns esfemérides
+ */
+function hoyEs() {
+    fecha = new Date()
+    diaMes = fecha.getDate()
+    diaSem = fecha.getDay()
+    nroMes = fecha.getMonth()
+    anio = fecha.getFullYear()
+    hoy = ""
+    if (diaSem == 1) hoy = "Odio los lunes, por que hay que ir a trabajar!"
+    if (diaSem == 2) hoy = "es Martes hay que ir a trabajar!"
+    if (diaSem == 3) hoy = "es Miércoles hay que ir a trabajar!"
+    if (diaSem == 4) hoy = "es Jueves hay que ir a trabajar!"
+    if (diaSem == 5) hoy = "es viernes y tu cuerpo lo sabe!"
+    if (diaSem == 6) hoy = "Es fin de semana, a descansar!"
+    if (diaSem == 0) hoy = "Es fin de semana, a descansar!"
+    return hoy
+
+}
+
+/**
+ * Función que devuelve la estación
+ * @returns esfemérides
+ */
+function getEstacion() {
+    estacion = ""
+    fecha = new Date()
+    diaMes = fecha.getDate()
+    diaSem = fecha.getDay()
+    nroMes = fecha.getMonth()
+    switch (nroMes) {
+        case 0: case 1: estacion = "verano"
+            break;
+        case 3: case 4: estacion = "otoño"
+            break;
+        case 6: case 7: estacion = "invierno"
+            break;
+        case 9: case 10: estacion = "primavera"
+            break;
+        case 2: estacion = (diaMes < 21) ? "verano" : "otoño"
+            break
+        case 5: estacion = (diaMes < 21) ? "otoño" : "invierno"
+            break
+        case 8: estacion = (diaMes < 21) ? "invierno" : "primavera"
+            break
+        case 11: estacion = (diaMes < 21) ? "primavera" : "verano"
+            break
+    }
+    return estacion
+}
+
 function toCelsius(kelvin) {
     return Math.round(kelvin - 273.15)
 }
@@ -494,6 +625,7 @@ function getLlueve(){
 }
 
 const frases = [
+    //"¡Che, boludo! ",
     "¿El chori pan te gusta con chimichurri o criolla? ",
     "¿Que haces máquina turbina? ",
     "¿Las pastaflora te gusta de batata o membrillo? ",
@@ -518,6 +650,7 @@ const frases = [
     "¡Al toque perro! ",
     "¡Plata no tenemos, miedo tampoco! ",
     "¡Hasta la vista beibi! ",
+    //"¿Tenes vértigo en la cola? ",
     "¿Lo entendiste o te lo explico con dibujito? ",
     "¡No tenes los patitos en fila! ",
     "¡Calentito los panchos! ",
@@ -690,6 +823,14 @@ const frases = [
     "Lo sospeche desde un principio! ",
     "Ya me canse de hablar tanto ",
     "Me gustan las chicas! ",
+    "¿Te gustaría estudiar programación? ",
+    "¿Té gustaría estudiar Java?",
+    "¿Té gustaría estudiar Tester de Aplicaciónes?",
+    "¿Té gustaría estudiar Javaescript?",
+    "¿Té gustaría estudiar Paiton?",
+    "¿Té gustaría estudiar Cyber Seguridad?",
+    "¿Té gustaría estudiar Análisis de datos?",
+    "¿Té gustaría estudiar Programación Web?",
     "Acusalo con tu mamá",
     "cuidado! Viene el maestro longaniza",
     "¿por si o por no?",
@@ -708,6 +849,7 @@ const frases = [
     "No seas ortiva, no te zarpes!!",
     "Che, esto es un embole!",
     "¿Más claro? Echale agua",
+    //"Ni en pedo! ",
     "No gastes pólvora en chimango",
     "Creo que no te llega agua al tanque",
     "Me faltan un par de caramelos en el frasco!",
@@ -769,12 +911,25 @@ const frases = [
     "Un médico por allá!",
     "se te escapo la tortuga!",
     "Estudia programación, más vale tarde que nunca!",
-    "No te aguanto, pero me hago el dolobu!",
+    "No te aguanto, pero me hago el boludo!",
     "No hay tu tía!",
     "No le busques el pelo al huevo! vení a estudiar programación",
     "Soy muy argento!",
     "Vivir en Suiza y perderte de conocerme a mi?",
+    "No se si soy carpincho, capibara o capiguara!",
+    "En Argentina me llaman carpincho!",
+    "En Bolivia me llaman capiguara!",
+    "En Brazil me llaman capibara!",
+    "En Venezuela me llaman chigüire!",
+    "En otros paises me dicen capiguara!",
+    "En otros paises me dicen capibara!",
     "Me gusta tomar Mate!",
+    "Yo vivo en Nordelta, provincia de Buenos Aires",
+    "Naci en nordelta, provincia de Buenos Aires",
+    "Soy bonaerense, vivo en nordelta",
+    "Ahora tengo una diseñadora gráfica, pronto voy a estar más bonito!",
+    "Mi diseñadora gráfica se llama Romina!",
+    "Mi diseñadora gráfica me quiere mucho!",
     "Yo se que soy muy lindo!",
     "Me cuesta mucho superarme, soy insuperable, soy maravilloso",
     "Tengo fiaca",
@@ -791,16 +946,56 @@ const frases = [
     "No estoy pintado",
     "La programación es divertida",
     "cuidado, en cualquier momento me salta la térmica y digo cualquier cosa",
+    "estudia Marketing digital",
+    "Te gustaría estudiar Marketing digital?",
+    "estudia Análisis de datos",
+    "Te gustaría estudiar análisis de datos?",
+    "Hacete conocer, estudiá marketing digital",
+    "Convertite en un Bi Ai, estudia análisis de datos",
+    "Domina la inteligencia de negocio con análisis de datos",
     "Me alegro de saber que ",
+    "Tu vida pide alegría, por eso vení a estudiar con nosotros",
     "como te dije antes",
-    "no fumes charutos!",
+    "Deberías estudiar energías renovables",
+    "estudia energías renovables",
+    "Contribuye con el medio ambiente, estudia energías renovables",
+    "Te falta un tornillo, imprimilo en 3 d, estudia modelado 3 d",
+    "estudia modelado 3 d",
+    "deberías estudiar modelado 3 d",
+    "estudia reparación de celulares",
+    "deberías estudiar reparación de celulares",
+    "potencia tus ventas con marketing digital",
+    "querés ser famoso como yo, estudia marketing digital",
+    "no fumes charutos",
+    "pronto inician los cursos de reparación de celulares",
     "solo se que no se nada",
     "sabemos que",
     "me alegra saber que",
+    "estudia instalación de alarmas de seguridad",
+    "estudia reparación de equipos de climatización",
+    "estudia reparación de aires acondicionado",
+    "estudia instalación de redes informáticas",
+    "estudia reparación de impresoras 3 D",
+    "estudia electricidad básica",
+    "tenemos cursos con inserción laboral",
     "siempre es bueno estudiar",
+    "mejora tus capacidades laborales, estudia con nosotros",
+    "no lo dudes, estudia con nosotros",
+    "En formación profesional, brindamos capacitaciones gratuitas",
+    "no sabes que hacer de tu vida? Vení a estudiar con nosotros",
+    "te sentís solo? Vení a estudiar con nosotros",
+    "tu amor te dejó? Vení a estudiar con nosotros",
+    "estas sin trabajo? Vení a estudiar con nosotros",
+    "estas depre? Vení a estudiar con nosotros y te alegramos el día",
     "te veo a vos y sale el sol",
     "estoy feliz de verte",
+    "dale a tu vida un cambio, vení a estudiar con nosotros",
+    "ponele fin a los problemas, vení a estudiar con nosotros",
     "soy un pastelito",
+    "tu moto te deja a pata? estudia reparación de motos",
+    "estas cansado de ir al mecánico? estudia mecánica del automotor",
+    "tenés una moto vieja? estudia reparación de motos",
+    "tenés un auto viejo? estudia mecánica del automotor",
     "Fui programado en javascript!",
     "Abrazame tengo frio!",
     "Abrazame tengo miedo!",
@@ -808,7 +1003,18 @@ const frases = [
     "Sabías que ",
     "Hoy te convertis en heroe! ",
     "Al que trabaja Díos lo ayuda, pero al que estudia Díos lo Ama",
+    "los carpinchos somos muy sociables y tomamos mate",
+    "los carpinchos somos muy sociables y vivimos en grupo",
+    "los carpinchos somos muy amistosos",
+    "los carpinchos somos muy tranquilos y convivimos con los humanos",
+    "los carpinchos somos un símbolo de la biodiversidad en los humedales de América del Sur",
+    "los carpinchos nos encanta estar cerca del agua y somos buenos nadadores",
+    "los carpinchos no le tenemos miedo a los cocodrilos",
+    "los carpinchos montamos y andamos parados sobre cocodrilos",
     "adopta un carpincho",
+    "los carpinchos somos mamíferos roedores",
+    "los carpinchos solos los roedores más grandes del mundo",
+    "los carpinchos vivimos en sudamerica",
     "mira que te como hermano!",
     "Sos un groso!!",
     "no te hagas el gil!",
@@ -825,6 +1031,7 @@ const frases = [
     "corta la bocha",
     "en esta te banco",
     "estoy en la lona!",
+    "te peliaste con la tóxica? Vení a estudiar con nosotros",
     "seguinos en redes sociales!",
     "siempre carpincho, nunca capibara!!!",
     "Escuchate esta ",
@@ -907,6 +1114,8 @@ const frases = [
     "¿Quién se anima a jugar en el barro?",
     "Disfrutemos del momento, siempre.",
     "seguí así que vamos bien",
+    "No tenes un mango? nuestra oferta es gratuita",
+    "No tenes plata? nuestra oferta es gratuita",
     "No tenes plata? Yo tampoco",
     "no me dejen solo, me da miedo estar solo!",
     "Mirarme a mi, trae suerte",
