@@ -72,6 +72,6 @@ const frasesCrecimientoPersonal = [
     "Mi visión es profunda sobre la vida, el amor y el arte."
 ]
 
-function getFrasesCrecimientoPersonalRandom(){
+function getFraseCrecimientoPersonalRandom(){
     return frasesCrecimientoPersonal[getRandomInt(frasesCrecimientoPersonal.length-1)]
 }

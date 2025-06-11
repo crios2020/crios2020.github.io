@@ -58,4 +58,7 @@ select option{
     background-color: #78529d;
     padding: 5px;
     text-align: left;
+    font-size: smaller;
+    width: 100%;
+    height: 15rem;
 }

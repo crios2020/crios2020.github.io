@@ -1,5 +1,4 @@
 const frasesFrida = [
- 
     "Pies, ¿para qué los quiero si tengo alas para volar?",
     "Soy mi propia musa. Soy el sujeto que conozco mejor.",
     "La vida es un conjunto de experiencias, y yo he vivido muchas.",
@@ -102,6 +101,6 @@ const frasesFrida = [
     "Cada trazo es un acto de amor hacia mi historia."
 ]
 
-function getFrasesFridaRandom(){
+function getFraseFridaRandom(){
     return frasesFrida[getRandomInt(frasesFrida.length-1)]
 }
