@@ -98,7 +98,29 @@ const frasesFrida = [
     "Pinto para desafiar las expectativas.",
     "Mis obras son una celebración de la dualidad de la vida.",
     "El arte es mi forma de resistir y persistir.",
-    "Cada trazo es un acto de amor hacia mi historia."
+    "Cada trazo es un acto de amor hacia mi historia.",
+    "La vida es un constante juego de contrastes.",
+    "No pinto lo que veo, pinto lo que siento.",
+    "Soy mi propia musa. Soy el tema que conozco mejor.",
+    "La tristeza es un muro entre dos jardines.",
+    "Vivo en mis propias contradicciones.",
+    "El dolor es parte de la vida, y la vida es un arte.",
+    "Cada día es un nuevo comienzo.",
+    "Mis heridas son mi fortaleza.",
+    "El amor es un viaje que nunca termina.",
+    "La creatividad surge del sufrimiento.",
+    "A veces, me siento perdida, pero siempre encuentro el camino.",
+    "La autenticidad es mi mejor ropa.",
+    "No hay nada más bello que ser uno mismo.",
+    "El arte es la forma de liberarse del dolor.",
+    "La vida me ha enseñado a ser fuerte.",
+    "El sufrimiento puede ser un gran maestro.",
+    "La belleza es efímera, pero el arte es eterno.",
+    "No me arrepiento de mis elecciones, son parte de mí.",
+    "El amor y el dolor son dos caras de la misma moneda.",
+    "tengo un pasado muy oscuro",
+    "mi visión es profunda sobre la vida, el amor y el arte."
+
 ]
 
 function getFraseFridaRandom(){
