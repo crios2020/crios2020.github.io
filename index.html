@@ -22,7 +22,7 @@
         <main>
             <div class="container-fluid text-center">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 mb-2">
                         <!-- svg de frida -->
                         <!-- Based on a drawing by @elCreata: https://twitter.com/elCreata/status/1412329674458476545 -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2162 2162" id="frida"
@@ -87,11 +87,24 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 mb-2">
                         <div class="col d-grid gap-2 p-0">
 
+                            <div class="card text-bg-primary mb-3" style="max-width: 100%;">
+                                <div class="card-header">Header</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Primary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card’s content.</p>
+                                </div>
+                            </div>
+
+                            <div id="output" class="clearfix">Frida esta lista .......</div>
                             <form class="d-flex" role="search">
-                                <select id="preguntas" class="form-control me-2">
+                                <select id="preguntas" class="form-control me-2 select">
+                                    <option value="opa">Que es OPA?</option>
+                                    <option value="nombre">Ayuda a personas con problemas auditivos?</option>
+                                    <option value="nombre">Ayuda a personas no videntes?</option>
                                     <option value="nombre">Como te llamas?</option>
                                     <option value="hora">Que hora es?</option>
                                     <option value="fecha">Que fecha es hoy?</option>
@@ -102,30 +115,17 @@
                                     <option value="especialidades">Hay especialidades de Programación?</option>
                                     <option value="cursos">Que otros trayectos o cursos puedo estudiar?</option>
                                     <option value="estudiar">Porque debo estudiar en la vida?</option>
-                                    <option value="requisitos">Que necesito para etudiar en Formación Profesional?</option>
-                                    <option value="frida">Que fue Frida?</option>
+                                    <option value="requisitos">Que necesito para etudiar en Formación Profesional?
+                                    </option>
+                                    <option value="frida">Quien fue Frida?</option>
                                     <option value="chiste">Podes contar un chiste malo?</option>
                                 </select>
-                                <button class="btn btn-outline-success" type="submit">Preguntar?</button>
+                                <button class="btn btn-outline-danger" type="button"><img src="icons/voice.png"
+                                        width="32" height="32" alt="microfono"></button>
                             </form>
-                            <!--
-                            <button type="button" class="btn boton btn-xl" onclick="runSpeechRecognition()">
-                                <img src="icons/mic.svg" alt="icono">
-                                Hablar con Frida!
-                            </button>
-                            <button type="button" class="btn boton btn-xl" onclick="callar()">
-                                <img src="icons/volume-mute.svg" alt="icono">
-                                Callar a Frida!
-                            </button>
-                            <div>Usa las palabras: Hola - Hora - Fecha - Clima - Ubicación - Formación Profesional -
-                                Programación - Cursos - Locura</div>
-                            <div id="output">Frida esta lista .......</div>
-                            -->
+
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div id="output">Frida esta lista .......</div>
                 </div>
             </div>
         </main>

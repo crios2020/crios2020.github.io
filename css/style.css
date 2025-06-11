@@ -39,3 +39,22 @@
 .pie{
     font-family: 'Aller', sans-serif;
 }
+
+select option{
+   color:#78529d; 
+   border-style: none;
+}
+
+.select{
+    color:#78529d;
+}
+
+.select:focus{
+    color:#78529d;
+}
+
+#output{
+    background-color: #78529d;
+    padding: 5px;
+    text-align: left;
+}
