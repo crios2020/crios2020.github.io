@@ -53,7 +53,8 @@ select option{
     color:#78529d;
 }
 
-#output{
+#caja{
+    color: white;
     background-color: #78529d;
     padding: 5px;
     text-align: left;

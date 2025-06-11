@@ -89,17 +89,6 @@
                     </div>
                     <div class="col-sm-6 mb-2">
                         <div class="col d-grid gap-2 p-0">
-
-                            <div class="card text-bg-primary mb-3" style="max-width: 100%;">
-                                <div class="card-header">Header</div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Primary card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card’s content.</p>
-                                </div>
-                            </div>
-
-                            <div id="output" class="clearfix">Frida esta lista .......</div>
                             <form class="d-flex" role="search">
                                 <select id="preguntas" class="form-control me-2 select">
                                     <option value="opa">Que es OPA?</option>
@@ -123,6 +112,16 @@
                                 <button class="btn btn-outline-danger" type="button"><img src="icons/voice.png"
                                         width="32" height="32" alt="microfono"></button>
                             </form>
+
+                            <div id="caja" class="card mb-3" style="max-width: 100%;">
+                                <div class="card-header"><b>habla con Frida</b></div>
+                                <div class="card-body">
+                                    <p id="output" class="card-text">
+                                        - Frida esta lista
+                                        - Selecciona un pregunta o habla por mic
+                                    </p>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -151,15 +150,13 @@
         </footer>
     </div>
 
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://crios2020.github.io/js/util.js"></script>
+    <script src="js/chistesMalos.js"></script>
+    <script src="js/frasesCrecimientoPersonal.js"></script>
+    <script src="js/frasesOptimistas.js"></script>
     <script src="js/main.js"></script>
     <script src="js/frida.js"></script>
 </body>

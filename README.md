@@ -3,6 +3,7 @@ Proyecto OPA Open Personal Assistant<br>
 Asistente Personal Abierto en JS<br>
 
 Participantes de este proyecto:<br>
+        Alumnos de Programación de Formación Profesional<br>
         Diseño gráfico <strong>Romina Cabral</strong><br>
         Profesor <strong>Carlos Rios</strong><br>
 
