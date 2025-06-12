@@ -2,26 +2,6 @@ body {
   background: #d8ddd8;
 }
 
-@keyframes moveEyeBrow1 {
-
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-
-  15% {
-    transform: rotate(0.2deg);
-  }
-
-  50% {
-    transform: rotate(0.3deg);
-  }
-
-  75% {
-    transform: rotate(0.5deg);
-  }
-}
-
 @keyframes moveEyeBrow2 {
 
   0%,
@@ -52,7 +32,7 @@ svg #eyebrow2 {
 }
 
 svg.listening #eyebrow1 {
-  transform: rotate(11deg);
+  transform: rotate(0.5deg);
 }
 
 @keyframes blink1 {

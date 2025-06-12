@@ -100,8 +100,8 @@
                             <!-- <div class="card-header"><b>habla con Frida</b></div> -->
                             <div class="card-body align-bottom">
                                 <p id="output" class="card-text">
-                                    - Frida esta lista
-                                    - Selecciona un pregunta o habla por mic
+                                    - Frida esta lista<br>
+                                    - Selecciona un opción o habla por mic
                                 </p>
                             </div>
                         </div>
@@ -109,12 +109,13 @@
                         <!-- Componente de busqueda y mic -->
                         <div class="col d-grid gap-2">
                             <form class="d-flex" role="search">
-                                 <!-- Selector de pregunta -->
+                                 <!-- Selector de Opción -->
                                 <select id="preguntas" class="form-control me-2 select">
+                                    <option value="pregunta">Selecciona una Opción</option> 
+                                    <option value="hola">Hola Frida</option>
                                     <option value="opa">Que es OPA?</option>
-                                    <option value="nombre">Ayuda a personas con problemas auditivos?</option>
-                                    <option value="nombre">Ayuda a personas no videntes?</option>
-                                    <option value="nombre">Como te llamas?</option>
+                                    <option value="sordo">Ayuda a personas con problemas auditivos?</option>
+                                    <option value="ciego">Ayuda a personas no videntes?</option>
                                     <option value="hora">Que hora es?</option>
                                     <option value="fecha">Que fecha es hoy?</option>
                                     <option value="clima">Como esta el clima?</option>
@@ -124,15 +125,18 @@
                                     <option value="especialidades">Hay especialidades de Programación?</option>
                                     <option value="cursos">Que otros trayectos o cursos puedo estudiar?</option>
                                     <option value="estudiar">Porque debo estudiar en la vida?</option>
-                                    <option value="requisitos">Que necesito para etudiar en Formación Profesional?
+                                    <option value="requisitos">Que necesito para estudiar en Formación Profesional?
                                     </option>
                                     <option value="frida">Quien fue Frida?</option>
                                     <option value="chiste">Podes contar un chiste malo?</option>
+                                    <option value="frases">Frases de Frida?</option>
+                                    <option value="argenta">Frida Argenta?</option>
                                 </select>
 
                                 <!-- Botón de microfono -->
-                                <button class="btn btn-outline-danger" type="button"><img src="icons/voice.png"
-                                        width="32" height="32" alt="microfono"></button>
+                                <button class="btn btn-outline-danger" type="button" onclick="runSpeechRecognition()">
+                                    <img src="icons/voice.png" width="32" height="32" alt="microfono">
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -147,7 +151,7 @@
                     
                     <!-- Notas al pie -->
                     <div class="col">
-                        <div class="container-fluid text-left p-2">
+                        <div class="container-fluid text-left">
                             <small class="pie">
                                 usar el navegador Chrome o Edge!<br>
                                 Versión de prueba
@@ -157,10 +161,10 @@
 
                     <!-- Logos y QR -->
                     <div class="col">
-                        <img src="qr/qrcode_frida.png" width="60" class="pt-2 pb-2" alt="Carpincho_QR"
+                        <img src="qr/qrcode_frida.png" width="60" class="pt-1 pb-1" alt="Carpincho_QR"
                             style="border-radius: 25%;">
                         <img src="logos/cfp35logo.png" width="50" class="rounded float-end" alt="Logo_centro_35">
-                        <img src="logos/cfp8logo.svg" width="40" class="rounded float-end" alt="Logo_centro_8">
+                        <img src="logos/cfp8logo.svg" width="40" class="rounded float-end pt-1" alt="Logo_centro_8">
                     </div>
                 </div>
             </div>
@@ -179,6 +183,7 @@
     <script src="js/frasesArgentinas.js"></script>
     <script src="js/frasesConectoras.js"></script>
     <script src="js/frasesEstudios.js"></script>
+    <script src="js/frida.js"></script>
 </body>
 
 </html>

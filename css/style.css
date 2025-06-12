@@ -38,6 +38,7 @@
 }
 .pie{
     font-family: 'Aller', sans-serif;
+    font-size: smaller;
 }
 
 select option{
@@ -56,7 +57,7 @@ select option{
 #caja{
     color: white;
     background-color: #78529d;
-    padding: 5px;
+    /*padding: 2px;*/
     text-align: left;
     font-size: smaller;
     width: 100%;
