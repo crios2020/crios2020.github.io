@@ -43,6 +43,8 @@ const frasesConectoras = [
     "me alegra saber que",
     "Sabías que ",
     "Es mucho muy importante saber que ",
+    "Vos sabés que ",
+    "¡Siempre y cuando! ",
     "Más vale tarde que nunca "
 ]
 

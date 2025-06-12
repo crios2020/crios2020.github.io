@@ -91,6 +91,6 @@ const frasesLocura = [
     "Soy como un reloj roto: siempre estoy en hora… para el caos."
 ]
 
-function getFraseLocura(){
+function getFraseLocuraRandom(){
     return frasesLocura[getRandomInt(frasesLocura.length-1)]
 }
