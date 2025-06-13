@@ -19,7 +19,7 @@ const apiGeo = {
  * @param {*} mensaje Mensaje a generar
  */
 function hablar(mensaje) {
-    message = new SpeechSynthesisUtterance(mensaje)
+    const message = new SpeechSynthesisUtterance(mensaje)
     window.speechSynthesis.speak(message)
 }
 
@@ -274,7 +274,7 @@ function getContinente() {
         if (navigator.geolocation) {
             var success = function (position) {
                 var latitud = position.coords.latitude,
-                    longitud = position.coords.longitude;
+                    longitud = position.coords.longitude
             }
             navigator.geolocation.getCurrentPosition(success, function (msg) {
                 console.error(msg);
@@ -326,11 +326,11 @@ function getAmanece() {
         request.send();
         if (request.status === 200) {
             const json = JSON.parse(request.responseText)
-            timestamp = json.sys.sunrise
-            fecha = new Date(timestamp * 1000)
-            anio = fecha.getFullYear()
-            hora = fecha.getHours()
-            minuto = fecha.getMinutes()
+            const timestamp = json.sys.sunrise
+            const fecha = new Date(timestamp * 1000)
+            const anio = fecha.getFullYear()
+            const hora = fecha.getHours()
+            const minuto = fecha.getMinutes()
             return hora + " horas y " + minuto + " minutos"
         }
     } catch (error) {
@@ -508,10 +508,9 @@ function getRandomInt(max) {
  * @returns Hora
  */
 function getHora() {
-    fecha = new Date()
-    anio = fecha.getFullYear()
-    hora = fecha.getHours()
-    minuto = fecha.getMinutes()
+    const fecha = new Date()
+    const hora = fecha.getHours()
+    const minuto = fecha.getMinutes()
     return hora + " horas y " + minuto + " minutos"
 }
 
@@ -520,7 +519,9 @@ function getHora() {
  * @returns Momento
  */
 function getMomento() {
-    momento = ""
+    const fecha = new Date()
+    const hora = fecha.getHours()
+    var momento = ""
     if (hora >= 0 && hora < 4) momento = "trasnoche"
     if (hora >= 4 && hora < 6) momento = "madrugada"
     if (hora >= 6 && hora < 8) momento = "amanecer"
@@ -537,7 +538,9 @@ function getMomento() {
  * @returns Momento
  */
 function getMomentoAccion() {
-    momento = ""
+    const fecha = new Date()
+    const hora = fecha.getHours()
+    var momento = ""
     if (hora >= 0 && hora < 6) momento = "dormir"
     if (hora >= 6 && hora < 8) momento = "despertar"
     if (hora >= 8 && hora < 11) momento = "desayunar"
@@ -555,11 +558,11 @@ function getMomentoAccion() {
  * @returns Fecha
  */
 function getFecha() {
-    fecha = new Date()
-    diaMes = fecha.getDate()
-    diaSem = fecha.getDay()
-    nroMes = fecha.getMonth()
-    anio = fecha.getFullYear()
+    const fecha = new Date()
+    const diaMes = fecha.getDate()
+    const diaSem = fecha.getDay()
+    const nroMes = fecha.getMonth()
+    const anio = fecha.getFullYear()
 
     var nombreDia = ''
     if (diaSem == 0) nombreDia = 'domingo'
@@ -585,7 +588,6 @@ function getFecha() {
     if (nroMes == 11) nombreMes = 'diciembre'
 
     return nombreDia + ", " + diaMes + " de " + nombreMes + " del año " + anio
-
 }
 
 /**
@@ -593,12 +595,9 @@ function getFecha() {
  * @returns esfemérides
  */
 function hoyEs() {
-    fecha = new Date()
-    diaMes = fecha.getDate()
-    diaSem = fecha.getDay()
-    nroMes = fecha.getMonth()
-    anio = fecha.getFullYear()
-    hoy = ""
+    const fecha = new Date()
+    const diaSem = fecha.getDay()
+    var hoy = ""
     if (diaSem == 1) hoy = "Odio los lunes, por que hay que ir a trabajar!"
     if (diaSem == 2) hoy = "es Martes hay que ir a trabajar!"
     if (diaSem == 3) hoy = "es Miércoles hay que ir a trabajar!"
@@ -607,7 +606,6 @@ function hoyEs() {
     if (diaSem == 6) hoy = "Es fin de semana, a descansar!"
     if (diaSem == 0) hoy = "Es fin de semana, a descansar!"
     return hoy
-
 }
 
 /**
@@ -615,11 +613,11 @@ function hoyEs() {
  * @returns esfemérides
  */
 function getEstacion() {
-    estacion = ""
-    fecha = new Date()
-    diaMes = fecha.getDate()
-    diaSem = fecha.getDay()
-    nroMes = fecha.getMonth()
+    var estacion = ""
+    const fecha = new Date()
+    const diaMes = fecha.getDate()
+    const diaSem = fecha.getDay()
+    const nroMes = fecha.getMonth()
     switch (nroMes) {
         case 0: case 1: estacion = "verano"
             break;
@@ -641,7 +639,11 @@ function getEstacion() {
     return estacion
 }
 
-
+/**
+ * Función para pausar el hilo de ejecución
+ * @param {*} tiempo 
+ * @returns 
+ */
 function pausar(tiempo) {
     return new Promise(resolve => {
         setTimeout(resolve, tiempo)

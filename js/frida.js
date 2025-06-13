@@ -87,7 +87,7 @@ function runSpeechRecognition() {
         }
 
         if (transcript.includes("hora") || transcript.includes("horario") || transcript.includes("reloj")) {
-            textToSpeak = horaActual();
+            textToSpeak = hora();
         }
 
         if (transcript.includes("hola")) {
@@ -168,7 +168,7 @@ function hablarFrida() {
 function cambiar() {
     callar()
     textToSpeak = ""
-    if (preguntas.value == "hora") { textToSpeak = horaActual() }
+    if (preguntas.value == "hora") { textToSpeak = hora() }
     if (preguntas.value == "hola") { textToSpeak = hola() }
     hablarFrida()
 }

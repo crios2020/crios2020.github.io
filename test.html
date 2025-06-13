@@ -8,7 +8,7 @@
 <script src="js/frasesConectoras.js"></script>
 <script src="js/frasesEstudios.js"></script>
 <script>
-    
+
     //TestChistesMalos
     //chisteMalo=getChisteMaloRandom()
     //print(chisteMalo)
@@ -86,5 +86,42 @@
     //    print(frasesEstudios[a])
     //    hablar(frasesEstudios[a])
     //}
+
+
+    //Test Ensayo de alcance de variables
+
+    // Alcance global
+    const nro1 = 1
+    let variableGlobal = "Soy global"
+    //nro1++            //no se puede cambiar una constante
+    print(nro1)
+    print(variableGlobal)
+
+    function miFuncion() {
+        // Alcance local de función (con var)
+        var variableLocal = "Soy local de función";
+        const constanteLocal = 1
+
+        variableGlobal2="hola"
+
+        // Se puede acceder a variableGlobal desde dentro de la función
+        print(variableGlobal)
+
+        // Se puede acceder a variableLocal desde dentro de la función
+        print(variableLocal)
+    }
+
+    miFuncion()
+    
+    // No se puede acceder a variableLocal fuera de la función
+    // print(variableLocal); // Error: variableLocal no está definida
+    // print(constanteLocal) // Error: variableLocal no está definida
+
+    // Se puede acceder a variableGlobal desde fuera de la función
+    print(variableGlobal)
+    print(variableGlobal2)
+
+    print(getMomento())
+    print(getTemperatura())
 
 </script>
