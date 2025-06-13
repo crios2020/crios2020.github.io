@@ -1,10 +1,12 @@
+const frida = document.querySelector("#frida");
+const texto = document.querySelector("#output");
+const preguntas = document.getElementById("preguntas")
+const panel = document.getElementById("panel")
+textToSpeak = "- Perdón no entendí";
+
 function runSpeechRecognition() {
     callar()
-    const frida = document.querySelector("#frida");
-    const texto = document.querySelector("#output");
-    const preguntas = document.getElementById("preguntas")
-    const panel = document.getElementById("panel")
-    textToSpeak = "- Perdón no entendí";
+
     // new speech recognition object in Spanish!
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
     const recognition = new SpeechRecognition()
@@ -20,17 +22,6 @@ function runSpeechRecognition() {
         recognition.stop();
     }
 
-    recognition.onend = () => {
-        //pausar(3000)
-        // Reiniciar el reconocimiento de voz
-        //recognition.start();
-        //console.log(1)
-        //setTimeout(function () {
-        //    recognition.start()
-        //}, 3000)
-        //console.log(2)
-    };
-
     // This runs when the speech recognition service returns result
     recognition.onresult = function (event) {
         const transcript = event.results[0][0].transcript.toLowerCase();
@@ -42,52 +33,57 @@ function runSpeechRecognition() {
         //Cambio de colores
         if (transcript.includes("defecto") || transcript.includes("normal")) {
             panel.style.backgroundColor = '#26214f'
-            textToSpeak = '- Panel de color Normal.'
+            textToSpeak = 'Panel de color Normal.'
         }
 
         if (transcript.includes("rojo") || transcript.includes("colorado")) {
             panel.style.backgroundColor = 'red'
-            textToSpeak = '- Panel de color Rojo.'
+            textToSpeak = 'Panel de color Rojo.'
         }
 
         if (transcript.includes("verde")) {
             panel.style.backgroundColor = 'green'
-            textToSpeak = '- Panel de color Verde.'
+            textToSpeak = 'Panel de color Verde.'
         }
 
         if (transcript.includes("azul")) {
             panel.style.backgroundColor = 'blue'
-            textToSpeak = '- Panel de color Azul.'
+            textToSpeak = 'Panel de color Azul.'
+        }
+
+        if (transcript.includes("rosa") || transcript.includes("rosado")) {
+            panel.style.backgroundColor = 'pink'
+            textToSpeak = 'Panel de color Rosa.'
         }
 
         if (transcript.includes("amarillo")) {
             panel.style.backgroundColor = 'yellow'
-            textToSpeak = '- Panel de color Amarillo.'
+            textToSpeak = 'Panel de color Amarillo.'
         }
 
         if (transcript.includes("blanco")) {
             panel.style.backgroundColor = 'white'
-            textToSpeak = '- Panel de color Blanco.'
+            textToSpeak = 'Panel de color Blanco.'
         }
 
         if (transcript.includes("negro")) {
             panel.style.backgroundColor = 'black'
-            textToSpeak = '- Panel de color Negro.'
+            textToSpeak = 'Panel de color Negro.'
         }
 
         if (transcript.includes("violeta") || transcript.includes("violetta")) {
             panel.style.backgroundColor = 'violet'
-            textToSpeak = '- Panel de color Violeta.'
+            textToSpeak = 'Panel de color Violeta.'
         }
 
         if (transcript.includes("marron") || transcript.includes("marrón")) {
             panel.style.backgroundColor = 'brown'
-            textToSpeak = '- Panel de color Marron.'
+            textToSpeak = 'Panel de color Marron.'
         }
 
         if (transcript.includes("celeste")) {
             panel.style.backgroundColor = 'skyblue'
-            textToSpeak = '- Panel de color Celeste.'
+            textToSpeak = 'Panel de color Celeste.'
         }
 
         if (transcript.includes("hora") || transcript.includes("horario") || transcript.includes("reloj")) {
@@ -142,30 +138,39 @@ function runSpeechRecognition() {
         //    texto.textContent = "Escuchando .......";
         //}, 5000)
 
-        texto.innerHTML = textToSpeak
+        hablarFrida()
 
-        // read out loud the answer
-        let speech = new SpeechSynthesisUtterance()
-        speech.lang = "es-AR"
-        speech.text = textToSpeak
-        speech.onend = function (event) {
-            console.log(event.elapsedTime)
-            setTimeout(function () {
-                frida.classList.remove("speaking")
-            }, 600 - (event.elapsedTime % 600))
-        }
-        frida.classList.remove("listening")
-        frida.classList.add("speaking")
-        window.speechSynthesis.speak(speech)
     }
-
-
-
 
     // start recognition
     recognition.start()
 
-    function hora() {
-        return " es la hora " + getHora() + " es " + getMomento() + " es momento de " + getMomentoAccion()
-    }
 }
+
+function hablarFrida() {
+    texto.innerHTML = '- ' + textToSpeak
+    let speech = new SpeechSynthesisUtterance()
+    speech.lang = "es-AR"
+    speech.text = textToSpeak
+    speech.onend = function (event) {
+        console.log(event.elapsedTime)
+        setTimeout(function () {
+            frida.classList.remove("speaking")
+        }, 600 - (event.elapsedTime % 600))
+    }
+    frida.classList.remove("listening")
+    frida.classList.add("speaking")
+    window.speechSynthesis.speak(speech)
+}
+
+function cambiar() {
+    callar()
+    textToSpeak = ""
+    if (preguntas.value == "hora") {
+        textToSpeak = hora()
+
+    }
+    hablarFrida()
+}
+
+
