@@ -35,7 +35,8 @@ function runSpeechRecognition() {
             for(x=0; x<motions[a].llaves.length; x++){
                 if(transcript.includes(motions[a].llaves[x])){
                     textToSpeak="xxxx"+a
-                    preguntas.setAttribute("selectedIndex",5)
+                    preguntas.setAttribute("selectedIndex",a)
+                    preguntas.selectedIndex = 5
                 }
             }
         }
