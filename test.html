@@ -135,4 +135,14 @@
     print("------------------------------------------------")
     motions.forEach((motion) => print(motion.value+", "+motion.text+", "+motion.llaves[0]));
 
+    print("------------------------------------------------")
+    motions
+            .filter(motion => motion.value.startsWith("a"))
+            .forEach((motion) => print(motion.value+", "+motion.text+", "+motion.llaves[0]));
+
+    print("------------------------------------------------")
+    for(a=0; a<motions.length; a++){
+        print(motions[a].value)
+    }
+
 </script>

@@ -30,6 +30,17 @@ function runSpeechRecognition() {
         console.log("conf" + confidence)
         textToSpeak = "- Perdón no entendí";
 
+        //Resolución Clásica
+        for(a=0; a<motions.length; a++){
+            for(x=0; x<motions[a].llaves.length; x++){
+                if(transcript.includes(motions[a].llaves[x])){
+                    textToSpeak="xxxx"+a
+                    preguntas.setAttribute("selectedIndex",5)
+                }
+            }
+        }
+        
+        /*
         //Cambio de colores
         if (transcript.includes("defecto") || transcript.includes("normal")) {
             panel.style.backgroundColor = '#26214f'
@@ -93,6 +104,7 @@ function runSpeechRecognition() {
         if (transcript.includes("hola")) {
             textToSpeak = hola();
         }
+        */
         /*
         // only run the special sentences if confidence is "high"
         if (confidence > 0.75) {
