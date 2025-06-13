@@ -1,9 +1,10 @@
 function runSpeechRecognition() {
-    //callar()
+    callar()
     const frida = document.querySelector("#frida");
     const texto = document.querySelector("#output");
     const preguntas = document.getElementById("preguntas")
-
+    const panel = document.getElementById("panel")
+    textToSpeak = "- Perdón no entendí";
     // new speech recognition object in Spanish!
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
     const recognition = new SpeechRecognition()
@@ -19,16 +20,79 @@ function runSpeechRecognition() {
         recognition.stop();
     }
 
+    recognition.onend = () => {
+        //pausar(3000)
+        // Reiniciar el reconocimiento de voz
+        //recognition.start();
+        //console.log(1)
+        //setTimeout(function () {
+        //    recognition.start()
+        //}, 3000)
+        //console.log(2)
+    };
+
     // This runs when the speech recognition service returns result
     recognition.onresult = function (event) {
         const transcript = event.results[0][0].transcript.toLowerCase();
         const confidence = event.results[0][0].confidence;
         console.log(transcript)
-        console.log("conf"+confidence)
-        let textToSpeak = "";
-        
+        console.log("conf" + confidence)
+        //let textToSpeak = "- Perdón no entendí";
+
+        //Cambio de colores
+        if (transcript.includes("defecto") || transcript.includes("normal")) {
+            panel.style.backgroundColor = '#26214f'
+            textToSpeak = '- Panel de color Normal.'
+        }
+
+        if (transcript.includes("rojo") || transcript.includes("colorado")) {
+            panel.style.backgroundColor = 'red'
+            textToSpeak = '- Panel de color Rojo.'
+        }
+
+        if (transcript.includes("verde")) {
+            panel.style.backgroundColor = 'green'
+            textToSpeak = '- Panel de color Verde.'
+        }
+
+        if (transcript.includes("azul")) {
+            panel.style.backgroundColor = 'blue'
+            textToSpeak = '- Panel de color Azul.'
+        }
+
+        if (transcript.includes("amarillo")) {
+            panel.style.backgroundColor = 'yellow'
+            textToSpeak = '- Panel de color Amarillo.'
+        }
+
+        if (transcript.includes("blanco")) {
+            panel.style.backgroundColor = 'white'
+            textToSpeak = '- Panel de color Blanco.'
+        }
+
+        if (transcript.includes("negro")) {
+            panel.style.backgroundColor = 'black'
+            textToSpeak = '- Panel de color Negro.'
+        }
+
+        if (transcript.includes("violeta") || transcript.includes("violetta")) {
+            panel.style.backgroundColor = 'violet'
+            textToSpeak = '- Panel de color Violeta.'
+        }
+
+        if (transcript.includes("marron") || transcript.includes("marrón")) {
+            panel.style.backgroundColor = 'brown'
+            textToSpeak = '- Panel de color Marron.'
+        }
+
+        if (transcript.includes("celeste")) {
+            panel.style.backgroundColor = 'skyblue'
+            textToSpeak = '- Panel de color Celeste.'
+        }
+
         if (transcript.includes("hora") || transcript.includes("horario") || transcript.includes("reloj")) {
-                preguntas.selectedIndex = 5
+            preguntas.selectedIndex = 5
+            textToSpeak = hora();
         }
 
         /*
@@ -73,26 +137,35 @@ function runSpeechRecognition() {
         */
 
         // show the closed captioned and remove after 3 seconds
-        texto.textContent = transcript      //+" "+confidence
+        //texto.textContent = transcript      //+" "+confidence
         //setTimeout(function () {
         //    texto.textContent = "Escuchando .......";
         //}, 5000)
 
+        texto.innerHTML = textToSpeak
+
         // read out loud the answer
-        let speech = new SpeechSynthesisUtterance();
-        speech.lang = "es-AR";
-        speech.text = textToSpeak;
+        let speech = new SpeechSynthesisUtterance()
+        speech.lang = "es-AR"
+        speech.text = textToSpeak
         speech.onend = function (event) {
-            console.log(event.elapsedTime);
+            console.log(event.elapsedTime)
             setTimeout(function () {
-                frida.classList.remove("speaking");
-            }, 600 - (event.elapsedTime % 600));
+                frida.classList.remove("speaking")
+            }, 600 - (event.elapsedTime % 600))
         }
-        frida.classList.remove("listening");
-        frida.classList.add("speaking");
-        window.speechSynthesis.speak(speech);
-    };
+        frida.classList.remove("listening")
+        frida.classList.add("speaking")
+        window.speechSynthesis.speak(speech)
+    }
+
+
+
 
     // start recognition
-    recognition.start();
+    recognition.start()
+
+    function hora() {
+        return " es la hora " + getHora() + " es " + getMomento() + " es momento de " + getMomentoAccion()
+    }
 }
