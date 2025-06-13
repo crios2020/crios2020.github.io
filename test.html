@@ -1,4 +1,5 @@
 <script src="js/util.js"></script>
+<script src="js/motion.js"></script>
 <script src="js/chistesMalos.js"></script>
 <script src="js/frasesOptimistas.js"></script>
 <script src="js/frasesCrecimientoPersonal.js"></script>
@@ -89,7 +90,7 @@
 
 
     //Test Ensayo de alcance de variables
-
+    /*
     // Alcance global
     const nro1 = 1
     let variableGlobal = "Soy global"
@@ -123,5 +124,15 @@
 
     print(getMomento())
     print(getTemperatura())
+    */
+
+    //Test Clase Motion
+    motion1=new Motion("hola", "Hola Frida", ["hola","chau"])
+    print(motion1.value)
+    print(motion1.text)
+    for(a=0; a<motion1.llaves.length; a++) print(motion1.llaves[a])
+
+    print("------------------------------------------------")
+    motions.forEach((motion) => print(motion.value+", "+motion.text+", "+motion.llaves[0]));
 
 </script>

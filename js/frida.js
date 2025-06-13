@@ -173,4 +173,12 @@ function cambiar() {
     hablarFrida()
 }
 
+function cargar() {
+    motions.forEach((motion) => {
+            const nuevaOpcion = document.createElement('option');
+            nuevaOpcion.value = motion.value;
+            nuevaOpcion.text = motion.text;
+            preguntas.appendChild(nuevaOpcion);
+    });
+}
 
