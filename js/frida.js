@@ -35,11 +35,12 @@ function runSpeechRecognition() {
             for(x=0; x<motions[a].llaves.length; x++){
                 if(transcript.includes(motions[a].llaves[x])){
                     textToSpeak="xxxx"+a
-                    preguntas.setAttribute("selectedIndex",a)
-                    preguntas.selectedIndex = 5
+                    //preguntas.setAttribute("selectedIndex",a)
+                    preguntas.selectedIndex = a
                 }
             }
         }
+        cambiar()
         
         /*
         //Cambio de colores
@@ -153,7 +154,7 @@ function runSpeechRecognition() {
         //    texto.textContent = "Escuchando .......";
         //}, 5000)
 
-        hablarFrida()
+        //hablarFrida()
 
     }
 
