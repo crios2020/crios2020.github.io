@@ -28,7 +28,7 @@ function runSpeechRecognition() {
         const confidence = event.results[0][0].confidence;
         console.log(transcript)
         console.log("conf" + confidence)
-        //let textToSpeak = "- Perdón no entendí";
+        textToSpeak = "- Perdón no entendí";
 
         //Cambio de colores
         if (transcript.includes("defecto") || transcript.includes("normal")) {
@@ -87,10 +87,12 @@ function runSpeechRecognition() {
         }
 
         if (transcript.includes("hora") || transcript.includes("horario") || transcript.includes("reloj")) {
-            preguntas.selectedIndex = 5
-            textToSpeak = hora();
+            textToSpeak = horaActual();
         }
 
+        if (transcript.includes("hola")) {
+            textToSpeak = hola();
+        }
         /*
         // only run the special sentences if confidence is "high"
         if (confidence > 0.75) {
@@ -166,10 +168,8 @@ function hablarFrida() {
 function cambiar() {
     callar()
     textToSpeak = ""
-    if (preguntas.value == "hora") {
-        textToSpeak = hora()
-
-    }
+    if (preguntas.value == "hora") { textToSpeak = horaActual() }
+    if (preguntas.value == "hola") { textToSpeak = hola() }
     hablarFrida()
 }
 

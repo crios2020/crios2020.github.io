@@ -647,3 +647,4 @@ function pausar(tiempo) {
         setTimeout(resolve, tiempo)
     })
 }
+
