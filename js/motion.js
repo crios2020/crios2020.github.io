@@ -67,5 +67,5 @@ motions.push(new Motion("color_turquese","Panel de color turquesa",['turqueza','
 motions.push(new Motion("color_salmon","Panel de color salmon",['salmon','zalmon']))
 motions.push(new Motion("color_tomate","Panel de color tomate",['tomate']))
 motions.push(new Motion("color_silver","Panel de color plata",['plata']))
-motions.push(new Motion("color_gold","Panel de color oro",[' oro ']))
-motions.push(new Motion("creditos","acerca de ",['creditos','profesores','profesor','diseñadora','diseñador']))
+motions.push(new Motion("color_gold","Panel de color oro",['oro','dorado']))
+motions.push(new Motion("creditos","acerca de ",['autor','credito','autores','creditos','profesores','profesor','diseñadora','diseñador','autor']))
