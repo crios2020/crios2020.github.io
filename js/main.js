@@ -3,7 +3,7 @@ function hola(){
 }
 
 function opa(){
-    return "OPA, Asistente Personal Libre es el software que impulsa mi inteligencia artificial, desarrollado en javascript en Formación Profesional. "+getFraseFridaRandom()
+    return "OPA, Asistente Personal Libre es el software que impulsa mi inteligencia artificial, desarrollado por Carlos Rios en javascript. "+getFraseFridaRandom()
 }
 
 function sordo(){
