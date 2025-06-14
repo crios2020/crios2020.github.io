@@ -303,11 +303,11 @@ function getAnochece() {
         request.send();
         if (request.status === 200) {
             const json = JSON.parse(request.responseText)
-            timestamp = json.sys.sunset
-            fecha = new Date(timestamp * 1000)
-            anio = fecha.getFullYear()
-            hora = fecha.getHours()
-            minuto = fecha.getMinutes()
+            var timestamp = json.sys.sunset
+            var fecha = new Date(timestamp * 1000)
+            var anio = fecha.getFullYear()
+            var hora = fecha.getHours()
+            var minuto = fecha.getMinutes()
             return hora + " horas y " + minuto + " minutos"
         }
     } catch (error) {
@@ -650,3 +650,77 @@ function pausar(tiempo) {
     })
 }
 
+function getEfemerides(){
+    var fecha=new Date()
+    var diaMes=fecha.getDate()
+    var mes=fecha.getMonth()
+    var efemerides=""
+
+
+    //inicio de mes
+    if(diaMes==1)                               efemerides+="Un nuevo mes inicia!!"
+
+    //día de ñoquis
+    if(diaMes==29)                              efemerides+="hoy es 29, hoy es día de ñoquis!!"
+
+    //día de la mujer
+    if(diaMes==8 && mes==2)                     efemerides+="Hoy es el día de la mujer!!"
+
+    //día del trabajador
+    if(diaMes==1 && mes==4)                     efemerides+="Hoy es el día del trabajador!!"    
+
+    //día de la felicidad
+    if(diaMes==20 && mes==2)                    efemerides+="Hoy es el día internacional de la felicidad!!"
+
+    //día del programador
+    if(diaMes==13 && mes==8)                    efemerides+="Hoy es el día del programador!!"
+
+    //cumpleaños del programador
+    if(diaMes==2 && mes==1)                     efemerides+="Hoy es el cumpleaños de mi programador!!"
+
+    //día de la patria
+    if(diaMes==25 && mes==4)                    efemerides+="Hoy es el día de la patria en argentina!!"
+
+    //día de la independencia
+    if(diaMes==9 && mes==6)                     efemerides+="Hoy es el día de la independencia en argentina !!"
+
+    //día de san martin
+    if(diaMes==17 && mes==7)                    efemerides+="Hoy recordamos a nuestro padre de la patria, el general Don Jose de San Martín!!"
+
+    //día de la primavera & estudiante
+    if(diaMes==21 && mes==8)                    efemerides+="Hoy es el día del estudiante y del perfumista!!"
+
+    //día de san patricio
+    if(diaMes==17 && mes==3)                    efemerides+="Feliz San Patricio, a tomar cerveza!!"
+
+    //día del aprendiz
+    if(diaMes==3 && mes==5)                     efemerides+="Feliz día del aprendiz, se viene la noche de los oficios!"
+
+    //día del mecánico 
+    if(diaMes==24 && mes==1)                    efemerides+="Feliz día del mecánico!!"
+
+    //día de la secretaria
+    if(diaMes==4 && mes==8)                     efemerides+="Feliz día de la secretaria!!"
+
+    //día del ferroviario
+    if(diaMes==1 && mes==2)                     efemerides+="Hoy es el día del ferroviario!!"
+
+    //día de la educación técnica
+    if(diaMes==15 && mes==10)                   efemerides+="Hoy es el día de la educación técnica!!"
+
+    //día del maestro
+    if(diaMes==11 && mes==8)                    efemerides+="Hoy es el día del maestro!!"
+
+    //día de la maestra jardinera
+    if(diaMes==28 && mes==4)                    efemerides+="Hoy es el día de la maestra jardinera!!"
+
+    //Navidad
+    if(diaMes==24 && mes==11)                   efemerides+="Feliz noche buena!!!"
+    if(diaMes==25 && mes==11)                   efemerides+="Feliz navidad!!!"
+
+    //Feliz año nuevo!
+    if(diaMes==31 && mes==11)                   efemerides+="Hoy es Fin de Año!!"
+    if(diaMes==1 && mes==0)                     efemerides+="Feliz año nuevo!!"
+
+    return efemerides;
+}

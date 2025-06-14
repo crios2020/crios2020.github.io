@@ -67,10 +67,15 @@ function cambiar() {
 
     argumento=""
 
-    if (typeof window[preguntas.value] === 'function') {
-        textToSpeak=window[preguntas.value](argumento);
-    } else {
-        textToSpeak="Perdón no entendí"
+    if(preguntas.value.startsWith("color")){
+        textToSpeak=motions.filter(m=>m.value==preguntas.value)[0].text
+        color(preguntas.value.substring(6))
+    }else{
+        if (typeof window[preguntas.value] === 'function') {
+            textToSpeak=window[preguntas.value](argumento);
+        } else {
+            textToSpeak="Perdón no entendí"
+        }
     }
 
     hablarFrida()

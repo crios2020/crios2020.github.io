@@ -166,4 +166,12 @@
     }
     */
 
+    //Test de filtro de colores
+    color="color_red"
+
+    //motions.filter(motion=>motion.value==color).forEach(e => print(e.text));
+
+    resultado=motions.filter(m=>m.value==color)[0].text
+    print(resultado)
+    print(color.substring(6))
 </script>
