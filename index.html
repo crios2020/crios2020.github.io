@@ -10,6 +10,7 @@
     <link rel="icon" type="image/jpg" href="icons/frida.jpg">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/styleFrida.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
 </head>
 
 <body onload="cargar()">
@@ -113,29 +114,7 @@
                             <form class="d-flex" role="search">
                                 <!-- Selector de Opciones -->
                                 <select id="preguntas" class="form-control me-2 select" onchange="cambiar()">
-                                    
-                                    <!--
-                                        <option value="nada">Selecciona una Opción</option> 
-                                        <option value="hola">Hola Frida</option>
-                                        <option value="opa">Que es OPA?</option>
-                                        <option value="sordo">Ayuda a personas con problemas auditivos?</option>
-                                        <option value="ciego">Ayuda a personas no videntes?</option>
-                                        <option value="hora">Que hora es?</option>
-                                        <option value="fecha">Que fecha es hoy?</option>
-                                        <option value="clima">Como esta el clima?</option>
-                                        <option value="donde">En donde estamos?</option>
-                                        <option value="formacion">Que es Formación Profesional?</option>
-                                        <option value="programacion">Puedo estudiar Programación?</option>
-                                        <option value="especialidades">Hay especialidades de Programación?</option>
-                                        <option value="cursos">Que otros trayectos o cursos puedo estudiar?</option>
-                                        <option value="estudiar">Porque debo estudiar en la vida?</option>
-                                        <option value="requisitos">Que necesito para estudiar en Formación Profesional?
-                                        </option>
-                                        <option value="frida">Quien fue Frida?</option>
-                                        <option value="chiste">Podes contar un chiste malo?</option>
-                                        <option value="frases">Frases de Frida?</option>
-                                        <option value="argenta">Frida Argenta?</option>
-                                    -->
+                                    <!-- Llenado dinámicamente desde js -->
                                 </select>
 
                                 <!-- Botón de microfono -->
@@ -166,10 +145,16 @@
 
                     <!-- Logos y QR -->
                     <div class="col">
-                        <img src="qr/qrcode_frida.png" width="60" class="pt-1 pb-1" alt="Carpincho_QR"
-                            style="border-radius: 25%;">
-                        <img src="logos/cfp35logo.png" width="50" class="rounded float-end" alt="Logo_centro_35">
-                        <img src="logos/cfp8logo.svg" width="40" class="rounded float-end pt-1" alt="Logo_centro_8">
+                        <a href="qr/qrcode_frida.png" data-lightbox="qr-frida" data-title="QR-Frida">
+                            <img src="qr/qrcode_frida.png" width="50" class="pt-1 pb-1 float-end" alt="Frida_QR"
+                                style="border-radius: 25%;">
+                        </a>
+                        <a href="logos/cfp_negro.png" data-lightbox="logo_CFP35" data-title="Logo CFP 35">
+                            <img src="logos/cfp35logo.png" width="50" class="rounded float-end" alt="Logo_centro_35">
+                        </a>
+                        <a href="logos/cfp8logo.svg" data-lightbox="logo_CFP8" data-title="Logo CFP 8">
+                            <img src="logos/cfp8logo.svg" width="40" class="rounded float-end pt-1" alt="Logo_centro_8">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -179,6 +164,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="js/lightbox-plus-jquery.js"></script>    
     <script src="js/util.js"></script>
     <script src="js/motion.js"></script>
     <script src="js/main.js"></script>

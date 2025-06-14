@@ -1,11 +1,8 @@
 # open_personal_assistant
-Proyecto OPA Open Personal Assistant<br>
+Proyecto OPA Open Personal Assistant Versión Frida<br>
 Asistente Persona Abierto en JS<br>
 
 Participantes de este proyecto:<br>
-        Alumnos de programación de CFP 8<br>
-        Alumnos de programación de CFP 35<br>
-        Alumnos de tester de aplicaciones de CFP 35<br>
         Diseño gráfico <strong>Romina Cabral</strong><br>
         Profesor <strong>Carlos Rios</strong><br>
 
