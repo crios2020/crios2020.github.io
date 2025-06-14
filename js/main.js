@@ -45,7 +45,7 @@ function clima(){
     if(temperatura<24)                                          informe+="Salir abrigado! "
     if(clima.includes("lluv") || clima.includes("llov")){       
         informe+="Esta lloviendo!, Salir con paraguas! "
-        if(hora>=15 && hora<=18 && temperatura<=18)             informe+="Esta para hacer unas tortafritas! "
+        if(hora>=15 && hora<=18 && temperatura<=18)             informe+="Está para hacer unas tortafritas! "
     }else                                                       informe+="No hay lluvias "
 
     if(clima.includes("nev") || clima.includes("niev"))         informe+="Esta Nevando! "
