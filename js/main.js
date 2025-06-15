@@ -210,5 +210,5 @@ function color(color){
 }
 
 function creditos(){
-    return "Diseño Gráfico: Romina Cabral. Programación: Carlos Rios"
+    return "Programación: Carlos Rios"
 }

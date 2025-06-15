@@ -130,7 +130,8 @@ function getZonaHoraria() {
         .timeZone
         .replace("/", " ")
         .replace("/", " ")
-        .replace("_", " ");
+        .replace("_", " ")
+        .replace("America","América")
 }
 
 
