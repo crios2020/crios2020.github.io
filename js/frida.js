@@ -1,8 +1,10 @@
 const frida = document.querySelector("#frida");
 const texto = document.querySelector("#output");
 const preguntas = document.getElementById("preguntas")
+const selectColores = document.getElementById("colores")
+const selectHoroscopo = document.getElementById("horoscopo")
 const panel = document.getElementById("panel")
-textToSpeak = "";
+var textToSpeak = "";
 
 function runSpeechRecognition() {
     callar()
@@ -28,16 +30,29 @@ function runSpeechRecognition() {
         const confidence = event.results[0][0].confidence;
         console.log(transcript)
         console.log("conf" + confidence)
+        console.log(preguntas.selectedIndex)
 
+        //Transcript proyectado en select preguntas
         for (a = 0; a < motions.length; a++) {
             for (x = 0; x < motions[a].llaves.length; x++) {
                 if (transcript.includes(motions[a].llaves[x])) {
-                    //preguntas.setAttribute("selectedIndex",a)
                     preguntas.selectedIndex = a
                 }
             }
         }
-        cambiar()
+        console.log(preguntas.selectedIndex)
+        if (preguntas.selectedIndex!=0) cambiar()
+
+        //Transcript proyectado en select selectColores
+        for (a = 0; a < colores.length; a++) {
+            for (x = 0; x < colores[a].llaves.length; x++) {
+                if (transcript.includes(colores[a].llaves[x])) {
+                    selectColores.selectedIndex = a
+                }
+            }
+        }
+        console.log(selectColores.selectedIndex)
+        if (selectColores.selectedIndex!=0) cambiarColor()
 
     }
 
@@ -64,29 +79,53 @@ function hablarFrida() {
 
 function cambiar() {
     callar()
-
     argumento=""
-
-    if(preguntas.value.startsWith("color")){
-        textToSpeak=motions.filter(m=>m.value==preguntas.value)[0].text
-        color(preguntas.value.substring(6))
-    }else{
-        if (typeof window[preguntas.value] === 'function') {
-            textToSpeak=window[preguntas.value](argumento);
-        } else {
-            textToSpeak="Perdón no entendí"
-        }
+    if (typeof window[preguntas.value] === 'function') {
+        textToSpeak=window[preguntas.value](argumento);
+    } else {
+        textToSpeak="Perdón no entendí"
     }
+    hablarFrida()
+}
 
+function cambiarColor() {
+    callar()
+    argumento=""
+    textToSpeak=colores.filter(m=>m.value==selectColores.value)[0].text
+    color(selectColores.value.substring(6))
+    hablarFrida()
+}
+
+function cambiarHoroscopo() {
+    callar()
+    argumento=""
+    //if (typeof window[preguntas.value] === 'function') {
+    //    textToSpeak=window[preguntas.value](argumento);
+    //} else {
+    //    textToSpeak="Perdón no entendí"
+    //}
+    textToSpeak="No disponible por el momento"
     hablarFrida()
 }
 
 function cargar() {
-    motions.forEach((motion) => {
+    motions.forEach(m => {
         const nuevaOpcion = document.createElement('option');
-        nuevaOpcion.value = motion.value;
-        nuevaOpcion.text = motion.text;
+        nuevaOpcion.value = m.value;
+        nuevaOpcion.text = m.text;
         preguntas.appendChild(nuevaOpcion);
+    });
+    colores.forEach(c => {
+        const nuevaOpcion = document.createElement('option');
+        nuevaOpcion.value = c.value;
+        nuevaOpcion.text = c.text;
+        selectColores.appendChild(nuevaOpcion);
+    });
+    sodiaco.forEach(c => {
+        const nuevaOpcion = document.createElement('option');
+        nuevaOpcion.value = c.value;
+        nuevaOpcion.text = c.text;
+        selectHoroscopo.appendChild(nuevaOpcion);
     });
 }
 

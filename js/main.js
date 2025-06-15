@@ -145,10 +145,10 @@ function bio(){
     var informe=""
     informe+="Fue una pintora mexicana conocida por sus obras llenas de simbolismo "
     informe+="y por su estilo único que combina el surrealismo con el folclore mexicano. "
-    informe+="y a lo largo de su vida enfrentó numerosos desafíos de salud, que influyeron en su arte. "
+    informe+="En su vida enfrentó numerosos desafíos de salud, que influyeron en su arte. "
     informe+="Su vida estuvo marcada por el sufrimiento físico y emocional, "
     informe+="especialmente tras un grave accidente de autobús en su juventud, que la dejó con secuelas permanentes."
-    informe+="Frida también es reconocida por su activismo político y su relación tumultuosa con el famoso muralista Diego Rivera. "
+    informe+="Fue activista política y pareja del famoso muralista Diego Rivera. "
     return informe;
 }
 
@@ -194,12 +194,12 @@ function argentina(){
 
 function carpincho(){
     var informe=""
-    informe+="Los carpinchos, también conocidos como capibaras, son los roedores más grandes del mundo. "
-    informe+="Viven en áreas húmedas como ríos, lagos y pantanos en América del Sur. "
+    informe+="Los carpinchos o capibaras, son los roedores más grandes del mundo. "
+    informe+="Viven en humedales en América del Sur. "
     informe+="Pueden pesar entre 35 y 66 kg y medir hasta 1.3 metros de largo. "
-    informe+="Son herbívoros, y su alimentación se basa en pasto, plantas acuáticas. "
-    informe+="Son animales muy sociales que suelen vivir en grupos familiares."
-    informe+="son conocidos por su naturaleza tranquila y a menudo se les ve en compañía de otras especies, como aves y monos. "
+    informe+="Son herbívoros, y su alimentación se basa en pasto y plantas acuáticas. "
+    informe+="Son animales muy sociales viven en grupos familiares."
+    informe+="son conocidos por su tranquilidad y a menudo se les ve en compañía de otras especies, como aves y monos. "
     informe+="Tienen patas adaptadas para nadar y pueden sumergirse en el agua para escapar de depredadores. "
     return informe;
 }
