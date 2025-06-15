@@ -1,64 +1,24 @@
-@font-face {
-    font-family: 'Aller';
-    src: url('/fonts/ALLERFONT/Aller_Rg.ttf') format('truetype');
-}
-
 .fondo{
-    background-color: #26214f;
+    background-color: #d8457b;
     color:white;
 }
 
-
-.boton{
-    color: #26214f;
-    background-color: white;
-    font-family: 'Aller', sans-serif;
-    border-radius: 6px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-style: none;
-}
-
-
-.boton:hover{
-    color: white;
-    background-color: #78529d;
-}
-
-.boton img {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 5px;
-    font-size: 1.5rem;
-    color:#78529d;
-}
 .pie{
-    font-family: 'Aller', sans-serif;
     font-size: smaller;
-}
-
-select option{
-   color:#78529d; 
-   border-style: none;
+    color: #000000;
 }
 
 .select{
-    color:#78529d;
-}
-
-.select:focus{
-    color:#78529d;
+    color: #000000;
+    background-color: #44AAAA;
+    font-size: small;
 }
 
 #caja{
-    color: white;
-    background-color: #78529d;
+    color: #000000;
+    background-color: #44AAAA;
     text-align: left;
     font-size: smaller;
     width: 100%;
-    height: 18rem;
+    height: 16rem;
 }

@@ -28,9 +28,8 @@ function runSpeechRecognition() {
     recognition.onresult = function (event) {
         const transcript = event.results[0][0].transcript.toLowerCase();
         const confidence = event.results[0][0].confidence;
-        console.log(transcript)
-        console.log("conf" + confidence)
-        console.log(preguntas.selectedIndex)
+        //console.log(transcript)
+        //console.log("conf" + confidence)
 
         //Transcript proyectado en select preguntas
         for (a = 0; a < motions.length; a++) {
@@ -51,8 +50,17 @@ function runSpeechRecognition() {
                 }
             }
         }
-        console.log(selectColores.selectedIndex)
         if (selectColores.selectedIndex!=0) cambiarColor()
+
+        //Transcript proyectado en select selectHoroscopo
+        for (a = 0; a < sodiaco.length; a++) {
+            for (x = 0; x < sodiaco[a].llaves.length; x++) {
+                if (transcript.includes(sodiaco[a].llaves[x])) {
+                    selectHoroscopo.selectedIndex = a
+                }
+            }
+        }
+        if (selectHoroscopo.selectedIndex!=0) cambiarHoroscopo()
 
     }
 

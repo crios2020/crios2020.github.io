@@ -34,13 +34,13 @@ motions.push(new Motion("creditos","acerca de ",['autor','credito','autores','cr
 
 let colores = []
 colores.push(new Motion("nada","Cambiar el color",[""]))
-colores.push(new Motion("color_#26214f","Panel de color normal",['normal','defecto']))
+colores.push(new Motion("color_#d8457b","Panel de color normal",['normal','defecto']))
 colores.push(new Motion("color_red","Panel de color rojo",['rojo','colorado']))
 colores.push(new Motion("color_green","Panel de color verde",['verde']))
 colores.push(new Motion("color_blue","Panel de color azul",['azul','ashul','ayul',' asul ','azulado',' asulado ']))
 colores.push(new Motion("color_white","Panel de color blanco",['blanco']))
 colores.push(new Motion("color_black","Panel de color negro",['negro']))
-colores.push(new Motion("color_cyan","Panel de color cyan",['cyan',' cian ',' sian ']))
+colores.push(new Motion("color_cyan","Panel de color cyan",['cyan','cian ','sian ']))
 colores.push(new Motion("color_magenta","Panel de color magenta",['magenta','majenta']))
 colores.push(new Motion("color_yellow","Panel de color amarillo",['amarillo']))
 colores.push(new Motion("color_violet","Panel de color violeta",['violeta','violetta']))
