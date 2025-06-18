@@ -7,7 +7,7 @@ class Motion {
 }
 
 let motions = []
-motions.push(new Motion("nada","Selecciona una Opción",[""]))
+motions.push(new Motion("nada","Habla con Frida!",[""]))
 motions.push(new Motion("hola","Hola Frida",['hola','saludo','saludar','saludarte']))
 motions.push(new Motion("opa","¿Que es OPA?",[' opa','asistente']))
 motions.push(new Motion("sordo","¿Ayuda a personas con hipoacusia?",['sordo','sordera','no escucha','hipoacusia','hipoacúsica','hipoacusica','hipoacúsico','hipoacusico']))
@@ -16,12 +16,6 @@ motions.push(new Motion("hora","¿Que hora es?",['hora','horario','reloj']))
 motions.push(new Motion("fecha","¿Que fecha es hoy?",[' dia ','día','fecha']))
 motions.push(new Motion("clima","¿Como esta el clima?",['clima','tiempo','temperatura']))
 motions.push(new Motion("donde","¿En donde estamos?",['donde','adonde','ubicacion','ubicación','dónde','adónde']))
-motions.push(new Motion("fp","¿Que es Formación Profesional?",['formación profesional','formacion profesional']))
-motions.push(new Motion("trayectos","¿Que otros trayectos o cursos puedo hacer?",['trayecto','trayectos','curso','cursos']))
-motions.push(new Motion("programacion","¿Puedo ser programador?",['programador','programacion','programación','software','desarrollo']))
-motions.push(new Motion("especialidades","¿Hay especialidades de Programación?",['especialidades','especialización','especializacion']))
-motions.push(new Motion("estudiar","¿Porque debo estudiar en la vida?",['estudiar','crecer','merito']))
-motions.push(new Motion("requisitos","¿Que necesito para estudiar en Formación Profesional?",['requisitos','inscripción','inscripcion','inscribirme','inscribir','anotarme']))
 motions.push(new Motion("bio","Quien fue Frida Kahlo?",['pintora','mexicana','frida kahlo','frida kalo','frida calo']))
 motions.push(new Motion("hablame","Háblame con arte",['arte']))
 motions.push(new Motion("locura","Háblame con locura o rebeldía",['locura','loca','rebeldía','rebeldia','sarcasmo']))
@@ -31,6 +25,15 @@ motions.push(new Motion("argentina","Háblame como Argentina",['argenta','argent
 motions.push(new Motion("carpincho","¿Que son los carpinchos?  ",['carpincho','carpinchos','carpinchito','carpinchitos','capibara','capibaras','chiguire','chiguires','capiguara','capiguaras']))
 motions.push(new Motion("chiste","¿Podes contar un chiste malo?",['chiste']))
 motions.push(new Motion("creditos","acerca de ",['autor','credito','autores','creditos','profesores','profesor','diseñadora','diseñador','autor']))
+
+let fps = []
+fps.push(new Motion("nada","Formación Profesional!",[""]))
+fps.push(new Motion("fp","¿Que es Formación Profesional?",['formación profesional','formacion profesional']))
+fps.push(new Motion("trayectos","¿Que otros trayectos o cursos puedo hacer?",['trayecto','trayectos','curso','cursos']))
+fps.push(new Motion("programacion","¿Puedo ser programador?",['programador','programacion','programación','software','desarrollo']))
+fps.push(new Motion("especialidades","¿Hay especialidades de Programación?",['especialidades','especialización','especializacion']))
+fps.push(new Motion("estudiar","¿Porque debo estudiar en la vida?",['estudiar','crecer','merito']))
+fps.push(new Motion("requisitos","¿Que necesito para estudiar en Formación Profesional?",['requisitos','inscripción','inscripcion','inscribirme','inscribir','anotarme']))
 
 let colores = []
 colores.push(new Motion("nada","Cambiar el color",[""]))
@@ -54,7 +57,7 @@ colores.push(new Motion("color_purple","Panel de color purpura",['purpura']))
 colores.push(new Motion("color_lavanda","Panel de color lavanda",['lavanda','labanda']))
 colores.push(new Motion("color_olive","Panel de color oliva",['oliva','oliba','olivo','aceituna','tutuna']))
 colores.push(new Motion("color_turquoise","Panel de color turquesa",['turqueza','turquesa','turkesa','turqueza']))
-colores.push(new Motion("color_salmon","Panel de color salmon",['salmon','zalmon']))
+colores.push(new Motion("color_salmon","Panel de color salmón",['salmon','zalmon']))
 colores.push(new Motion("color_tomate","Panel de color tomate",['tomate']))
 colores.push(new Motion("color_silver","Panel de color plata",['plata']))
 colores.push(new Motion("color_gold","Panel de color oro",['oro','dorado']))

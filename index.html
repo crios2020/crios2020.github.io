@@ -107,7 +107,7 @@
                         <div class="col d-grid gap-2 mb-2">
                             <form class="d-flex" role="search">
                                 <!-- Selector de Opciones -->
-                                <select id="preguntas" class="form-control form-control-sm me-2 select border-0"
+                                <select id="preguntas" class="form-select me-2 select border-0"
                                     onchange="cambiar()">
                                     <!-- Llenado dinámicamente desde js -->
                                 </select>
@@ -118,12 +118,23 @@
                                 </button>
                             </form>
                         </div>
+                        
+                        <!-- Componente FP -->
+                        <div class="col d-grid gap-2 mb-2">
+                            <form class="d-flex" role="search">
+                                <!-- Selector de Opciones -->
+                                <select id="fp" class="form-select me-2 select border-0"
+                                    onchange="cambiarFp()">
+                                    <!-- Llenado dinámicamente desde js -->
+                                </select>
+                            </form>
+                        </div>
 
                         <!-- Componente colores -->
                         <div class="col d-grid gap-2 mb-2">
                             <form class="d-flex" role="search">
                                 <!-- Selector de Opciones -->
-                                <select id="colores" class="form-control form-control-sm me-2 select border-0"
+                                <select id="colores" class="form-select me-2 select border-0"
                                     onchange="cambiarColor()">
                                     <!-- Llenado dinámicamente desde js -->
                                 </select>
@@ -134,7 +145,7 @@
                         <div class="col d-grid gap-2 mb-2">
                             <form class="d-flex" role="search">
                                 <!-- Selector de Opciones -->
-                                <select id="horoscopo" class="form-control form-control-sm me-2 select border-0"
+                                <select id="horoscopo" class="form-select me-2 select border-0"
                                     onchange="cambiarHoroscopo()">
                                     <!-- Llenado dinámicamente desde js -->
                                 </select>
@@ -155,13 +166,13 @@
                     <div class="col">
                         <div class="container-fluid text-left">
                             <small class="pie">
-                                usar el navegador Chrome o Edge!<br>
-                                Versión de prueba
+                                usar Chrome o Edge!<br>
                             </small>
                         </div>
                     </div>
 
                     <!-- Logos y QR -->
+                    <!-- TODO manejar tamaño de imagen abierta en chrome-->
                     <div class="col">
                         <a href="qr/qrcode_frida.png" data-lightbox="qr-frida" data-title="QR-Frida">
                             <img src="qr/qrcode_frida.png" width="50" class="pt-1 pb-1 float-end" alt="Frida_QR"

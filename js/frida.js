@@ -2,6 +2,7 @@ const frida = document.querySelector("#frida");
 const texto = document.querySelector("#output");
 const preguntas = document.getElementById("preguntas")
 const selectColores = document.getElementById("colores")
+const selectFp = document.getElementById("fp")
 const selectHoroscopo = document.getElementById("horoscopo")
 const panel = document.getElementById("panel")
 var textToSpeak = "";
@@ -39,8 +40,17 @@ function runSpeechRecognition() {
                 }
             }
         }
-        console.log(preguntas.selectedIndex)
         if (preguntas.selectedIndex!=0) cambiar()
+
+        //Transcript proyectado en selectFp
+        for (a = 0; a < fps.length; a++) {
+            for (x = 0; x < fps[a].llaves.length; x++) {
+                if (transcript.includes(fps[a].llaves[x])) {
+                    selectFp.selectedIndex = a
+                }
+            }
+        }
+        if (selectFp.selectedIndex!=0) cambiarFp()
 
         //Transcript proyectado en select selectColores
         for (a = 0; a < colores.length; a++) {
@@ -96,6 +106,17 @@ function cambiar() {
     hablarFrida()
 }
 
+function cambiarFp(){
+    callar()
+    argumento=""
+    if (typeof window[selectFp.value] === 'function') {
+        textToSpeak=window[selectFp.value](argumento);
+    } else {
+        textToSpeak="Perdón no entendí"
+    }
+    hablarFrida()
+}
+
 function cambiarColor() {
     callar()
     argumento=""
@@ -122,6 +143,12 @@ function cargar() {
         nuevaOpcion.value = m.value;
         nuevaOpcion.text = m.text;
         preguntas.appendChild(nuevaOpcion);
+    });
+    fps.forEach(m => {
+        const nuevaOpcion = document.createElement('option');
+        nuevaOpcion.value = m.value;
+        nuevaOpcion.text = m.text;
+        selectFp.appendChild(nuevaOpcion);
     });
     colores.forEach(c => {
         const nuevaOpcion = document.createElement('option');
