@@ -1,3 +1,7 @@
+function nada(){
+    return "Frida esta lista"
+}
+
 function hola(){
     return "Hola soy Frida, estoy para ayudarte! "+getFraseAlegriaRandom()+" "+getFraseFridaRandom()+" "+getFraseAmorRandom()
 }

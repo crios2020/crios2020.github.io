@@ -7,7 +7,7 @@ class Motion {
 }
 
 let motions = []
-motions.push(new Motion("nada","Habla con Frida!",[""]))
+motions.push(new Motion("nada","Hablá con Frida!",[""]))
 motions.push(new Motion("hola","Hola Frida",['hola','saludo','saludar','saludarte']))
 motions.push(new Motion("opa","¿Que es OPA?",[' opa','asistente']))
 motions.push(new Motion("sordo","¿Ayuda a personas con hipoacusia?",['sordo','sordera','no escucha','hipoacusia','hipoacúsica','hipoacusica','hipoacúsico','hipoacusico']))
@@ -27,7 +27,7 @@ motions.push(new Motion("chiste","¿Podes contar un chiste malo?",['chiste']))
 motions.push(new Motion("creditos","acerca de ",['autor','credito','autores','creditos','profesores','profesor','diseñadora','diseñador','autor']))
 
 let fps = []
-fps.push(new Motion("nada","Formación Profesional!",[""]))
+fps.push(new Motion("nada","Consultá sobre Formación Profesional!",[""]))
 fps.push(new Motion("fp","¿Que es Formación Profesional?",['formación profesional','formacion profesional']))
 fps.push(new Motion("trayectos","¿Que otros trayectos o cursos puedo hacer?",['trayecto','trayectos','curso','cursos']))
 fps.push(new Motion("programacion","¿Puedo ser programador?",['programador','programacion','programación','software','desarrollo']))
@@ -36,7 +36,7 @@ fps.push(new Motion("estudiar","¿Porque debo estudiar en la vida?",['estudiar',
 fps.push(new Motion("requisitos","¿Que necesito para estudiar en Formación Profesional?",['requisitos','inscripción','inscripcion','inscribirme','inscribir','anotarme']))
 
 let colores = []
-colores.push(new Motion("nada","Cambiar el color",[""]))
+colores.push(new Motion("nada","Cambiá el color",[""]))
 colores.push(new Motion("color_#d8457b","Panel de color normal",['normal','defecto']))
 colores.push(new Motion("color_red","Panel de color rojo",['rojo','colorado']))
 colores.push(new Motion("color_green","Panel de color verde",['verde']))
@@ -63,7 +63,7 @@ colores.push(new Motion("color_silver","Panel de color plata",['plata']))
 colores.push(new Motion("color_gold","Panel de color oro",['oro','dorado']))
 
 let sodiaco = []
-sodiaco.push(new Motion("nada","Consulta el Sodiaco",[""]))
+sodiaco.push(new Motion("nada","Consultá el Zodiaco",[""]))
 sodiaco.push(new Motion("horos_aries","Horóscopo Aries",[' aries']))
 sodiaco.push(new Motion("horos_tauro","Horóscopo Tauro",['tauro']))
 sodiaco.push(new Motion("horos_geminis","Horóscopo Géminis",['geminis','géminis']))
