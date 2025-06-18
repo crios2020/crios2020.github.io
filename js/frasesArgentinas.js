@@ -220,7 +220,7 @@ const frasesArgentinas = [
     "Me lo contó un pajarito!",
     "Por si las moscas!",
     "Siempre salé un martes trece.",
-    "Soy mas viejo que Matusalén.",
+    "Soy mas vieja que Matusalén.",
     "Me falta un tornillo!",
     "Esto no es soplar y hacer botellas.",
     "cada tanto me salta la térmica.",

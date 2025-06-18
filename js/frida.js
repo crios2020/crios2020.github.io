@@ -33,14 +33,13 @@ function runSpeechRecognition() {
         //console.log("conf" + confidence)
 
         //Filtro de palabras inapropiadas
-        palabras=transcript.toSplit(" ")
-        
-        palabras.forEach(palabra=>inapropiadas.forEach(inapropiada=>{
-            if(palabra==inapropiada){
-                textToSpeak="No debes decir esas palabras"
-                hablarFrida()
-            }
-        }))
+        //palabras=transcript.toSplit(" ")
+        //palabras.forEach(palabra=>inapropiadas.forEach(inapropiada=>{
+        //    if(palabra==inapropiada){
+        //        textToSpeak="No debes decir esas palabras"
+        //        hablarFrida()
+        //    }
+        //}))
 
         //Transcript proyectado en select preguntas
         for (a = 0; a < motions.length; a++) {
