@@ -119,7 +119,7 @@ function especialidades(){
     informe+="Programación WEB "
     informe+="Programación Segura y Cyberseguridad! "
     informe+="Programación de video juegos "
-    informe+="Administración de base de datos "
+    informe+="Administración de base de datos. "
     informe+=getFraseCrecimientoPersonalRandom()
     return informe;
 }
