@@ -44,5 +44,10 @@ const inapropiadas = [
     "culeado",
     "culeao",
     "huevon",
-    "huevón"
+    "huevón",
+    "orto",
+    "culo",
+    "pedo",
+    "pedorro",
+    "pedorra"
 ]

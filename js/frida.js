@@ -29,17 +29,25 @@ function runSpeechRecognition() {
     recognition.onresult = function (event) {
         const transcript = event.results[0][0].transcript.toLowerCase();
         const confidence = event.results[0][0].confidence;
-        //console.log(transcript)
-        //console.log("conf" + confidence)
+        console.log(transcript)
+        console.log("conf" + confidence)
 
         //Filtro de palabras inapropiadas
-        //palabras=transcript.toSplit(" ")
-        //palabras.forEach(palabra=>inapropiadas.forEach(inapropiada=>{
-        //    if(palabra==inapropiada){
-        //        textToSpeak="No debes decir esas palabras"
-        //        hablarFrida()
-        //    }
-        //}))
+        inapropiadasFlag=false
+        palabras=transcript.split(" ")
+        palabras.forEach(palabra=>inapropiadas.forEach(inapropiada=>{
+            if(palabra
+                        .replace(".","")
+                        .replace(",","")
+                        .replace("?","")
+                        .replace("¿","")
+                        .replace("!","")
+                        .replace("¡","")==inapropiada){
+                inapropiadasFlag=true
+                textToSpeak="No debes decir esas palabras."
+                hablarFrida()
+            }
+        }))
 
         //Transcript proyectado en select preguntas
         for (a = 0; a < motions.length; a++) {
@@ -71,6 +79,7 @@ function runSpeechRecognition() {
         }
         if (selectColores.selectedIndex!=0) cambiarColor()
 
+
         //Transcript proyectado en select selectHoroscopo
         for (a = 0; a < sodiaco.length; a++) {
             for (x = 0; x < sodiaco[a].llaves.length; x++) {
@@ -80,6 +89,15 @@ function runSpeechRecognition() {
             }
         }
         if (selectHoroscopo.selectedIndex!=0) cambiarHoroscopo()
+        
+        if( preguntas.selectedIndex==0 && 
+            selectFp.selectedIndex==0 &&
+            selectColores.selectedIndex==0 &&
+            selectHoroscopo.selectedIndex==0 &&
+            inapropiadasFlag==false){
+                textToSpeak="Perdón no entendí"
+                hablarFrida()
+            }
 
     }
 
@@ -109,8 +127,6 @@ function cambiar() {
     argumento=""
     if (typeof window[preguntas.value] === 'function') {
         textToSpeak=window[preguntas.value](argumento);
-    } else {
-        textToSpeak="Perdón no entendí"
     }
     hablarFrida()
 }
@@ -120,8 +136,6 @@ function cambiarFp(){
     argumento=""
     if (typeof window[selectFp.value] === 'function') {
         textToSpeak=window[selectFp.value](argumento);
-    } else {
-        textToSpeak="Perdón no entendí"
     }
     hablarFrida()
 }
