@@ -24,6 +24,8 @@ const inapropiadas = [
     "putita",
     "putito",
     "chacon",
+    "chácon",
+    "chacón",
     "vergaso",
     "vergazo",
     "pijaso",

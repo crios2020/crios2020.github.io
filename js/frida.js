@@ -27,24 +27,27 @@ function runSpeechRecognition() {
 
     // This runs when the speech recognition service returns result
     recognition.onresult = function (event) {
-        const transcript = event.results[0][0].transcript.toLowerCase();
+        transcript = event.results[0][0].transcript.toLowerCase();
         const confidence = event.results[0][0].confidence;
         console.log(transcript)
         console.log("conf" + confidence)
+
+        transcript=transcript
+                                .replace(".","")
+                                .replace(",","")
+                                .replace("?","")
+                                .replace("¿","")
+                                .replace("!","")
+                                .replace("¡","")
 
         //Filtro de palabras inapropiadas
         inapropiadasFlag=false
         palabras=transcript.split(" ")
         palabras.forEach(palabra=>inapropiadas.forEach(inapropiada=>{
-            if(palabra
-                        .replace(".","")
-                        .replace(",","")
-                        .replace("?","")
-                        .replace("¿","")
-                        .replace("!","")
-                        .replace("¡","")==inapropiada){
+            if(palabra==inapropiada){
                 inapropiadasFlag=true
-                textToSpeak="No debes decir esas palabras."
+                //textToSpeak="No debes decir esas palabras."
+                textToSpeak=respuestaEleganteRandom()
                 hablarFrida()
             }
         }))
