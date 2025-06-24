@@ -4,6 +4,7 @@ const preguntas = document.getElementById("preguntas")
 const selectColores = document.getElementById("colores")
 const selectFp = document.getElementById("fp")
 const selectHoroscopo = document.getElementById("horoscopo")
+const selectNoVisible = document.getElementById("no_visible")
 const panel = document.getElementById("panel")
 var textToSpeak = "";
 
@@ -27,6 +28,13 @@ function runSpeechRecognition() {
 
     // This runs when the speech recognition service returns result
     recognition.onresult = function (event) {
+        callar()
+        preguntas.selectedIndex=0
+        selectColores.selectedIndex=0
+        selectFp.selectedIndex=0
+        selectHoroscopo.selectedIndex=0
+        selectNoVisible.selectedIndex=0
+
         transcript = event.results[0][0].transcript.toLowerCase();
         const confidence = event.results[0][0].confidence;
         console.log(transcript)
@@ -42,7 +50,7 @@ function runSpeechRecognition() {
 
         //Filtro de palabras inapropiadas
         var inapropiadaFlag=false
-        palabras=transcript.split(" ")
+        const palabras=transcript.split(" ")
         palabras.forEach(palabra=>inapropiadas.forEach(inapropiada=>{
             if(palabra==inapropiada){
                 inapropiadaFlag=true
@@ -56,7 +64,7 @@ function runSpeechRecognition() {
         //Transcript proyectado en select preguntas
         for (a = 0; a < motions.length; a++) {
             for (x = 0; x < motions[a].llaves.length; x++) {
-                if (transcript.includes(motions[a].llaves[x])) {
+                if (palabras.includes(motions[a].llaves[x])) {
                     preguntas.selectedIndex = a
                 }
             }
@@ -66,7 +74,7 @@ function runSpeechRecognition() {
             //Transcript proyectado en selectFp
             for (a = 0; a < fps.length; a++) {
                 for (x = 0; x < fps[a].llaves.length; x++) {
-                    if (transcript.includes(fps[a].llaves[x])) {
+                    if (palabras.includes(fps[a].llaves[x])) {
                         selectFp.selectedIndex = a
                     }
                 }
@@ -76,17 +84,28 @@ function runSpeechRecognition() {
             //Transcript proyectado en select selectColores
             for (a = 0; a < colores.length; a++) {
                 for (x = 0; x < colores[a].llaves.length; x++) {
-                    if (transcript.includes(colores[a].llaves[x])) {
+                    if (palabras.includes(colores[a].llaves[x])) {
                         selectColores.selectedIndex = a
                     }
                 }
             }
             if (selectColores.selectedIndex!=0) cambiarColor()
 
+            //Transcript proyectado en select selectNoVisibles
+            for (a = 0; a < no_visibles.length; a++) {
+                for (x = 0; x < no_visibles[a].llaves.length; x++) {
+                    if (transcript.includes(no_visibles[a].llaves[x])) {
+                        selectNoVisible.selectedIndex = a
+                    }
+                }
+            }
+            if (selectNoVisible.selectedIndex!=0) cambiarNoVisible()
+
+
             //Transcript proyectado en select selectHoroscopo
             for (a = 0; a < sodiaco.length; a++) {
                 for (x = 0; x < sodiaco[a].llaves.length; x++) {
-                    if (transcript.includes(sodiaco[a].llaves[x])) {
+                    if (palabras.includes(sodiaco[a].llaves[x])) {
                         selectHoroscopo.selectedIndex = a
                     }
                 }
@@ -97,6 +116,7 @@ function runSpeechRecognition() {
             selectFp.selectedIndex==0 &&
             selectColores.selectedIndex==0 &&
             selectHoroscopo.selectedIndex==0 &&
+            selectNoVisible.selectedIndex==0 &&
             inapropiadaFlag==false){
                 textToSpeak="Perdón no entendí"
                 hablarFrida()
@@ -163,6 +183,14 @@ function cambiarHoroscopo() {
     hablarFrida()
 }
 
+function cambiarNoVisible(){
+    callar()
+    argumento=""
+    textToSpeak=no_visibles.filter(m=>m.value==selectNoVisible.value)[0].text
+    console.log(textToSpeak)
+    hablarFrida()
+}
+
 function cargar() {
     motions.forEach(m => {
         const nuevaOpcion = document.createElement('option');
@@ -187,6 +215,12 @@ function cargar() {
         nuevaOpcion.value = c.value;
         nuevaOpcion.text = c.text;
         selectHoroscopo.appendChild(nuevaOpcion);
+    });
+    no_visibles.forEach(c => {
+        const nuevaOpcion = document.createElement('option');
+        nuevaOpcion.value = c.value;
+        nuevaOpcion.text = c.text;
+        selectNoVisible.appendChild(nuevaOpcion);
     });
 }
 

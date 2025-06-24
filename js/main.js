@@ -214,5 +214,5 @@ function color(color){
 }
 
 function creditos(){
-    return "Programación: Carlos Rios"
+    return "Gestión de proyecto y Programación: Profesor Carlos Ríos"
 }
