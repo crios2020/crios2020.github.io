@@ -41,17 +41,18 @@ function runSpeechRecognition() {
                                 .replace("¡","")
 
         //Filtro de palabras inapropiadas
-        inapropiadasFlag=false
+        var inapropiadaFlag=false
         palabras=transcript.split(" ")
         palabras.forEach(palabra=>inapropiadas.forEach(inapropiada=>{
             if(palabra==inapropiada){
-                inapropiadasFlag=true
+                inapropiadaFlag=true
                 //textToSpeak="No debes decir esas palabras."
                 textToSpeak=respuestaEleganteRandom()
                 hablarFrida()
             }
         }))
 
+        if(!inapropiadaFlag){
         //Transcript proyectado en select preguntas
         for (a = 0; a < motions.length; a++) {
             for (x = 0; x < motions[a].llaves.length; x++) {
@@ -62,45 +63,44 @@ function runSpeechRecognition() {
         }
         if (preguntas.selectedIndex!=0) cambiar()
 
-        //Transcript proyectado en selectFp
-        for (a = 0; a < fps.length; a++) {
-            for (x = 0; x < fps[a].llaves.length; x++) {
-                if (transcript.includes(fps[a].llaves[x])) {
-                    selectFp.selectedIndex = a
+            //Transcript proyectado en selectFp
+            for (a = 0; a < fps.length; a++) {
+                for (x = 0; x < fps[a].llaves.length; x++) {
+                    if (transcript.includes(fps[a].llaves[x])) {
+                        selectFp.selectedIndex = a
+                    }
                 }
             }
-        }
-        if (selectFp.selectedIndex!=0) cambiarFp()
+            if (selectFp.selectedIndex!=0) cambiarFp()
 
-        //Transcript proyectado en select selectColores
-        for (a = 0; a < colores.length; a++) {
-            for (x = 0; x < colores[a].llaves.length; x++) {
-                if (transcript.includes(colores[a].llaves[x])) {
-                    selectColores.selectedIndex = a
+            //Transcript proyectado en select selectColores
+            for (a = 0; a < colores.length; a++) {
+                for (x = 0; x < colores[a].llaves.length; x++) {
+                    if (transcript.includes(colores[a].llaves[x])) {
+                        selectColores.selectedIndex = a
+                    }
                 }
             }
-        }
-        if (selectColores.selectedIndex!=0) cambiarColor()
+            if (selectColores.selectedIndex!=0) cambiarColor()
 
-
-        //Transcript proyectado en select selectHoroscopo
-        for (a = 0; a < sodiaco.length; a++) {
-            for (x = 0; x < sodiaco[a].llaves.length; x++) {
-                if (transcript.includes(sodiaco[a].llaves[x])) {
-                    selectHoroscopo.selectedIndex = a
+            //Transcript proyectado en select selectHoroscopo
+            for (a = 0; a < sodiaco.length; a++) {
+                for (x = 0; x < sodiaco[a].llaves.length; x++) {
+                    if (transcript.includes(sodiaco[a].llaves[x])) {
+                        selectHoroscopo.selectedIndex = a
+                    }
                 }
             }
+            if (selectHoroscopo.selectedIndex!=0) cambiarHoroscopo()
         }
-        if (selectHoroscopo.selectedIndex!=0) cambiarHoroscopo()
-        
         if( preguntas.selectedIndex==0 && 
             selectFp.selectedIndex==0 &&
             selectColores.selectedIndex==0 &&
             selectHoroscopo.selectedIndex==0 &&
-            inapropiadasFlag==false){
+            inapropiadaFlag==false){
                 textToSpeak="Perdón no entendí"
                 hablarFrida()
-            }
+        }
 
     }
 

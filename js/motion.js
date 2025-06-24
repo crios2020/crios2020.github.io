@@ -9,7 +9,7 @@ class Motion {
 let motions = []
 motions.push(new Motion("nada","Hablá con Frida!",[""]))
 motions.push(new Motion("hola","Hola Frida",['hola','saludo','saludar','saludarte']))
-motions.push(new Motion("opa","¿Que es OPA?",[' opa','asistente']))
+motions.push(new Motion("opa","¿Que es OPA?",['opa','asistente']))
 motions.push(new Motion("sordo","¿Ayuda a personas con hipoacusia?",['sordo','sordera','no escucha','hipoacusia','hipoacúsica','hipoacusica','hipoacúsico','hipoacusico']))
 motions.push(new Motion("ciego","¿Ayuda a personas no videntes?",['ciego','ciega','no vidente','cieguito', 'cieguita']))
 motions.push(new Motion("hora","¿Que hora es?",['hora','horario','reloj']))
