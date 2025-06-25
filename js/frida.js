@@ -6,10 +6,10 @@ const selectFp = document.getElementById("fp")
 const selectHoroscopo = document.getElementById("horoscopo")
 const selectNoVisible = document.getElementById("no_visible")
 const panel = document.getElementById("panel")
-var textToSpeak = "";
+var textToSpeak = ""
 
 function runSpeechRecognition() {
-    callar()
+    callarFrida()
 
     // new speech recognition object in Spanish!
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
@@ -28,7 +28,7 @@ function runSpeechRecognition() {
 
     // This runs when the speech recognition service returns result
     recognition.onresult = function (event) {
-        callar()
+        callarFrida()
         preguntas.selectedIndex=0
         selectColores.selectedIndex=0
         selectFp.selectedIndex=0
@@ -130,8 +130,9 @@ function runSpeechRecognition() {
 }
 
 function hablarFrida() {
+    window.speechSynthesis.cancel
     texto.innerHTML = '- ' + textToSpeak
-    let speech = new SpeechSynthesisUtterance()
+    speech = new SpeechSynthesisUtterance()
     speech.lang = "es-AR"
     speech.text = textToSpeak
     speech.onend = function (event) {
@@ -145,8 +146,14 @@ function hablarFrida() {
     window.speechSynthesis.speak(speech)
 }
 
+function callarFrida(){
+    window.speechSynthesis.cancel
+    //frida.classList.remove("speaking")
+    //frida.classList.add("listening")
+}
+
 function cambiar() {
-    callar()
+    callarFrida()
     argumento=""
     if (typeof window[preguntas.value] === 'function') {
         textToSpeak=window[preguntas.value](argumento);
@@ -155,7 +162,7 @@ function cambiar() {
 }
 
 function cambiarFp(){
-    callar()
+    callarFrida()
     argumento=""
     if (typeof window[selectFp.value] === 'function') {
         textToSpeak=window[selectFp.value](argumento);
@@ -164,7 +171,7 @@ function cambiarFp(){
 }
 
 function cambiarColor() {
-    callar()
+    callarFrida()
     argumento=""
     textToSpeak=colores.filter(m=>m.value==selectColores.value)[0].text
     color(selectColores.value.substring(6))
@@ -172,7 +179,7 @@ function cambiarColor() {
 }
 
 function cambiarHoroscopo() {
-    callar()
+    callarFrida()
     argumento=""
     //if (typeof window[preguntas.value] === 'function') {
     //    textToSpeak=window[preguntas.value](argumento);
@@ -184,7 +191,7 @@ function cambiarHoroscopo() {
 }
 
 function cambiarNoVisible(){
-    callar()
+    callarFrida()
     argumento=""
     textToSpeak=no_visibles.filter(m=>m.value==selectNoVisible.value)[0].text
     console.log(textToSpeak)
