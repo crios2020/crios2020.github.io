@@ -1,4 +1,4 @@
-signos=[
+let signos=[
     'aries',
     'tauro',
     'géminis',

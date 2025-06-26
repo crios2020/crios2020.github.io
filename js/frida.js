@@ -179,13 +179,14 @@ function cambiarColor() {
 
 function cambiarHoroscopo() {
     callarFrida()
-    argumento=""
+    //argumento=""
     //if (typeof window[preguntas.value] === 'function') {
     //    textToSpeak=window[preguntas.value](argumento);
     //} else {
     //    textToSpeak="Perdón no entendí"
     //}
-    textToSpeak="No disponible por el momento"
+    //textToSpeak="No disponible por el momento"
+    textToSpeak=horoscopo(selectHoroscopo.value.substring(6))
     hablarFrida()
 }
 

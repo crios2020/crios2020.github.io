@@ -216,3 +216,17 @@ function color(color){
 function creditos(){
     return "Gestión de proyecto y Programación: Profesor Carlos Ríos"
 }
+
+function horoscopo(signo){
+    dia=new Date().getDate()
+    indexSigno=signos.indexOf(signo)
+    indexAmor=indexSigno+1*(dia%6)+indexSigno
+    indexDinero=indexSigno+1*(dia%6)+indexSigno+12
+    indexSalud=indexSigno+1*(dia%6)+indexSigno+24
+    informe=""
+    informe+="Horoscopo de "+signo+" día "+getFecha()+". "
+    informe+="Sobre el amor: "+frasesHoroscopoAmor[indexAmor]+" "
+    informe+="Sobre el dinero: "+frasesHoroscopoDinero[indexDinero]+" "
+    informe+="Sobre la salud: "+frasesHoroscopoSalud[indexSalud]
+    return informe
+}
