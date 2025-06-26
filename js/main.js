@@ -219,10 +219,11 @@ function creditos(){
 
 function horoscopo(signo){
     dia=new Date().getDate()
+    mes=new Date().getMonth()
     indexSigno=signos.indexOf(signo)
-    indexAmor=indexSigno+1*(dia%6)+indexSigno
-    indexDinero=indexSigno+1*(dia%6)+indexSigno+12
-    indexSalud=indexSigno+1*(dia%6)+indexSigno+24
+    indexAmor=indexSigno+1*(dia%6)+indexSigno+mes
+    indexDinero=indexSigno+1*(dia%6)+indexSigno+12+mes
+    indexSalud=indexSigno+1*(dia%6)+indexSigno+24+mes
     informe=""
     informe+="Horoscopo de "+signo+" día "+getFecha()+". "
     informe+="Sobre el amor: "+frasesHoroscopoAmor[indexAmor]+" "

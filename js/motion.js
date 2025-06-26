@@ -86,10 +86,11 @@ no_visibles.push(new Motion("espe","¡No, no hay esperanzas!",["hay esperansa","
 no_visibles.push(new Motion("lindo","¡ponele!",["soy lindo","soy bello","somos lindos","somos bellos","soy hermoso","somos hermosos","es lindo","es bello","es hemoso","son lindos","son bellos","son hermosos"]))
 no_visibles.push(new Motion("mori","¡si obvio, que duda te cabe!",["voy a morir","va a morir","esta muerto","está muerto"]))
 no_visibles.push(new Motion("feo","¡No tengo pruebas, pero tampoco dudas!",["soy feo","soy horrible","es feo","es horrible"]))
-no_visibles.push(new Motion("miedo","¡Sin miedo al exitó!",["miedo","temor"]))
+no_visibles.push(new Motion("miedo","¡Sin miedo al exitó!",["miedo","temor","estoy alegre"]))
 no_visibles.push(new Motion("tiro","¡Sí dale hacelo boleta!",["pegar un tiro"]))
-no_visibles.push(new Motion("callada","¡Soy una tumba!",["no digas nada","callada","vos musa","voz musa"]))
+no_visibles.push(new Motion("loca","¡Tenes vertigó en la cola!",["rarito","estoy raro","estoy rara","soy rara","soy raro","pizza con anana","pizza con ananá","mouse con muchos botones"]))
+no_visibles.push(new Motion("callada","¡Soy una tumba!",["no digas nada","callada","vos musa","voz musa","silencio"]))
 no_visibles.push(new Motion("aburrido","¡No es mi problema!",["aburrido","me siento mal"]))
-
+no_visibles.push(new Motion("depre","¡Realmente no me importa!",["depre","deprimido","depresivo","triste","tristesa"]))
 
 
