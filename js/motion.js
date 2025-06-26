@@ -81,7 +81,7 @@ sodiaco.push(new Motion("horos_piscis","Horóscopo Piscis",['piscis']))
 let no_visibles = []
 no_visibles.push(new Motion("nada","nada",[]))
 no_visibles.push(new Motion("profe","¡El mejor profe es Carlos Ríos! ¡Sin lugar a dudas!",["mejor profe","mejor profesor","mejor docente"]))
-no_visibles.push(new Motion("prog","Carlos Ríos, es un analista de sistemas y docente argentino, que creo el software OPA, que impulsa el motor de mi inteligencia artificial.",["carlos rios","carlos ríos"]))
+no_visibles.push(new Motion("prog","Carlos Ríos, es un analista de sistemas y docente argentino, que creó el software OPA, que impulsa el motor de mi inteligencia artificial.",["carlos rios","carlos ríos"]))
 no_visibles.push(new Motion("espe","¡No, no hay esperanzas!",["hay esperansa","hay esperansas","hay esperanza","hay esperanzas","va a parar"]))
 no_visibles.push(new Motion("lindo","¡ponele!",["soy lindo","soy bello","somos lindos","somos bellos","soy hermoso","somos hermosos","es lindo","es bello","es hemoso","son lindos","son bellos","son hermosos"]))
 no_visibles.push(new Motion("mori","¡si obvio, que duda te cabe!",["voy a morir","va a morir","esta muerto","está muerto"]))
@@ -89,6 +89,7 @@ no_visibles.push(new Motion("feo","¡No tengo pruebas, pero tampoco dudas!",["so
 no_visibles.push(new Motion("miedo","¡Sin miedo al exitó!",["miedo","temor"]))
 no_visibles.push(new Motion("tiro","¡Sí dale hacelo boleta!",["pegar un tiro"]))
 no_visibles.push(new Motion("callada","¡Soy una tumba!",["no digas nada","callada","vos musa","voz musa"]))
+no_visibles.push(new Motion("aburrido","¡No es mi problema!",["aburrido","me siento mal"]))
 
 
 
