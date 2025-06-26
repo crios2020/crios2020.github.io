@@ -23,7 +23,7 @@ function runSpeechRecognition() {
 
     // stop listenting the speech recognition
     recognition.onspeechend = function () {
-        recognition.stop();
+        //recognition.stop();
     }
 
     // This runs when the speech recognition service returns result
@@ -54,7 +54,6 @@ function runSpeechRecognition() {
         palabras.forEach(palabra=>inapropiadas.forEach(inapropiada=>{
             if(palabra==inapropiada){
                 inapropiadaFlag=true
-                //textToSpeak="No debes decir esas palabras."
                 textToSpeak=respuestaEleganteRandom()
                 hablarFrida()
             }
@@ -147,9 +146,9 @@ function hablarFrida() {
 }
 
 function callarFrida(){
-    window.speechSynthesis.cancel
-    //frida.classList.remove("speaking")
-    //frida.classList.add("listening")
+    window.speechSynthesis.cancel()
+    frida.classList.remove("speaking")
+    frida.classList.add("listening")
 }
 
 function cambiar() {
@@ -230,4 +229,3 @@ function cargar() {
         selectNoVisible.appendChild(nuevaOpcion);
     });
 }
-

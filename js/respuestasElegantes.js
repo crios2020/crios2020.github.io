@@ -16,7 +16,8 @@ const respuestasElegantes = [
     "No me toca el desprecio, me abraza la libertad.",
     "La crítica es solo el eco de tus propias frustraciones.",
     "Los insultos hablan mal de Ti, no de Mi.",
-    "No debes decir esas palabras."
+    "No debes decir esas palabras.",
+    "Debes ser más educado con una Dama!"
 ]
 
 function respuestaEleganteRandom(){
