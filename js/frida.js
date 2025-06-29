@@ -60,15 +60,15 @@ function runSpeechRecognition() {
         }))
 
         if(!inapropiadaFlag){
-        //Transcript proyectado en select preguntas
-        for (a = 0; a < motions.length; a++) {
-            for (x = 0; x < motions[a].llaves.length; x++) {
-                if (palabras.includes(motions[a].llaves[x])) {
-                    preguntas.selectedIndex = a
+            //Transcript proyectado en select preguntas
+            for (a = 0; a < motions.length; a++) {
+                for (x = 0; x < motions[a].llaves.length; x++) {
+                    if (palabras.includes(motions[a].llaves[x])) {
+                        preguntas.selectedIndex = a
+                    }
                 }
             }
-        }
-        if (preguntas.selectedIndex!=0) cambiar()
+            if (preguntas.selectedIndex!=0) cambiar()
 
             //Transcript proyectado en selectFp
             for (a = 0; a < fps.length; a++) {
