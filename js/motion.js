@@ -54,7 +54,7 @@ colores.push(new Motion("color_orange","Panel de color naranja",['naranja','anar
 colores.push(new Motion("color_beige","Panel de color beige",['beige','beish']))
 colores.push(new Motion("color_skyblue","Panel de color celeste",['celeste']))
 colores.push(new Motion("color_purple","Panel de color purpura",['purpura']))
-colores.push(new Motion("color_lavanda","Panel de color lavanda",['lavanda','labanda']))
+colores.push(new Motion("color_lavender","Panel de color lavanda",['lavanda','labanda']))
 colores.push(new Motion("color_olive","Panel de color oliva",['oliva','oliba','olivo','aceituna','tutuna']))
 colores.push(new Motion("color_turquoise","Panel de color turquesa",['turqueza','turquesa','turkesa','turqueza']))
 colores.push(new Motion("color_salmon","Panel de color salmón",['salmon','zalmon','salmón']))
