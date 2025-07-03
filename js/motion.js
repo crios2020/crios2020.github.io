@@ -93,6 +93,6 @@ no_visibles.push(new Motion("callada","¡Soy una tumba!",["no digas nada","calla
 no_visibles.push(new Motion("aburrido","¡No es mi problema!",["aburrido","me siento mal"]))
 no_visibles.push(new Motion("depre","¡Realmente no me importa!",["depre","deprimido","depresivo","triste","tristesa"]))
 no_visibles.push(new Motion("trava","¡Travestí lindo, siempré!",["travesti lindo","traba lindo"]))
-no_visibles.push(new Motion("fafafa","¡fafafa, siempré!",["fafafa","merluza","merca","merka","faso","fazo","vicio","sandunga"]))
+no_visibles.push(new Motion("fafafa","¡fafafa, siempré!",["fafafa","merluza","merca","merka","faso","fazo","vicio","sandunga","porro"]))
 no_visibles.push(new Motion("pasta","¡Batata, no hay que confiar de los que le gusta el membrillo!",["membrillo","batata","bátata"]))
 no_visibles.push(new Motion("pizza","¡la gente que come pizza de anana es muy rarita, o tiene vertigo en la cola!",["pizza","anana","ananá"]))
