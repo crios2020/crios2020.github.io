@@ -24,6 +24,17 @@ function hablar(mensaje) {
 }
 
 /**
+ * Función para generar voz
+ * La voz es generada por el browser, se recomienda usar Edge de Microsoft
+ * Ej: speak("Hola Mundo!!")
+ * @param {*} mensaje Mensaje a generar
+ */
+function speak(mensaje) {
+    const message = new SpeechSynthesisUtterance(mensaje)
+    window.speechSynthesis.speak(message)
+}
+
+/**
  * Esta función detiene el sintetizador de voz
  */
 function callar() {
