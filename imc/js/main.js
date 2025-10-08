@@ -20,8 +20,8 @@ function calcularEstado(imc){
 }
 
 function calcularColor(imc){
-    if(imc<=15.9 || imc>=30)    return "color: white; background-color: red;"       //
-    if(imc<=18.4 || imc>=24.9)  return "color: red; background-color: yellow;"
+    if(imc<=15.9 || imc>30)    return "color: white; background-color: red;"       //
+    if(imc<=18.4 || imc>24.9)  return "color: red; background-color: yellow;"
     return "color: white; background-color: green;"
 }
 
