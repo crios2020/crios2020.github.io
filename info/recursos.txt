@@ -1,0 +1,2 @@
+Medidor de performance WEB y seo:       https://pagespeed.web.dev/ 
+Mimificador de JS - CSS:                https://www.minifier.org/
