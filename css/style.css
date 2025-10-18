@@ -1,11 +1,14 @@
 .fondo{
-    background-color: #d8457b;
+    background-color: #d8457B;
     color:white;
 }
 
 .pie{
     font-size: smaller;
     color: #FFFFFF;
+    background-color: #A8154B;
+    padding: 8px;
+    border-radius: 6px;
 }
 
 .select{
