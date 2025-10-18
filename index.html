@@ -108,17 +108,15 @@
                         <!-- Componente de busqueda y mic -->
                         <div class="col d-grid gap-2 mb-2">
                             <form class="d-flex" role="search">
-                                    <!-- Selector de Opciones -->
-                                    <label for="preguntas" hidden>Preguntas:</label>
-                                        <select id="preguntas" class="form-select me-2 select border-0"
-                                            onchange="cambiar()">
-                                            <!-- Llenado dinámicamente desde js -->
-                                        </select>
-                                    <!-- Botón de microfono -->
-                                    <button class="btn btn btn-outline-info" type="button"
-                                        onclick="runSpeechRecognition()">
-                                        <img src="icons/microphone.png" width="24" height="24" alt="microfono">
-                                    </button>
+                                <!-- Selector de Opciones -->
+                                <label for="preguntas" hidden>Preguntas:</label>
+                                <select id="preguntas" class="form-select me-2 select border-0" onchange="cambiar()">
+                                    <!-- Llenado dinámicamente desde js -->
+                                </select>
+                                <!-- Botón de microfono -->
+                                <button class="btn btn btn-outline-info" type="button" onclick="runSpeechRecognition()">
+                                    <img src="icons/microphone.png" width="24" height="24" alt="microfono">
+                                </button>
                             </form>
                         </div>
 
@@ -126,7 +124,7 @@
                         <div class="col d-grid gap-2 mb-2">
                             <form class="d-flex" role="search">
                                 <!-- Selector de Opciones -->
-                                <label for="fp" hidden>FP:</label>
+                                <label for="fp">FP: </label>
                                 <select id="fp" class="form-select me-2 select border-0" onchange="cambiarFp()">
                                     <!-- Llenado dinámicamente desde js -->
                                 </select>
