@@ -1,0 +1,86 @@
+.calculator {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #e9ecef;
+    /* Fondo de la calculadora: gris claro */
+}
+
+.display {
+    font-size: 2em;
+    padding: 10px;
+    text-align: right;
+    background-color: #343a40;
+    /* Fondo del display: gris oscuro */
+    color: #ffffff;
+    /* Texto del display: blanco */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #6c757d;
+}
+
+.btn-calculator {
+    font-size: 1.2em;
+    padding: 15px;
+    width: 100%;
+    margin: 5px 0;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    /* Suavidad en animaciones */
+}
+
+.btn-number {
+    background-color: #00bcd4;
+    /* Cian vibrante */
+    color: #ffffff;
+    border: none;
+}
+
+.btn-number:hover {
+    background-color: #26c6da;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
+    /* Efecto glow cian */
+}
+
+.btn-operator {
+    background-color: #6c757d;
+    /* Gris para operadores */
+    color: #ffffff;
+}
+
+.btn-operator:hover {
+    background-color: #5a6268;
+    box-shadow: 0 0 10px rgba(108, 117, 125, 0.5);
+    /* Glow más suave */
+}
+
+.btn-equal {
+    background: linear-gradient(45deg, #ff5722, #ffeb3b, #ff5722);
+    /* Gradiente dinámico */
+    background-size: 200% 200%;
+    color: #ffffff;
+    animation: gradientShift 3s ease infinite;
+    /* Animación de gradiente */
+}
+
+.btn-equal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.8);
+    /* Glow naranja intenso */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="icons/calculator.svg" rel="icon" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-sm">
+        <div class="calculator">
+            <div class="display" id="display">0</div>
+            <div class="row g-2">
+                <!-- Fila 1 -->
+                <div class="col-6">
+                    <button class="btn btn-operator btn-calculator" onclick="clearDisplay()">C</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-operator btn-calculator" onclick="appendToDisplay('/')">/</button>
+                </div>
+                <!-- Fila 2 -->
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('7')">7</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('8')">8</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('9')">9</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-operator btn-calculator" onclick="appendToDisplay('*')">×</button>
+                </div>
+                <!-- Fila 3 -->
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('4')">4</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('5')">5</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('6')">6</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-operator btn-calculator" onclick="appendToDisplay('-')">-</button>
+                </div>
+                <!-- Fila 4 -->
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('1')">1</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('2')">2</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('3')">3</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-operator btn-calculator" onclick="appendToDisplay('+')">+</button>
+                </div>
+                <!-- Fila 5 -->
+                <div class="col-6">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('0')">0</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-number btn-calculator" onclick="appendToDisplay('.')">.</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-equal btn-calculator" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
