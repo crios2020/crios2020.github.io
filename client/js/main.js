@@ -18,6 +18,10 @@ userInput.addEventListener('keypress', (e) => {
     }
 });
 
+function borrar(){
+    chatWindow.innerText=""
+}
+
 function addMessage(text, isUser) {
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('message');
