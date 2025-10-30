@@ -32,6 +32,9 @@ fps.push(new Motion("fp","¿Que es Formación Profesional?",['formación profesi
 fps.push(new Motion("trayectos","¿Que otros trayectos o cursos puedo hacer?",['trayecto','trayectos','curso','cursos']))
 fps.push(new Motion("programacion","¿Puedo ser programador?",['programador','programacion','programación','software','desarrollo']))
 fps.push(new Motion("especialidades","¿Hay especialidades de Programación?",['especialidades','especialización','especializacion']))
+fps.push(new Motion("mkt","¿Estudiar Marketing Digital?",['seo','campaña','marketing','marqueting','digital','negocios','sociales','publicidad']))
+fps.push(new Motion("informatica","¿Estudiar Informática Básica?",['computación','informática','básica']))
+fps.push(new Motion("datos","¿Estudiar Análisis de datos?",['análisis','analista','datos','estadística','inteligencia']))
 fps.push(new Motion("estudiar","¿Porque debo estudiar en la vida?",['estudiar','crecer','merito']))
 fps.push(new Motion("requisitos","¿Que necesito para estudiar en Formación Profesional?",['requisitos','inscripción','inscripcion','inscribirme','inscribir','anotarme']))
 

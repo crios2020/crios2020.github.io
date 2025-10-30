@@ -124,6 +124,33 @@ function especialidades(){
     return informe;
 }
 
+function mkt(){
+    var informe=""
+    informe+="Estudiar marketing digital es clave: domina redes sociales, "
+    informe+="posicionamiento SEO y analytics para crear campañas efectivas, "
+    informe+="impulsar ventas y adaptarte al mundo online en constante evolución. "
+    informe+=getFraseCrecimientoPersonalRandom()
+    return informe;
+}
+
+function informatica(){
+    var informe=""
+    informe+="Estudiar informática básica te empodera: domina herramientas digitales, internet, "
+    informe+="herramientas de oficina, resuelve problemas lógicos, automatiza tareas "
+    informe+="y abre puertas a carreras tecnológicas en un mundo cada vez más conectado. "
+    informe+=getFraseCrecimientoPersonalRandom()
+    return informe;
+}
+
+function datos(){
+    var informe=""
+    informe+="Estudiar análisis de datos te transforma: interpreta información, "
+    informe+="descubre patrones ocultos, toma decisiones inteligentes en inteligencia de negocio, "
+    informe+="optimiza estrategias y lidera en empresas con habilidades demandadas globalmente. "
+    informe+=getFraseCrecimientoPersonalRandom()
+    return informe;
+}
+
 function estudiar(){
     var informe=""
     for(a=1; a<=2; a++){

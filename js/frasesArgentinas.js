@@ -313,7 +313,7 @@ const frasesArgentinas = [
     "Por favor, verifica la información en fuentes confiables.",
     "Estoy aquí las 24 horas, siempre disponible.",
     "¿Te gustaría saber más sobre un tema específico?",
-    "Estoy diseñado para aprender de mis errores.",
+    "Estoy diseñada para aprender de mis errores.",
     "Puedo ayudarte a resolver problemas complejos.",
     "No tengo opiniones personales, solo hechos.",
     "Estoy aquí para facilitar tu búsqueda de información.",
