@@ -60,8 +60,12 @@ async function sendMessage() {
         }
 
         const data = await response.json();
-        const aiReply = data.choices[0].message.content.trim();
+        let aiReply = data.choices[0].message.content.trim();
+        aiReply = aiReply.replaceAll('*', '');
+        aiReply = aiReply.replaceAll('|', '');
+        aiReply = aiReply.replaceAll('#', '');
         addMessage("chatbot - "+aiReply, false);
+        hablar(aiReply)
     } catch (error) {
         addMessage('Error: ' + error.message, false);
     } finally {
