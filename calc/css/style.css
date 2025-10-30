@@ -57,12 +57,11 @@
 }
 
 .btn-equal {
-    background: linear-gradient(45deg, #ff5722, #ffeb3b, #ff5722);
-    /* Gradiente dinámico */
+    /* background: linear-gradient(45deg, #ff5722, #ffeb3b, #ff5722); */  /* Gradiente dinámico */
     background-size: 200% 200%;
     color: #ffffff;
-    animation: gradientShift 3s ease infinite;
-    /* Animación de gradiente */
+    background-color: red;
+    /* animation: gradientShift 3s ease infinite; */ /* Animación de gradiente */
 }
 
 .btn-equal:hover {
