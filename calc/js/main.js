@@ -14,9 +14,12 @@ function clearDisplay() {
 
 function calculate() {
     try {
-        display.innerText = eval(display.innerText)
+        resultado = eval(display.innerText)
+        display.innerText = resultado
+        hablar(resultado)
     } catch (error) {
         display.innerText = 'Error'
+        hablar('Error')
         setTimeout(clearDisplay, 1000)
     }
 }
