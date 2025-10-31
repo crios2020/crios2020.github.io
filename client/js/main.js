@@ -64,6 +64,8 @@ async function sendMessage() {
         aiReply = aiReply.replaceAll('*', '');
         aiReply = aiReply.replaceAll('|', '');
         aiReply = aiReply.replaceAll('#', '');
+        aiReply = aiReply.replaceAll('_', '');
+        aiReply = aiReply.replaceAll('-', '');
         addMessage("chatbot - "+aiReply, false);
         hablar(aiReply)
     } catch (error) {
