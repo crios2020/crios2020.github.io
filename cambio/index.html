@@ -14,17 +14,43 @@
 </head>
 <body>
     <div class="container-lg m-2 p-2 contenedor">
-        <h1 class="text-center text-primary p-3 mb-2 banner">
+        <h1 class="text-center p-3 mb-2 banner">
             <img src="images/icons8-money-96.png" alt="logo Dolar" with="36" height="36">
             Cambio de monedas
         </h1>
-        <div class="formulario">
+        <div class="formulario m-2 p-4">
             <form>
+
                 <!-- Monto -->
-                <div class="row mb-2 p-3 fila">
+                <div class="row mb-2 p-3 fila justify-content-md-center">
                     <label for="monto" class="col-sm-3 text-primary">Monto</label>
                     <div class="col-sm-6">
-                        <input type="number" id="monto" class="form-control text-primary">
+                        <input type="number" id="monto" value="1000" class="form-control text-primary">
+                    </div>
+                </div>
+
+                <!-- Operación -->
+                <div class="row mb-2 p-3 fila justify-content-md-center">
+                    <label for="operacion" class="col-sm-3 text-primary">Operación</label>
+                    <div class="col-sm-6">
+                        <select id="operacion" class="form-select text-primary">
+                            <option value="dolar">Dolar a Pesos</option>
+                            <option value="pesos">Pesos a Dolar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="row mb-2 p-3 fila gap-2 justify-content-md-center">
+                    <button type="reset" class="btn btn-danger col-sm-4">Borrar</button>
+                    <button type="button" class="btn btn-success col-sm-4">Calcular</button>
+                </div>
+
+                <!-- Resultado -->
+                <div class="row mb-2 p-3 fila justify-content-md-center">
+                    <label for="resultado" class="col-sm-3 text-primary">Resultado</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="resultado" value="0" class="form-control text-primary">
                     </div>
                 </div>
 

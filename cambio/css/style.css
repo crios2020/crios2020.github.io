@@ -1,13 +1,14 @@
 .contenedor{
-    background-color: bisque;
+    background-color: #3C7B5A;
 }
 
 .banner{
-    background-color: lightgray;
+    background-color: #75AADB;
+    color: #FFFFFF;
 }
 
 .formulario{
-    background-color: lightgray;
+    background-color: #75AADB;
 }
 
 .fila{
