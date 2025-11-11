@@ -15,6 +15,7 @@ motions.push(new Motion("ciego","¿Ayuda a personas no videntes?",['ciego','cieg
 motions.push(new Motion("hora","¿Que hora es?",['hora','horario','reloj']))
 motions.push(new Motion("fecha","¿Que fecha es hoy?",['dia','día','fecha']))
 motions.push(new Motion("clima","¿Como esta el clima?",['clima','tiempo','temperatura']))
+motions.push(new Motion("economia","¿Información Financiera?",['dolar','euro','blu','blue','mercado','finaciera','bursátil']))
 motions.push(new Motion("donde","¿En donde estamos?",['donde','adonde','ubicacion','ubicación','dónde','adónde']))
 motions.push(new Motion("bio","Quien fue Frida Kahlo?",['pintora','mexicana','frida kahlo','frida kalo','frida calo','kahlo']))
 motions.push(new Motion("hablame","Háblame con arte",['arte']))

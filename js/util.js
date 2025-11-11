@@ -736,3 +736,93 @@ function getEfemerides(){
 
     return efemerides;
 }
+
+/**
+ * Devuelve la cotización del dolar oficial para la compra
+ * @returns cotización en Arg$
+ */
+function getValorDolarOficialCompra() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", 'https://dolarapi.com/v1/dolares/oficial', false); 
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.compra
+        }
+    } catch (error) {
+        return "error"
+    }
+}
+
+/**
+ * Devuelve la cotización del dolar oficial para la venta
+ * @returns cotización en Arg$
+ */
+function getValorDolarOficialVenta() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", 'https://dolarapi.com/v1/dolares/oficial', false); 
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.venta
+        }
+    } catch (error) {
+        return "error"
+    }
+}
+
+/**
+ * Devuelve la cotización del dolar blue para la compra
+ * @returns cotización en Arg$
+ */
+function getValorDolarBlueCompra() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", 'https://dolarapi.com/v1/dolares/blue', false); 
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.compra
+        }
+    } catch (error) {
+        return "error"
+    }
+}
+
+/**
+ * Devuelve la cotización del dolar blue para la venta
+ * @returns cotización en Arg$
+ */
+function getValorDolarBlueVenta() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", 'https://dolarapi.com/v1/dolares/blue', false); 
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.venta
+        }
+    } catch (error) {
+        return "error"
+    }
+}
+
+/**
+ * Devuelve el ultimo valor registrado de riesgo país
+ * @returns valor de riesgo país
+ */
+function getValorRiesgoPais() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", 'https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais/ultimo/', false); 
+        request.send();
+        if (request.status === 200) {
+            const json = JSON.parse(request.responseText)
+            return json.valor
+        }
+    } catch (error) {
+        return "error"
+    }
+}

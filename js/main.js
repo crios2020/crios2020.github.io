@@ -63,6 +63,10 @@ function clima(){
     return informe
 }
 
+function economia(){
+    return "hola ecónomia!"
+}
+
 function donde(){
 
     //Usando el api limitada
