@@ -8,13 +8,14 @@ function cambiarPesosADolares(cantidadDePesos, cotizacion){
 
 function calcular(){
     cargar()
-    let monto = parseFloat(document.getElementById("monto").value)
+    let monto = parseFloat(document
+                                    .getElementById("monto")
+                                    .value
+                                    .replaceAll('.', '')
+                                    .replaceAll(',', '.'))
     let operacion = document.getElementById("operacion").value
     let dolarCompra=parseFloat(getDolarBlueCompra())
     let dolarVenta=parseFloat(getDolarBlueVenta())
-
-    //console.log(monto)
-    //console.log(operacion)
 
     if(operacion=="pesos"){
         document
@@ -26,6 +27,14 @@ function calcular(){
                 .getElementById("resultado")
                 .value=cambiarDolaresAPesos(monto,dolarCompra)
     }
+    document
+            .getElementById("resultado")
+                .value=(document.getElementById("resultado").value).toLocaleString('es-AR', {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                })
+    formatear()
+
 }
 
 function getDolarBlueCompra(){
@@ -61,4 +70,42 @@ function cargar(){
     //console.log(getDolarBlueVenta())
     document.getElementById("compra").value=getDolarBlueCompra()
     document.getElementById("venta").value=getDolarBlueVenta()
+}
+
+function formatear(){
+    let monto = parseFloat(document.getElementById("monto")
+                    .value
+                    .replaceAll('.', '')
+                    .replaceAll(',', '.')) 
+    let dolarCompra=parseFloat(getDolarBlueCompra())
+    let dolarVenta=parseFloat(getDolarBlueVenta())
+
+    document
+            .getElementById("monto")
+                .value=(monto).toLocaleString('es-AR', {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                })
+    document
+            .getElementById("compra")
+            .value=dolarCompra.toLocaleString('es-AR', {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+            })
+    document
+            .getElementById("venta")
+            .value=dolarVenta.toLocaleString('es-AR', {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+            })
+    document
+            .getElementById("resultado")
+            .value=(parseFloat(
+                                document
+                                    .getElementById("resultado").value))
+                                    .toLocaleString('es-AR', {
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2
+            })
+                                
 }

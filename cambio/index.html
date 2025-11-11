@@ -12,7 +12,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body onload="cargar()">
+<body onload="cargar(), formatear()">
     <div class="container-lg m-2 p-2 contenedor">
         <h1 class="text-center p-3 mb-2 banner">
             <img src="images/icons8-money-96.png" alt="logo Dolar" with="36" height="36">
@@ -25,7 +25,7 @@
                 <div class="row mb-2 p-3 fila justify-content-md-center">
                     <label for="monto" class="col-sm-3 text-primary">Monto</label>
                     <div class="col-sm-6">
-                        <input type="number" id="monto" value="1000" class="form-control text-primary">
+                        <input type="text" id="monto" value="1000" class="form-control text-primary text-end pe-3" onchange="formatear()">
                     </div>
                 </div>
 
@@ -44,11 +44,11 @@
                 <div class="row mb-2 p-3 fila justify-content-md-center">
                     <label for="compra" class="col-sm-2 text-primary">Compra</label>
                     <div class="col-sm-2">
-                        <input type="text" id="compra" readonly value="0" class="form-control text-primary">
+                        <input type="text" id="compra" readonly value="0" class="form-control text-primary text-end pe-3">
                     </div>
                     <label for="venta" class="col-sm-2 text-primary">Venta</label>
                     <div class="col-sm-2">
-                        <input type="text" id="venta" readonly value="0" class="form-control text-primary">
+                        <input type="text" id="venta" readonly value="0" class="form-control text-primary text-end pe-3">
                     </div>
                 </div>
 
@@ -62,7 +62,7 @@
                 <div class="row mb-2 p-3 fila justify-content-md-center">
                     <label for="resultado" class="col-sm-3 text-primary">Resultado</label>
                     <div class="col-sm-6">
-                        <input type="text" id="resultado" readonly value="0" class="form-control text-primary">
+                        <input type="text" id="resultado" readonly value="0" class="form-control text-primary text-end pe-3">
                     </div>
                 </div>
 
