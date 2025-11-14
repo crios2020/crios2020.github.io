@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatbot Local</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .chat-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+    }
+    .chat-header {
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .chat-messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .message {
+      max-width: 80%;
+      padding: 10px 14px;
+      border-radius: 18px;
+      line-height: 1.4;
+    }
+    .user {
+      align-self: flex-end;
+      background: #007bff;
+      color: white;
+    }
+    .bot {
+      align-self: flex-start;
+      background: #e9ecef;
+      color: #333;
+    }
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      background: #fff;
+    }
+    input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+      font-size: 16px;
+    }
+    button {
+      margin-left: 8px;
+      padding: 0 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="chat-container">
+  <div class="chat-header">Chatbot Local (sin servidor)</div>
+  <div class="chat-messages" id="messages">
+    <div class="message bot">¡Hola! Soy un chatbot que funciona completamente en tu navegador. ¿En qué puedo ayudarte?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Escribe un mensaje..." autocomplete="off" />
+    <button id="sendBtn">Enviar</button>
+  </div>
+</div>
+
+<script>
+  const messages = document.getElementById('messages');
+  const userInput = document.getElementById('userInput');
+  const sendBtn = document.getElementById('sendBtn');
+
+  // Base de conocimiento del bot (reglas simples)
+  const responses = [
+    {
+      triggers: ['hola', 'buenos', 'saludos', 'hey', 'hi', 'bro'],
+      reply: '¡Hola! ¿Cómo estás hoy?'
+    },
+    {
+      triggers: ['cómo estás', 'qué tal', 'como va'],
+      reply: '¡Estoy funcionando al 100%! ¿Y tú?'
+    },
+    {
+      triggers: ['nombre', 'quién eres', 'te llamas'],
+      reply: 'Soy un chatbot simple hecho en JavaScript. ¡No necesito internet ni servidor!'
+    },
+    {
+      triggers: ['adiós', 'bye', 'hasta luego', 'chau'],
+      reply: '¡Hasta luego! Vuelve cuando quieras.'
+    },
+    {
+      triggers: ['clima', 'tiempo', 'llueve'],
+      reply: 'No tengo acceso a internet, pero puedes mirar por la ventana 😉'
+    },
+    {
+      triggers: ['gracias', 'thank'],
+      reply: '¡De nada! Estoy aquí para ayudarte.'
+    },
+    {
+      triggers: ['ayuda', 'qué puedes hacer', 'funciones'],
+      reply: 'Puedo responder preguntas básicas, saludar, despedirme y charlar un poco. Todo sin servidor.'
+    }
+  ];
+
+  // Función para encontrar respuesta
+  function getBotResponse(input) {
+    const text = input.toLowerCase().trim();
+
+    for (const rule of responses) {
+      if (rule.triggers.some(trigger => text.includes(trigger))) {
+        return rule.reply;
+      }
+    }
+
+    return 'Lo siento, no entendí eso. ¿Puedes decirlo de otra forma?';
+  }
+
+  // Añadir mensaje al chat
+  function addMessage(text, sender) {
+    const msg = document.createElement('div');
+    msg.className = `message ${sender}`;
+    msg.textContent = text;
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  // Enviar mensaje
+  function sendMessage() {
+    const text = userInput.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user');
+    userInput.value = '';
+
+    setTimeout(() => {
+      const reply = getBotResponse(text);
+      addMessage(reply, 'bot');
+    }, 500);
+  }
+
+  // Eventos
+  sendBtn.addEventListener('click', sendMessage);
+  userInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
+
+  // Foco inicial
+  userInput.focus();
+</script>
+
+</body>
+</html>

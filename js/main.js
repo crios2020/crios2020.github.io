@@ -65,9 +65,9 @@ function clima(){
 
 function economia(){
     informe=""
-    informe+="El dolar oficial cotiza "+getValorDolarOficialCompra()+" pesos para la compra, y "
+    informe+="El dólar oficial cotiza "+getValorDolarOficialCompra()+" pesos para la compra, y "
     informe+=getValorDolarOficialVenta()+" pesos para la venta, "
-    informe+="el dolar blue cotiza "+getValorDolarBlueCompra()+" pesos para la compra, y "
+    informe+="el dólar blue cotiza "+getValorDolarBlueCompra()+" pesos para la compra, y "
     informe+=getValorDolarBlueVenta()+" pesos para la venta, "
     informe+="el riesgo país esta en "+getValorRiesgoPais()+" puntos."
     return informe
