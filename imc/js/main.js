@@ -32,8 +32,10 @@ function calcularColor(imc){
 //console.log(calcularColor(calcularIMC(peso, altura)))
 
 function calcular(){
-    peso=parseInt(document.getElementById("peso").value)                            //
-    altura=parseInt(document.getElementById("altura").value)
+    peso=parseInt(document.getElementById("peso").value.replace("-", "").replace("+", "").replace("e", ""))                            //
+    altura=parseInt(document.getElementById("altura").value.replace("-", "").replace("+", "").replace("e", ""))
+    document.getElementById("peso").value=peso
+    document.getElementById("altura").value=altura
     if(!isNaN(peso) && !isNaN(altura) &&
         peso>=10 && peso<=500 &&
         altura>=40 && altura<=300
