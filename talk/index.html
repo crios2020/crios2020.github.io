@@ -9,93 +9,12 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
 
-    <style>
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-        }
+    <link rel="stylesheet" href="css/style.css">
 
-        .assistant-card {
-            width: 100%;
-            max-width: 1000px;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
-        }
+    <link rel="icon" type="image/svg" href="icons/robot.svg">
 
-        .assistant-header {
-            background: linear-gradient(135deg, #2563eb, #3b82f6);
-            color: white;
-            padding: 20px;
-        }
-
-        .assistant-header h2 {
-            margin: 0;
-            font-weight: 700;
-        }
-
-        .assistant-header small {
-            opacity: .9;
-        }
-
-        #chat-window {
-            height: 60vh;
-            overflow-y: auto;
-            padding: 25px;
-            background: #fafafa;
-        }
-
-        #chat-window::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        #chat-window::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-
-        .controls {
-            padding: 20px;
-            border-top: 1px solid #e5e7eb;
-            background: white;
-        }
-
-        .btn-action {
-            height: 60px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 15px;
-        }
-
-        #estado {
-            display: inline-block;
-            margin-top: 12px;
-            font-weight: 500;
-            color: #64748b;
-        }
-
-        .markdown-body {
-            background: transparent !important;
-        }
-
-        @media (max-width: 768px) {
-            .btn-action {
-                width: 100%;
-            }
-
-            #chat-window {
-                height: 50vh;
-            }
-        }
-    </style>
 </head>
 
 <body onload="cargar()">
@@ -111,37 +30,38 @@
 
         <div class="controls">
 
-            <div class="row g-3">
-
-                <div class="col-md-4">
-                    <button id="btnMic"
-                        class="btn btn-primary btn-action w-100">
-                        🎤 Hablar
-                    </button>
-                </div>
-
-                <div class="col-md-4">
-                    <button
-                        class="btn btn-warning btn-action w-100"
-                        onclick="callar()">
-                        🤫 Cállate
-                    </button>
-                </div>
-
-                <div class="col-md-4">
-                    <button
-                        class="btn btn-danger btn-action w-100"
-                        onclick="borrar()">
-                        🗑️ Borrar
-                    </button>
-                </div>
-
-            </div>
-
             <div class="text-center">
                 <span id="estado">
                     Listo para escuchar
                 </span>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-md-3">
+                    <button id="btnMic" class="btn btn-primary btn-action w-100">
+                        🎤 Hablar
+                    </button>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="btn btn-warning btn-action w-100" onclick="callar()">
+                        🤫 Cállate
+                    </button>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="btn btn-danger btn-action w-100" onclick="borrar()">
+                        🗑️ Borrar
+                    </button>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="btn btn-success w-100" href="qr/qr.png">
+                        📱 Escanear QR
+                    </a>
+                </div>
+
             </div>
 
         </div>
