@@ -26,7 +26,8 @@ function addMessage(text, isUser) {
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('message');
     messageDiv.classList.add(isUser ? 'user-message' : 'ai-message');
-    messageDiv.textContent = text;
+    //messageDiv.textContent = text;
+    messageDiv.innerHTML = text;
     chatWindow.appendChild(messageDiv);
     chatWindow.scrollTop = chatWindow.scrollHeight;
 }
@@ -49,9 +50,10 @@ async function sendMessage() {
             body: JSON.stringify({
                 //model: 'gpt-3.5-turbo',
                 //model: 'gpt-4.1',
-                model: 'openai/gpt-oss-20b',
+                //model: 'openai/gpt-oss-20b',
+                model: 'qwen/qwen3-32b',
                 //max_completion_tokens: 500,
-                messages: [{ role: 'user', content: message }]
+                messages: [{ role: 'user', content: "/no_think, Responde en español: "+message }]
             })
         });
 
@@ -61,12 +63,17 @@ async function sendMessage() {
 
         const data = await response.json();
         let aiReply = data.choices[0].message.content.trim();
+        addMessage("chatbot - "+marked.parse(aiReply), false);
+        //console.log(aiReply)
         aiReply = aiReply.replaceAll('*', '');
         aiReply = aiReply.replaceAll('|', '');
         aiReply = aiReply.replaceAll('#', '');
         aiReply = aiReply.replaceAll('_', '');
         aiReply = aiReply.replaceAll('-', '');
-        addMessage("chatbot - "+aiReply, false);
+        aiReply = aiReply.replaceAll('<think>', '');
+        aiReply = aiReply.replaceAll('</think>', '');
+        aiReply = aiReply.replaceAll('<br>', '');
+        
         hablar(aiReply)
     } catch (error) {
         addMessage('Error: ' + error.message, false);
