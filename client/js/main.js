@@ -63,7 +63,7 @@ async function sendMessage() {
 
         const data = await response.json();
         let aiReply = data.choices[0].message.content.trim();
-        addMessage("chatbot - "+marked.parse(aiReply), false);
+        addMessage("chatbot - "+DOMPurify.sanitize(marked.parse(aiReply)), false);
         //console.log(aiReply)
         aiReply = aiReply.replaceAll('*', '');
         aiReply = aiReply.replaceAll('|', '');
