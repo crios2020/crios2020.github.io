@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Financiero</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BANNER -->
+    <div class="container-fluid dashboard">
+        <div class="hero-banner">
+            <div class="hero-content">
+                <h1>Información Financiera</h1>
+                <p>
+                    Cotizaciones, mercados, indicadores económicos y seguimiento financiero en tiempo real.
+                </p>
+            </div>
+        </div>
+
+        <!-- MÉTRICAS -->
+        <div class="row g-4 mb-4">
+
+            <!-- DOLAR OFICIAL -->
+            <div class="col-md-6 col-xl-3">
+                <div class="metric-card">
+                    <div class="metric-label" id="dolarOficialNombre"></div>
+                    <div class="metric-value" id="dolarOficialCompra"></div>
+                    <div class="metric-value" id="dolarOficialVenta"></div>
+                    <div class="metric-date" id="dolarOficialFecha"></div>
+                </div>
+            </div>
+
+            <!-- DOLAR BLUE -->
+            <div class="col-md-6 col-xl-3">
+                <div class="metric-card">
+                    <div class="metric-label" id="dolarBlueNombre"></div>
+                    <div class="metric-value" id="dolarBlueCompra"></div>
+                    <div class="metric-value" id="dolarBlueVenta"></div>
+                    <div class="metric-date" id="dolarBlueFecha"></div>
+                </div>
+            </div>
+
+            <!-- DOLAR MAYORISTA -->
+            <div class="col-md-6 col-xl-3">
+                <div class="metric-card">
+                    <div class="metric-label" id="dolarMayoristaNombre"></div>
+                    <div class="metric-value" id="dolarMayoristaCompra"></div>
+                    <div class="metric-value" id="dolarMayoristaVenta"></div>
+                    <div class="metric-date" id="dolarMayoristaFecha"></div>
+                </div>
+            </div>
+           
+        </div>
+
+        <!-- GRÁFICOS -->
+        <div class="row g-4">
+            <!--
+        <div class="col-lg-8">
+            <div class="chart-card">
+                <div class="chart-title">Evolución del Dólar</div>
+                <canvas id="chartDolar"></canvas>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="chart-card">
+                <div class="chart-title">Distribución de Cartera</div>
+                <canvas id="chartPortfolio"></canvas>
+            </div>
+        </div>
+        -->
+        </div>
+
+        <!--
+    <div class="row mt-4">
+
+        <div class="col-12">
+            <div class="chart-card">
+                <div class="chart-title">Volumen Operado</div>
+                <canvas id="chartVolume"></canvas>
+            </div>
+        </div>
+
+    </div>
+    -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
